@@ -19,6 +19,9 @@ module.exports = {
     extend: {
       colors: {
         primary: '#5959D8',
+      },
+      boxShadow: {
+        mvm: '0px 8px 40px rgba(18, 43, 91, 0.08)'
       }
     }
   }

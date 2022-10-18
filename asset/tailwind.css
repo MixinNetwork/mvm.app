@@ -6,9 +6,11 @@
     .nav-bar {
         @apply invisible absolute top-7 -right-2.5 flex flex-col items-center bg-white shadow-[0_2px_20px_rgba(0,0,74,0.1)] z-10
     }
-
     .nav-link {
         @apply flex items-center w-36 h-12 sm:ml-14 text-lg opacity-80 bg-white text-sm
+    }
+    .link {
+        @apply block ml-6 text-black
     }
 
     .btn {
@@ -29,4 +31,19 @@
         background: linear-gradient(359.71deg, #FFFFFF 0.26%, #F7F8FF 8.31%, #F1F2FF 31%, #FFFFFF 83.81%);
     }
 
+    @screen sm {
+        .nav-bar {
+            @apply visible flex flex-row justify-between relative top-0 right-0 m-0 w-[350px] border-opacity-0 shadow-none
+        }
+        .nav-link {
+            @apply justify-center m-0 w-[90px] text-lg
+        }
+        .link {
+            @apply m-0
+        }
+
+        .feature-box {
+            @apply flex-[0_0_23%] mb-3.5 py-3
+        }
+    }
 }

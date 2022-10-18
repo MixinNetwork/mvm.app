@@ -1,7 +1,7 @@
 <template>
   <div class="feature-box">
-    <div class="font-bold text-xl lg:text-3xl">{{ title }}</div>
-    <div class="mt-2 lg:mt-3.5 text-sm lg:text-lg opacity-60">{{ content }}</div>
+    <div class="font-bold text-xl sm:text-lg lg:text-3xl">{{ title }}</div>
+    <div class="mt-2 text-sm sm:mt-1.5 lg:mt-3.5 lg:text-lg opacity-60">{{ content }}</div>
   </div>
 </template>
 

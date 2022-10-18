@@ -1,38 +1,37 @@
 <template>
   <div class="w-full min-w-[375px] h-screen flex flex-col items-center background overflow-hidden">
     <!-- header -->
-    <div class="w-full h-6 my-7 px-6
-      sm:w-[1280px] sm:h-[100px] flex justify-between items-center">
-      <div class="flex row items-center h-full">
+    <div class="w-full h-20 px-6 flex justify-between items-center sm:h-[100px] sm:my-0 sm:px-10 lg:w-[1280px] ">
+      <div class="flex row items-center h-6 sm:h-8">
         <img class="h-full" :src="logo" alt="mvm-logo" />
-        <div class="ml-2 font-extrabold text-xs opacity-80">MVM</div>
+        <div class="ml-2 font-extrabold text-xs opacity-80 sm:text-xl">MVM</div>
       </div>
 
       <div class="relative">
-        <img class="h-6 cursor-pointer" :src="menuIcon"  alt="menu" @click="onClickMenu"/>
+        <img class="h-6 cursor-pointer sm:invisible sm:h-0" :src="menuIcon"  alt="menu" @click="onClickMenu"/>
 
         <div :class="['nav-bar', showNav ? 'visible' : '']">
-          <div class="nav-link font-semibold"><a class="block ml-6 text-black" href="/">Explore</a></div>
-          <div class="nav-link border-y border-[#F5F5F5] sm:ml-14"><a class="block ml-6 text-black" href="https://bridge.mvm.app">Bridge</a></div>
-          <div class="nav-link"><a class="block ml-6 text-black" href="https://mvm.dev">Developers</a></div>
+          <div class="nav-link"><a class="link font-semibold" href="/">Explore</a></div>
+          <div class="nav-link border-y border-[#F5F5F5] sm:border-opacity-0"><a class="link" href="https://bridge.mvm.app">Bridge</a></div>
+          <div class="nav-link"><a class="link" href="https://mvm.dev">Developers</a></div>
         </div>
       </div>
     </div>
 
-    <div class="relative w-full px-6 lg:w-[1280px] lg:h-[643px]">
-      <div class="flex justify-center">
+    <div class="relative w-full px-6 sm:px-10 lg:w-[1280px] lg:h-[643px]">
+      <div class="flex justify-center sm:absolute sm:top-0 -right-2.5">
         <img class="h-[270px]" :src="background" alt="background-image" />
       </div>
 
       <!-- title -->
-      <div class="w-full font-bold text-[34px] lg:text-[56px] leading-[130%]">
+      <div class="w-full font-bold text-[34px] sm:text-[30px] sm:mt-8 lg:text-[56px] leading-[130%]">
         <div class="text-primary">Cross-Chain</div>
         <div>Smart Contracts Platform</div>
       </div>
-      <div class="mt-4 text-sm lg:mt-6 lg:text-xl opacity-60">Open source, secure, low-cost, lightning fast and decentralized.</div>
+      <div class="mt-4 text-sm sm:mt-3 sm:w-[400px] lg:mt-6 lg:text-xl opacity-60">Open source, secure, low-cost, lightning fast and decentralized.</div>
 
       <!-- links -->
-      <div class="flex justify-between mt-9 mb-12 lg:mt-[106px] lg:mb-[142px]">
+      <div class="flex justify-between mt-9 mb-12 sm:w-[344px] lg:mt-[106px] lg:mb-[142px]">
         <div class="btn"><a class="primary-btn" href="https://mvm.dev">Developer docs</a></div>
         <div class="btn"><a class="default-btn" href="https://bridge.mvm.app">Bridge to MVM</a></div>
       </div>

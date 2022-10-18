@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col justify-center items-center w-4/5 h-20 lg:w-72 lg:h-36 bg-white shadow-mvm rounded-xl">
-    <div class="font-bold text-3xl">{{ title }}</div>
-    <div class="mt-3.5 text-lg opacity-60">{{ content }}</div>
+  <div class="feature-box">
+    <div class="font-bold text-xl lg:text-3xl">{{ title }}</div>
+    <div class="mt-2 lg:mt-3.5 text-sm lg:text-lg opacity-60">{{ content }}</div>
   </div>
 </template>
 

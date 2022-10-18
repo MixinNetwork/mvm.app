@@ -3,17 +3,27 @@
 @tailwind utilities;
 
 @layer components {
-    .home-button {
-        display: inline-block;
-        margin-right: 20px;
-        padding: 0 32px;
-        height: 60px;
-        border: 2px solid #5959D8;
-        border-radius: 12px;
-        font-size: 20px;
-        line-height: 60px;
+    .nav-bar {
+        @apply invisible absolute top-7 -right-2.5 flex flex-col items-center bg-white shadow-[0_2px_20px_rgba(0,0,74,0.1)] z-10
     }
 
+    .nav-link {
+        @apply flex items-center w-36 h-12 sm:ml-14 text-lg opacity-80 bg-white text-sm
+    }
+
+    .btn {
+        @apply flex flex-[0_0_48%] h-12 border-2 border-primary rounded-xl cursor-pointer overflow-hidden;
+    }
+    .primary-btn {
+        @apply flex justify-center items-center w-full h-full bg-primary text-white;
+    }
+    .default-btn {
+        @apply flex justify-center items-center block w-full h-full border-primary text-primary;
+    }
+
+    .feature-box {
+        @apply flex flex-[0_0_48%] flex-col justify-center items-center mb-3.5 py-2.5 bg-white shadow-mvm rounded-xl
+    }
 
     .background {
         background: linear-gradient(359.71deg, #FFFFFF 0.26%, #F7F8FF 8.31%, #F1F2FF 31%, #FFFFFF 83.81%);

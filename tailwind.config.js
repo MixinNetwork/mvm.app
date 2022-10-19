@@ -12,17 +12,17 @@ module.exports = {
   ],
   theme: {
     screens: {
-      sm: '720px',
-      md: '960px',
-      lg: '1280px'
+      sm: "720px",
+      md: "960px",
+      lg: "1280px",
     },
     extend: {
       colors: {
-        primary: '#5959D8',
+        primary: "#5959D8",
       },
       boxShadow: {
-        mvm: '0px 8px 40px rgba(18, 43, 91, 0.08)'
-      }
-    }
-  }
-}
+        mvm: "0px 8px 40px rgba(18, 43, 91, 0.08)",
+      },
+    },
+  },
+};

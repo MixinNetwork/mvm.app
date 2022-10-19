@@ -9,9 +9,12 @@ export const RegistryContract = new ethers.Contract(
   mvmProvider
 );
 
-export const fetchAssetContract = async (assetId: string): Promise<string | undefined> => {
-  const id = assetId.replaceAll('-', '');
+export const fetchAssetContract = async (
+  assetId: string
+): Promise<string | undefined> => {
+  const id = assetId.replaceAll("-", "");
   const address = await RegistryContract.contracts(`0x${id}`);
-  if (address === '0x0000000000000000000000000000000000000000') return undefined;
+  if (address === "0x0000000000000000000000000000000000000000")
+    return undefined;
   return address;
 };

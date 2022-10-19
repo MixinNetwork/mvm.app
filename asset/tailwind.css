@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-    .absolute-center {
-        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform;
+    .center {
+        @apply absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 transform;
     }
 
     .nav-bar {
@@ -58,6 +58,16 @@
 
         .feature-box {
             @apply flex-[0_0_23%] mb-3.5 py-4
+        }
+    }
+
+    @screen lg {
+        .btn {
+            @apply flex-[0_0_47%] h-[60px] text-xl
+        }
+
+        .feature-box {
+            @apply flex-[0_0_23%] mb-3 py-[30px]
         }
     }
 }

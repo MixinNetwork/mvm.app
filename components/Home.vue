@@ -61,13 +61,18 @@ import background from '@/static/bg.png';
 export default {
   name: "home",
   components: { FeatureBox },
+  props: ['tvl'],
   data() {
     return {
       logo,
       menuIcon,
       background,
       showNav: false,
-      features: [
+    }
+  },
+  computed: {
+    features() {
+      return [
         {
           title: "1 sec",
           content: "Transfer time"
@@ -81,8 +86,8 @@ export default {
           content: "Chains"
         },
         {
-          title: "$80,503,125",
-          content: "Total Value Locked"
+          title: `$${this.tvl}`,
+          content: 'Total locked value'
         }
       ]
     }
@@ -91,7 +96,7 @@ export default {
     onClickMenu() {
       this.showNav = !this.showNav
     }
-  }
+  },
 }
 </script>
 

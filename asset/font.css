@@ -4,9 +4,9 @@
   font-style: normal;
   font-weight: 400;
   src: local("Open Sans"), local("OpenSans-Regular"),
-    url("./OpenSans/OpenSans-Regular.woff2") format("woff2"),
+    url("OpenSans/OpenSans-Regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("./OpenSans/OpenSans-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("OpenSans/OpenSans-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* OpenSans-500 - latin */
@@ -15,9 +15,9 @@
   font-style: normal;
   font-weight: 500;
   src: local("Open Sans"), local("OpenSans-Medium"),
-    url("./OpenSans/OpenSans-Medium.woff2") format("woff2"),
+    url("OpenSans/OpenSans-Medium.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("./OpenSans/OpenSans-Medium.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("OpenSans/OpenSans-Medium.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* OpenSans-600 - latin */
@@ -26,9 +26,9 @@
   font-style: normal;
   font-weight: 600;
   src: local("Open Sans"), local("OpenSans-SemiBold"),
-    url("./OpenSans/OpenSans-SemiBold.woff2") format("woff2"),
+    url("OpenSans/OpenSans-SemiBold.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("./OpenSans/OpenSans-SemiBold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("OpenSans/OpenSans-SemiBold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* OpenSans-700 - latin */
@@ -37,7 +37,7 @@
   font-style: normal;
   font-weight: 700;
   src: local("Open Sans"), local("OpenSans-Bold"),
-    url("./OpenSans/OpenSans-bold.woff2") format("woff2"),
+    url("OpenSans/OpenSans-bold.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("./OpenSans/OpenSans-bold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("OpenSans/OpenSans-bold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }

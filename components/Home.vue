@@ -18,28 +18,28 @@
       </div>
     </div>
 
-    <div class="px-6 w-full sm:center sm:px-0 sm:w-[632px] md:w-[852px] lg:w-[1200px]">
-      <div class="flex justify-center h-[262px] sm:absolute sm:-top-6 sm:-right-20 sm:h-[300px] sm:-z-10 md:h-[380px] lg:h-[530px]">
+    <div class="relative mx-auto mt-8 px-6 w-full sm:px-0 sm:w-[632px] sm:mt-20 md:w-[852px] lg:w-[1200px] lg:mt-36">
+      <div class="flex justify-center h-[262px] sm:absolute sm:-top-6 sm:-right-20 sm:h-[300px]  md:h-[380px] lg:h-[530px]">
         <img class="h-full" :src="background" alt="background-image" />
       </div>
 
       <!-- title -->
-      <div class="mt-3.5 w-full font-bold text-[34px] sm:text-[32px] sm:mt-8 md:text-[40px] md:mt-4 lg:text-[56px] leading-[130%]">
+      <div class="relative mt-3.5 w-full font-bold text-[34px] sm:text-[32px] sm:mt-8 md:text-[40px] md:mt-4 lg:text-[56px] leading-[130%]">
         <div class="text-primary">Cross-Chain</div>
         <div>Smart Contracts Platform</div>
       </div>
-      <div class="mt-4 text-sm opacity-60 sm:mt-3 sm:w-[400px] md:text-base md:mt-6 md:w-[500px] lg:mt-6 lg:text-xl lg:w-[700px]">
+      <div class="relative mt-4 text-sm opacity-60 sm:mt-3 sm:w-[400px] md:text-base md:mt-6 md:w-[500px] lg:mt-6 lg:text-xl lg:w-[700px]">
         Open source, secure, low-cost, lightning fast and decentralized.
       </div>
 
       <!-- links -->
-      <div class="flex justify-between mt-9 mb-12 sm:w-[344px] md:mt-20 md:mb-20 md:w-[380px] lg:w-[440px] lg:mt-[106px] lg:mb-[142px]">
+      <div class="flex justify-between relative mt-9 mb-12 sm:w-[344px] md:mt-20 md:mb-20 md:w-[380px] lg:w-[440px] lg:mt-[106px] lg:mb-[142px]">
         <div class="btn"><a class="primary-btn" href="https://mvm.dev">Developer docs</a></div>
         <div class="btn"><a class="default-btn" href="https://bridge.mvm.app">Bridge to MVM</a></div>
       </div>
 
       <!-- status -->
-      <div class="flex flex-wrap justify-between w-full">
+      <div class="flex flex-wrap relative justify-between w-full">
         <template v-for="(feature, i) of features">
           <feature-box
             :key="i"

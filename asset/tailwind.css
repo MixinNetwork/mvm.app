@@ -18,13 +18,13 @@
     }
 
     .btn {
-        @apply flex flex-[0_0_48%] h-12 border-2 border-primary rounded-xl cursor-pointer overflow-hidden;
+        @apply flex flex-[0_0_48%] h-12 cursor-pointer overflow-hidden;
     }
     .primary-btn {
-        @apply flex justify-center items-center w-full h-full bg-primary text-white;
+        @apply flex justify-center items-center w-full h-full border-2 border-primary rounded-xl bg-primary text-white;
     }
     .default-btn {
-        @apply flex justify-center items-center block w-full h-full border-primary text-primary;
+        @apply flex justify-center items-center block w-full h-full border-2 border-primary rounded-xl text-primary;
     }
 
     .feature-box {
@@ -44,6 +44,10 @@
         }
         .link {
             @apply m-0
+        }
+
+        .btn {
+            @apply text-sm
         }
 
         .feature-box {

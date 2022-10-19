@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-full min-w-[375px] h-screen background overflow-x-hidden">
     <!-- header -->
-    <div class="flex justify-between items-center w-full h-20 px-6 sm:my-0 sm:px-10 sm:h-[100px] md:mx-auto lg:w-[1280px] ">
+    <div class="flex justify-between items-center w-full h-20 px-6 sm:my-0 sm:px-10 sm:h-[100px] md:px-[54px] md:mx-auto lg:w-[1280px] ">
       <div class="flex row items-center h-6 sm:h-8">
         <img class="h-full" :src="logo" alt="mvm-logo" />
         <div class="ml-2 font-extrabold text-xs opacity-80 sm:text-xl">MVM</div>
@@ -19,12 +19,12 @@
     </div>
 
     <div class="px-6 w-full sm:center sm:px-0 sm:w-[632px] md:w-[852px] lg:w-[1200px]">
-      <div class="flex justify-center h-[262px] sm:absolute sm:-top-6 sm:-right-20 sm:h-[300px] md:h-[380px] lg:h-[530px]">
+      <div class="flex justify-center h-[262px] sm:absolute sm:-top-6 sm:-right-20 sm:h-[300px] sm:-z-10 md:h-[380px] lg:h-[530px]">
         <img class="h-full" :src="background" alt="background-image" />
       </div>
 
         <!-- title -->
-        <div class="mt-3.5 w-full font-bold text-[34px] sm:text-[30px] sm:mt-8 md:text-[40px] md:mt-4 lg:text-[56px] leading-[130%]">
+        <div class="mt-3.5 w-full font-bold text-[34px] sm:text-[32px] sm:mt-8 md:text-[40px] md:mt-4 lg:text-[56px] leading-[130%]">
           <div class="text-primary">Cross-Chain</div>
           <div>Smart Contracts Platform</div>
         </div>

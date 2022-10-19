@@ -8,13 +8,13 @@
     }
 
     .nav-bar {
-        @apply invisible absolute top-7 -right-2.5 flex flex-col items-center bg-white shadow-[0_2px_20px_rgba(0,0,74,0.1)] z-10
+        @apply invisible absolute top-7 -right-2.5 flex flex-col items-center bg-white shadow-[0_2px_20px_rgba(0,0,74,0.1)] z-10;
     }
     .nav-link {
-        @apply flex items-center w-36 h-12 sm:ml-14 text-lg opacity-80 bg-white text-sm
+        @apply flex items-center w-36 h-12 sm:ml-14 text-lg opacity-80 bg-white text-sm;
     }
     .link {
-        @apply block ml-6 text-black
+        @apply block ml-6 text-black;
     }
 
     .btn {
@@ -28,7 +28,7 @@
     }
 
     .feature-box {
-        @apply flex flex-[0_0_48%] flex-col justify-center items-center mb-3.5 py-2.5 bg-white shadow-mvm rounded-xl
+        @apply flex flex-[0_0_48%] flex-col justify-center items-center mb-3.5 py-2.5 bg-white shadow-mvm rounded-xl;
     }
 
     .background {
@@ -37,41 +37,41 @@
 
     @screen sm {
         .nav-bar {
-            @apply visible flex flex-row justify-between relative top-0 right-0 m-0 w-[350px] border-opacity-0 shadow-none
+            @apply visible flex flex-row justify-between relative top-0 right-0 m-0 w-[350px] border-opacity-0 shadow-none;
         }
         .nav-link {
-            @apply justify-center m-0 w-[90px] text-lg
+            @apply justify-center m-0 w-[90px] text-lg;
         }
         .link {
-            @apply m-0
+            @apply m-0;
         }
 
         .btn {
-            @apply text-sm
+            @apply text-sm;
         }
 
         .feature-box {
-            @apply flex-[0_0_23%] mb-3.5 py-3
+            @apply flex-[0_0_23%] mb-3.5 py-3;
         }
     }
 
     @screen md {
         .btn {
-            @apply flex-[0_0_47%] h-[60px]
+            @apply flex-[0_0_47%] h-[60px];
         }
 
         .feature-box {
-            @apply flex-[0_0_23%] mb-3.5 py-4
+            @apply flex-[0_0_23%] mb-3.5 py-4;
         }
     }
 
     @screen lg {
         .btn {
-            @apply flex-[0_0_47%] h-[60px] text-xl
+            @apply flex-[0_0_47%] h-[60px] text-xl;
         }
 
         .feature-box {
-            @apply flex-[0_0_23%] mb-3 py-[30px]
+            @apply flex-[0_0_23%] mb-3 py-[30px];
         }
     }
 }

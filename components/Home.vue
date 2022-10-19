@@ -23,32 +23,32 @@
         <img class="h-full" :src="background" alt="background-image" />
       </div>
 
-        <!-- title -->
-        <div class="mt-3.5 w-full font-bold text-[34px] sm:text-[32px] sm:mt-8 md:text-[40px] md:mt-4 lg:text-[56px] leading-[130%]">
-          <div class="text-primary">Cross-Chain</div>
-          <div>Smart Contracts Platform</div>
-        </div>
-        <div class="mt-4 text-sm opacity-60 sm:mt-3 sm:w-[400px] md:text-base md:mt-6 md:w-[500px] lg:mt-6 lg:text-xl lg:w-[700px]">
-          Open source, secure, low-cost, lightning fast and decentralized.
-        </div>
-
-        <!-- links -->
-        <div class="flex justify-between mt-9 mb-12 sm:w-[344px] md:mt-20 md:mb-20 md:w-[380px] lg:w-[440px] lg:mt-[106px] lg:mb-[142px]">
-          <div class="btn"><a class="primary-btn" href="https://mvm.dev">Developer docs</a></div>
-          <div class="btn"><a class="default-btn" href="https://bridge.mvm.app">Bridge to MVM</a></div>
-        </div>
-
-        <!-- status -->
-        <div class="flex flex-wrap justify-between w-full">
-          <template v-for="(feature, i) of features">
-            <feature-box
-              :key="i"
-              :title="feature.title"
-              :content="feature.content"
-            />
-          </template>
-        </div>
+      <!-- title -->
+      <div class="mt-3.5 w-full font-bold text-[34px] sm:text-[32px] sm:mt-8 md:text-[40px] md:mt-4 lg:text-[56px] leading-[130%]">
+        <div class="text-primary">Cross-Chain</div>
+        <div>Smart Contracts Platform</div>
       </div>
+      <div class="mt-4 text-sm opacity-60 sm:mt-3 sm:w-[400px] md:text-base md:mt-6 md:w-[500px] lg:mt-6 lg:text-xl lg:w-[700px]">
+        Open source, secure, low-cost, lightning fast and decentralized.
+      </div>
+
+      <!-- links -->
+      <div class="flex justify-between mt-9 mb-12 sm:w-[344px] md:mt-20 md:mb-20 md:w-[380px] lg:w-[440px] lg:mt-[106px] lg:mb-[142px]">
+        <div class="btn"><a class="primary-btn" href="https://mvm.dev">Developer docs</a></div>
+        <div class="btn"><a class="default-btn" href="https://bridge.mvm.app">Bridge to MVM</a></div>
+      </div>
+
+      <!-- status -->
+      <div class="flex flex-wrap justify-between w-full">
+        <template v-for="(feature, i) of features">
+          <feature-box
+            :key="i"
+            :title="feature.title"
+            :content="feature.content"
+          />
+        </template>
+      </div>
+    </div>
   </div>
 </template>
 

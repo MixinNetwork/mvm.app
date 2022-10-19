@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-full min-w-[375px] h-screen background overflow-x-hidden">
     <!-- header -->
-    <div class="flex justify-between items-center w-full h-20 px-6 sm:my-0 sm:px-10 sm:h-[100px] md:px-[54px] md:mx-auto lg:w-[1280px] ">
+    <div class="flex justify-between items-center mx-auto px-6 w-full h-20 sm:my-0 sm:px-0 sm:h-[100px] sm:w-[632px] md:w-[852px] lg:w-[1200px] ">
       <div class="flex row items-center h-6 sm:h-8">
         <img class="h-full" :src="logo" alt="mvm-logo" />
         <div class="ml-2 font-extrabold text-xs opacity-80 sm:text-xl">MVM</div>

@@ -21,7 +21,7 @@
 
         <div :class="['nav-bar', showNav ? 'visible' : '']">
           <div class="nav-link">
-            <a class="link font-bold" href="/">Explore</a>
+            <a class="link" href="https://scan.mvm.dev">Explore</a>
           </div>
           <div class="nav-link border-y border-[#F5F5F5] sm:border-opacity-0">
             <a class="link" href="https://bridge.mvm.app">Bridge</a>

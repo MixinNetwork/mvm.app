@@ -47,7 +47,7 @@ export default {
 
   // Remove when deployment
   router: {
-    base: 'mvm.app'
+    base: '/mvm.app'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

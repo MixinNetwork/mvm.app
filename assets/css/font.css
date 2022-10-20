@@ -1,43 +1,43 @@
-/* OpenSans-400 - latin */
+/* Poppins-400 - latin */
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  src: local("Open Sans"), local("OpenSans-Regular"),
-    url("~assets/fonts/OpenSans-Regular.woff2") format("woff2"),
+  src: local("Poppins"), local("Poppins-Regular"),
+    url("~assets/fonts/Poppins-Regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("~assets/fonts/OpenSans-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("~assets/fonts/Poppins-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* OpenSans-500 - latin */
+/* Poppins-500 - latin */
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  src: local("Open Sans"), local("OpenSans-Medium"),
-    url("~assets/fonts/OpenSans-Medium.woff2") format("woff2"),
+  src: local("Poppins"), local("Poppins-Medium"),
+    url("~assets/fonts/Poppins-Medium.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("~assets/fonts/OpenSans-Medium.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("~assets/fonts/Poppins-Medium.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* OpenSans-600 - latin */
+/* Poppins-600 - latin */
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  src: local("Open Sans"), local("OpenSans-SemiBold"),
-    url("~assets/fonts/OpenSans-SemiBold.woff2") format("woff2"),
+  src: local("Poppins"), local("Poppins-SemiBold"),
+    url("~assets/fonts/Poppins-SemiBold.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("~assets/fonts/OpenSans-SemiBold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("~assets/fonts/Poppins-SemiBold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* OpenSans-700 - latin */
+/* Poppins-700 - latin */
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  src: local("Open Sans"), local("OpenSans-Bold"),
-    url("~assets/fonts/OpenSans-Bold.woff2") format("woff2"),
+  src: local("Poppins"), local("Poppins-Bold"),
+    url("~assets/fonts/Poppins-Bold.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("~assets/fonts/OpenSans-Bold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("~assets/fonts/Poppins-Bold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }

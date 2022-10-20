@@ -21,10 +21,10 @@
     @apply flex flex-[0_0_48%] h-12 cursor-pointer overflow-hidden;
   }
   .primary-btn {
-    @apply flex justify-center items-center w-full h-full border-2 border-primary rounded-xl bg-primary text-white;
+    @apply flex justify-center items-center w-full h-full border-2 border-primary rounded-xl bg-primary text-white hover:bg-hover hover:border-hover hover:text-primary;
   }
   .default-btn {
-    @apply flex justify-center items-center block w-full h-full border-2 border-primary rounded-xl text-primary;
+    @apply flex justify-center items-center block w-full h-full border-2 border-primary rounded-xl text-primary hover:bg-hover hover:border-hover hover:text-primary;
   }
 
   .feature-box {

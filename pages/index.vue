@@ -1,15 +1,15 @@
 <template>
-  <Home :tvl="tvl" />
+  <Home :eth="tvl"/>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import { getMvmTvl } from "~/helpers/api";
+import { getEthValue } from "~/helpers/api";
 
 export default Vue.extend({
   name: "Index",
   async asyncData() {
-    const tvl = await getMvmTvl();
+    const tvl = await getEthValue();
     return {
       tvl: tvl.toString(),
     };

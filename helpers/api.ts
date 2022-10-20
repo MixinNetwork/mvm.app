@@ -7,7 +7,7 @@ import { toThousands } from "~/helpers/utils";
 const networkClient = NetworkClient();
 const WHITELIST_ASSET_ID = WHITELIST_ASSET.map((asset) => asset.id);
 
-export const getMvmTvl = async () => {
+export const getMvmTlv = async () => {
   const [allAssets, addresses] = await Promise.all([
     Promise.all(
       WHITELIST_ASSET_ID.map(
@@ -48,6 +48,12 @@ export const getMvmTvl = async () => {
   }, FixedNumber.from("0"));
   return toThousands(Math.floor(Number(tvl)).toString());
 };
+
+export const getEthValue = async () => {
+  const eth = await networkClient.fetchAsset(ETH_ASSET_ID);
+  const lv = FixedNumber.from('1000000').mulUnsafe(FixedNumber.from(eth.price_usd)).toString();
+  return `${toThousands(Math.floor(Number(lv)).toString())}`;
+}
 
 export const fetchMvmToken = async (address: string) => {
   const response = await fetch(

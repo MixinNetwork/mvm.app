@@ -86,14 +86,14 @@ import FeatureBox from "@/components/FeatureBox";
 import logo from "@/static/logo.svg";
 import menuIcon from "@/static/menu.svg";
 import background from "@/static/bg.png";
+import { getMvmTlv } from "@/helpers/api";
 
 export default {
   name: "Home",
   components: { FeatureBox },
   props: {
-    tvl: {
+    eth: {
       type: String,
-      default: "0.00",
     },
   },
   data() {
@@ -102,7 +102,11 @@ export default {
       menuIcon,
       background,
       showNav: false,
+      tlv: this.eth
     };
+  },
+  mounted() {
+    this.updateTlv();
   },
   computed: {
     features() {
@@ -120,16 +124,26 @@ export default {
           content: "Chains",
         },
         {
-          title: `$${this.tvl}`,
+          title: `$${this.tlv}`,
           content: "Total locked value",
         },
       ];
     },
   },
+  fetchOnServer: false,
+  async fetch() {
+    setInterval(async () => {
+      await this.updateTlv();
+    }, 30000)
+  },
   methods: {
     onClickMenu() {
       this.showNav = !this.showNav;
     },
+    async updateTlv() {
+      const tlv = await getMvmTlv();
+      this.tlv = tlv.toString();
+    }
   },
 };
 </script>

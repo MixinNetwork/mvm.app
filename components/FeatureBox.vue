@@ -4,7 +4,7 @@
       {{ title }}
     </div>
     <div
-      class="mt-2 text-sm sm:mt-1.5 md:text-base md:mt-3 lg:mt-3.5 lg:text-lg opacity-60"
+      class="mt-2 text-sm opacity-60 sm:mt-1.5 md:text-base md:mt-3 lg:mt-3.5 lg:text-lg"
     >
       {{ content }}
     </div>

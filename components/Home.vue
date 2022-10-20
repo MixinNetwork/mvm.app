@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-full min-w-[375px] h-screen background overflow-x-hidden"
+    class="relative w-screen min-w-[375px] h-screen min-h-[512px] background overflow-x-hidden lg:min-h-[750px]"
   >
     <!-- header -->
     <div
@@ -34,7 +34,7 @@
     </div>
 
     <div
-      class="relative mx-auto mt-8 px-6 w-full sm:px-0 sm:w-[632px] sm:mt-20 md:w-[852px] lg:w-[1200px] lg:mt-36"
+      class="main relative mx-auto mt-8 px-6 w-full sm:px-0 sm:w-[632px]md:w-[852px] lg:w-[1200px]"
     >
       <div
         class="flex justify-center h-[262px] sm:absolute sm:-top-6 sm:-right-20 sm:h-[300px] md:h-[380px] lg:h-[530px]"
@@ -132,9 +132,9 @@ export default {
   },
   fetchOnServer: false,
   async fetch() {
-    setInterval(async () => {
-      await this.updateTlv();
-    }, 30000)
+    // setInterval(async () => {
+    //   await this.updateTlv();
+    // }, 30000)
   },
   methods: {
     onClickMenu() {

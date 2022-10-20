@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-  .center {
-    @apply absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 transform;
+  .absolute-horizontal-center {
+    @apply fixed left-1/2 -translate-x-1/2 transform;
   }
 
   .nav-bar {
@@ -28,7 +28,7 @@
   }
 
   .feature-box {
-    @apply flex flex-[0_0_48%] flex-col justify-center items-center mb-3.5 py-2.5 bg-white shadow-mvm rounded-xl;
+    @apply flex flex-[0_0_48%] flex-col justify-center items-center mb-3.5 py-2.5 bg-white shadow-mvm rounded-xl sm:mb-0;
   }
 
   .background {
@@ -57,7 +57,7 @@
     }
 
     .feature-box {
-      @apply flex-[0_0_23%] mb-3.5 py-3;
+      @apply flex-[0_0_23%] py-3;
     }
   }
 
@@ -67,7 +67,7 @@
     }
 
     .feature-box {
-      @apply flex-[0_0_23%] mb-3.5 py-4;
+      @apply flex-[0_0_23%] py-4;
     }
   }
 
@@ -77,7 +77,26 @@
     }
 
     .feature-box {
-      @apply flex-[0_0_23%] mb-3 py-[30px];
+      @apply flex-[0_0_23%] py-[30px];
     }
   }
 }
+
+@media (min-width: 1280px) and (min-height: 860px) {
+  .main {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 1280px) and (max-height: 859px) {
+  .main {
+    margin-top: calc(100vh - 764px);
+  }
+}
+
+@media (min-width: 1280px) and (max-height: 763px) {
+  .main {
+    margin-top: 0;
+  }
+}
+

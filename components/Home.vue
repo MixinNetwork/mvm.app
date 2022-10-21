@@ -4,7 +4,7 @@
   >
     <!-- header -->
     <div
-      class="flex justify-between items-center mx-auto px-6 w-full h-20 sm:my-0 sm:px-0 sm:h-[100px] sm:w-[632px] md:w-[852px] lg:w-[1200px]"
+      class="flex justify-between items-center mx-auto mt-2 px-6 w-full h-6 sm:my-0 sm:px-0 sm:h-[100px] sm:w-[632px] md:w-[852px] lg:w-[1200px]"
     >
       <div class="flex row items-center h-6 sm:h-8">
         <img class="h-full" :src="logo" alt="mvm-logo" />
@@ -34,30 +34,30 @@
     </div>
 
     <div
-      class="main relative mx-auto mt-8 px-6 w-full sm:px-0 sm:w-[632px] md:w-[852px] lg:w-[1200px]"
+      class="main relative mx-auto px-6 w-full sm:px-0 sm:w-[632px] md:w-[852px] lg:w-[1200px]"
     >
       <div
-        class="flex justify-center h-[262px] sm:absolute sm:-top-10 sm:-right-20 sm:h-[300px] md:h-[380px] lg:h-[530px]"
+        class="flex justify-center h-[234px] sm:absolute sm:-top-10 sm:-right-20 sm:h-[300px] md:h-[380px] lg:h-[530px]"
       >
         <img class="h-full" :src="background" alt="background-image" />
       </div>
 
       <!-- title -->
       <div
-        class="relative w-full font-bold text-[34px] sm:text-[32px] md:text-[40px] lg:text-[56px] leading-[130%]"
+        class="relative w-full font-bold text-[30px] sm:text-[32px] md:text-[40px] lg:text-[56px] leading-[130%]"
       >
         <div class="text-primary">Cross-Chain</div>
         <div>Smart Contracts Platform</div>
       </div>
       <div
-        class="relative mt-4 text-sm opacity-60 sm:mt-3 sm:w-[400px] md:text-base md:mt-6 md:w-[500px] lg:mt-6 lg:text-xl lg:w-[700px]"
+        class="relative mt-2.5 text-sm opacity-60 sm:mt-3 sm:w-[400px] md:text-base md:mt-6 md:w-[500px] lg:mt-6 lg:text-xl lg:w-[700px]"
       >
         Open source, secure, low-cost, lightning fast and decentralized.
       </div>
 
       <!-- links -->
       <div
-        class="flex justify-between relative mt-9 mb-12 sm:w-[344px] md:mt-20 md:mb-20 md:w-[380px] lg:w-[440px] lg:mt-[106px] lg:mb-[142px]"
+        class="flex justify-between relative mt-6 mb-[26px] sm:w-[344px] md:mt-20 md:mb-20 md:w-[380px] lg:w-[440px] lg:mt-[106px] lg:mb-[142px]"
       >
         <div class="btn">
           <a class="primary-btn" href="https://mvm.dev">Developer docs</a>

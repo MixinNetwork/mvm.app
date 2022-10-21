@@ -57,7 +57,7 @@
 
       <!-- links -->
       <div
-        class="flex justify-between relative mt-6 mb-[26px] sm:w-[344px] md:mt-20 md:mb-20 md:w-[380px] lg:w-[440px] lg:mt-[106px] lg:mb-[142px]"
+        class="button-container flex justify-between relative my-6 sm:w-[344px] md:mt-20 md:mb-20 md:w-[380px] lg:w-[440px] lg:mt-[106px] lg:mb-[142px]"
       >
         <div class="btn">
           <a class="primary-btn" href="https://mvm.dev">Developer docs</a>

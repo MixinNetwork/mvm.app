@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-screen min-w-[375px] h-screen background overflow-x-hidden"
+    class="relative w-full min-w-[375px] h-screen background overflow-x-hidden"
   >
     <!-- header -->
     <div

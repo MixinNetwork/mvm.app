@@ -132,9 +132,9 @@ export default {
   },
   fetchOnServer: false,
   async fetch() {
-    // setInterval(async () => {
-    //   await this.updateTlv();
-    // }, 30000)
+    setInterval(async () => {
+      await this.updateTlv();
+    }, 30000)
   },
   methods: {
     onClickMenu() {

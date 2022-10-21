@@ -1,10 +1,10 @@
-@media (min-width: 1280px) and (min-height: 860px) {
+@media (min-width: 1280px) and (min-height: 863px) {
   .main {
     margin-top: 100px;
   }
 }
 
-@media (min-width: 1280px) and (max-height: 859px) {
+@media (min-width: 1280px) and (max-height: 862px) {
   .main {
     margin-top: calc(100vh - 764px);
   }
@@ -16,19 +16,19 @@
   }
 }
 
-@media (min-width: 960px) and (max-width: 1279px) and (min-height: 660px) {
+@media (min-width: 960px) and (max-width: 1279px) and (min-height: 672px) {
   .main {
     margin-top: 60px;
   }
 }
 
-@media (min-width: 960px) and (max-width: 1279px) and (max-height: 659px) {
+@media (min-width: 960px) and (max-width: 1279px) and (max-height: 671px) {
   .main {
-    margin-top: calc(100vh - 602px);
+    margin-top: calc(100vh - 612px);
   }
 }
 
-@media (min-width: 960px) and (max-width: 1279px) and (max-height: 600px) {
+@media (min-width: 960px) and (max-width: 1279px) and (max-height: 610px) {
   .main {
     margin-top: 0;
   }
@@ -65,7 +65,7 @@
   }
 }
 
-@media (max-width: 720px) and (max-height: 676px) {
+@media (max-width: 720px) and (max-height: 670px) {
 .button-container {
   margin-top: 12px;
   margin-bottom: 12px;

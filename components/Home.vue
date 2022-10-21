@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-screen min-w-[375px] h-screen min-h-[512px] background overflow-x-hidden lg:min-h-[750px]"
+    class="relative w-screen min-w-[375px] h-screen background overflow-x-hidden"
   >
     <!-- header -->
     <div
@@ -34,17 +34,17 @@
     </div>
 
     <div
-      class="main relative mx-auto mt-8 px-6 w-full sm:px-0 sm:w-[632px]md:w-[852px] lg:w-[1200px]"
+      class="main relative mx-auto mt-8 px-6 w-full sm:px-0 sm:w-[632px] md:w-[852px] lg:w-[1200px]"
     >
       <div
-        class="flex justify-center h-[262px] sm:absolute sm:-top-6 sm:-right-20 sm:h-[300px] md:h-[380px] lg:h-[530px]"
+        class="flex justify-center h-[262px] sm:absolute sm:-top-10 sm:-right-20 sm:h-[300px] md:h-[380px] lg:h-[530px]"
       >
         <img class="h-full" :src="background" alt="background-image" />
       </div>
 
       <!-- title -->
       <div
-        class="relative mt-3.5 w-full font-bold text-[34px] sm:text-[32px] sm:mt-8 md:text-[40px] md:mt-4 lg:text-[56px] leading-[130%]"
+        class="relative w-full font-bold text-[34px] sm:text-[32px] md:text-[40px] lg:text-[56px] leading-[130%]"
       >
         <div class="text-primary">Cross-Chain</div>
         <div>Smart Contracts Platform</div>

@@ -34,10 +34,10 @@
     </div>
 
     <div
-      class="main relative mx-auto px-6 pb-5 w-full sm:p-0 sm:w-[632px] md:w-[852px] lg:w-[1200px]"
+      class="main relative mx-auto px-6 w-full sm:p-0 sm:w-[632px] md:w-[852px] lg:w-[1200px]"
     >
       <div
-        class="flex justify-center h-[234px] sm:absolute sm:-top-10 sm:-right-20 sm:h-[300px] md:h-[380px] lg:h-[530px]"
+        class="flex justify-center h-[234px] sm:absolute sm:-top-14 sm:-right-20 sm:h-[300px] md:h-[380px] md:-top-14 lg:h-[530px] lg:-top-[95px]"
       >
         <img class="h-full" :src="background" alt="background-image" />
       </div>
@@ -57,7 +57,7 @@
 
       <!-- links -->
       <div
-        class="button-container flex justify-between relative my-6 sm:w-[344px] md:mt-20 md:mb-20 md:w-[380px] lg:w-[440px] lg:mt-[106px] lg:mb-[142px]"
+        class="button-container flex justify-between relative my-6 sm:w-[344px] md:w-[380px] lg:w-[440px]"
       >
         <div class="btn">
           <a class="primary-btn" href="https://mvm.dev">Developer docs</a>

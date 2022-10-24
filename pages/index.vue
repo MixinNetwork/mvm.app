@@ -1,5 +1,5 @@
 <template>
-  <Home :eth="tvl"/>
+  <Home :eth="tvl" />
 </template>
 
 <script lang="ts">

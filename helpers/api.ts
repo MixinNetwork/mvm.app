@@ -51,9 +51,11 @@ export const getMvmTlv = async () => {
 
 export const getEthValue = async () => {
   const eth = await networkClient.fetchAsset(ETH_ASSET_ID);
-  const lv = FixedNumber.from('1000000').mulUnsafe(FixedNumber.from(eth.price_usd)).toString();
+  const lv = FixedNumber.from("1000000")
+    .mulUnsafe(FixedNumber.from(eth.price_usd))
+    .toString();
   return `${toThousands(Math.floor(Number(lv)).toString())}`;
-}
+};
 
 export const fetchMvmToken = async (address: string) => {
   const response = await fetch(

@@ -39,7 +39,11 @@
       <div
         class="flex justify-center w-full sm:w-auto sm:absolute sm:-top-14 sm:-right-20 sm:h-[300px] md:h-[380px] md:-top-14 lg:h-[530px] lg:-top-[95px]"
       >
-        <img class="w-full sm:w-auto sm:h-full" :src="background" alt="background-image" />
+        <img
+          class="w-full sm:w-auto sm:h-full"
+          :src="background"
+          alt="background-image"
+        />
       </div>
 
       <div>
@@ -64,7 +68,9 @@
             <a class="primary-btn" href="https://mvm.dev">Developer docs</a>
           </div>
           <div class="btn">
-            <a class="default-btn" href="https://bridge.mvm.app">Bridge to MVM</a>
+            <a class="default-btn" href="https://bridge.mvm.app"
+              >Bridge to MVM</a
+            >
           </div>
         </div>
 
@@ -104,7 +110,7 @@ export default {
       menuIcon,
       background,
       showNav: false,
-      tlv: this.eth
+      tlv: this.eth,
     };
   },
   mounted() {
@@ -136,7 +142,7 @@ export default {
   async fetch() {
     setInterval(async () => {
       await this.updateTlv();
-    }, 30000)
+    }, 30000);
   },
   methods: {
     onClickMenu() {
@@ -145,7 +151,7 @@ export default {
     async updateTlv() {
       const tlv = await getMvmTlv();
       this.tlv = tlv.toString();
-    }
+    },
   },
 };
 </script>

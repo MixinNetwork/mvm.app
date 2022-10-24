@@ -19,7 +19,7 @@ jobs:
         run: yarn install
 
       - name: Build APP
-        run: yarn generate
+        run: yarn generate:github-page
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

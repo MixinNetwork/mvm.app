@@ -23,7 +23,12 @@ export default {
       },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/mvm.app/favicon.png" }],
+    link: [{
+      rel: "icon",
+      type: "image/x-icon",
+      href: process.env.NUXT_ENV_PLATFORM === 'github' ? "/mvm.app/favicon.png" : "/favicon.png"
+    }],
+
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -45,10 +50,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
 
-  // Remove when deployment
-  router: {
+  router: process.env.NUXT_ENV_PLATFORM === 'github' ? {
     base: "/mvm.app/",
-  },
+  } : undefined,
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

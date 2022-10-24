@@ -97,25 +97,11 @@
   }
 }
 
-@media (max-width: 720px) and (max-height: 700px) {
-  $e: calc((700px - 100vh) / 5);
-
-  .button-container {
-    margin-top: calc(24px - #{$e} * 2);
-    margin-bottom: calc(24px - #{$e} * 2);
-  }
-
-  .feature-box {
-    margin-bottom: calc(12px - #{$e});
-  }
-}
-@media (max-width: 720px) and (max-height: 670px) {
-  .button-container {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-
-  .feature-box {
-    margin-bottom: 6px;
+@media (max-width: 720px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: calc(100vh - 32px);
   }
 }

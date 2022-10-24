@@ -23,7 +23,7 @@ export default {
       },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/mvm.app/favicon.png" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -47,7 +47,7 @@ export default {
 
   // Remove when deployment
   router: {
-    base: "/mvm.app",
+    base: "/mvm.app/",
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

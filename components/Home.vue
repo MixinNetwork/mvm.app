@@ -123,7 +123,7 @@ export default {
       return [
         {
           title: "1 sec",
-          content: "Transaction Finalization",
+          content: "Transaction Finality",
         },
         {
           title: "< $0.01",

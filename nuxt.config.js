@@ -26,7 +26,7 @@ export default {
     link: [{
       rel: "icon",
       type: "image/x-icon",
-      href: process.env.NUXT_ENV_PLATFORM === 'github' ? "/mvm.app/favicon.png" : "/favicon.png"
+      href: process.env.NUXT_ENV_PLATFORM === 'github' ? "/favicon.png" : "/favicon.png"
     }],
 
   },
@@ -50,9 +50,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
 
-  router: process.env.NUXT_ENV_PLATFORM === 'github' ? {
-    base: "/mvm.app/",
-  } : undefined,
+  // router: process.env.NUXT_ENV_PLATFORM === 'github' ? {
+  //   base: "/mvm.app/",
+  // } : undefined,
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

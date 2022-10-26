@@ -28,7 +28,7 @@
   }
 
   .feature-box {
-    @apply flex flex-[0_0_48%] flex-col justify-center items-center mb-3 py-2.5 bg-white shadow-mvm rounded-xl box-border sm:mb-0;
+    @apply flex flex-[0_0_48%] flex-col justify-center items-center mb-3 py-2.5 bg-white shadow-mvm rounded-xl box-border text-center sm:mb-0;
   }
 
   .background {

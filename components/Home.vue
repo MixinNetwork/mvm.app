@@ -86,6 +86,8 @@
         </div>
       </div>
     </div>
+
+    <footer class="w-full h-5"></footer>
   </div>
 </template>
 

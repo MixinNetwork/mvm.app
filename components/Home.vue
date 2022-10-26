@@ -133,7 +133,7 @@ export default {
         },
         {
           title: `$${this.tlv}`,
-          content: "Total locked value",
+          content: "Total value locked",
         },
       ];
     },

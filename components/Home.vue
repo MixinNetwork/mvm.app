@@ -65,7 +65,7 @@
           class="button-container flex justify-between relative my-6 sm:w-[344px] md:w-[380px] lg:w-[440px]"
         >
           <div class="btn">
-            <a class="primary-btn" href="https://mvm.dev">Developer docs</a>
+            <a class="primary-btn" href="https://mvm.dev">Developer Docs</a>
           </div>
           <div class="btn">
             <a class="default-btn" href="https://bridge.mvm.app"
@@ -121,19 +121,19 @@ export default {
       return [
         {
           title: "1 sec",
-          content: "Transfer time",
+          content: "Transaction Finalization",
         },
         {
-          title: "$0.01",
-          content: "Bridge fee",
+          title: "< $0.01",
+          content: "Fee",
         },
         {
-          title: "4",
-          content: "Chains",
+          title: "44",
+          content: "Connected Chains",
         },
         {
           title: `$${this.tlv}`,
-          content: "Total value locked",
+          content: "Total Value Locked",
         },
       ];
     },

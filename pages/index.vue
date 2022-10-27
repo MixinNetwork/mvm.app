@@ -11,7 +11,7 @@ export default Vue.extend({
   async asyncData() {
     const tvl = await getEthValue();
     return {
-      tvl: tvl.toString(),
+      tvl,
     };
   },
 });

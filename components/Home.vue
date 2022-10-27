@@ -96,7 +96,8 @@ import FeatureBox from "@/components/FeatureBox";
 import logo from "@/static/logo.svg";
 import menuIcon from "@/static/menu.svg";
 import background from "@/static/bg.png";
-import { getMvmTlv } from "@/helpers/api";
+import { getMvmTvl } from "@/helpers/api";
+import { toThousands } from "@/helpers/utils";
 
 export default {
   name: "Home",
@@ -112,14 +113,15 @@ export default {
       menuIcon,
       background,
       showNav: false,
-      tlv: this.eth,
+      tvl: this.eth,
     };
   },
   mounted() {
-    this.updateTlv();
+    this.updateTvl();
   },
   computed: {
     features() {
+      const tvlString = `$${toThousands(Math.floor(Number(this.tvl)).toString())}`;
       return [
         {
           title: "1 sec",
@@ -134,7 +136,7 @@ export default {
           content: "Connected Chains",
         },
         {
-          title: `$${this.tlv}`,
+          title: tvlString,
           content: "Total Value Locked",
         },
       ];
@@ -143,16 +145,16 @@ export default {
   fetchOnServer: false,
   async fetch() {
     setInterval(async () => {
-      await this.updateTlv();
+      await this.updateTvl();
     }, 30000);
   },
   methods: {
     onClickMenu() {
       this.showNav = !this.showNav;
     },
-    async updateTlv() {
-      const tlv = await getMvmTlv();
-      this.tlv = tlv.toString();
+    async updateTvl() {
+      const tvl = await getMvmTvl();
+      this.tvl = tvl.toString();
     },
   },
 };

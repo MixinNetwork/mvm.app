@@ -1,13 +1,12 @@
-import {NetworkAssetResponse, NetworkClient} from "@mixin.dev/mixin-node-sdk";
-import {FixedNumber, utils} from "ethers";
-import {ETH_ASSET_ID, LOCK_ADDRESS, WHITELIST_ASSET} from "./constant/common";
-import {fetchAssetContract} from "./mvm";
-import {toThousands} from "~/helpers/utils";
+import { NetworkAssetResponse, NetworkClient } from "@mixin.dev/mixin-node-sdk";
+import { FixedNumber, utils } from "ethers";
+import { ETH_ASSET_ID, LOCK_ADDRESS, WHITELIST_ASSET } from "./constant/common";
+import { fetchAssetContract } from "./mvm";
 
 const networkClient = NetworkClient();
 const WHITELIST_ASSET_ID = WHITELIST_ASSET.map((asset) => asset.id);
 
-export const getMvmTlv = async () => {
+export const getMvmTvl = async () => {
   const [allAssets, addresses] = await Promise.all([
     Promise.all(
       WHITELIST_ASSET_ID.map(
@@ -46,14 +45,13 @@ export const getMvmTlv = async () => {
   const tvl = tokenValues.reduce((pre, cur) => {
     return pre.addUnsafe(cur);
   }, FixedNumber.from("0"));
-  return toThousands(Math.floor(Number(tvl)).toString());
+  return tvl;
 };
 
 export const getEthValue = async () => {
   const eth = await networkClient.fetchAsset(ETH_ASSET_ID);
   const ethSupply = await fetchEthSupply();
-  const lv = ethSupply.mulUnsafe(FixedNumber.from(eth.price_usd)).toString();
-  return `${toThousands(Math.floor(Number(lv)).toString())}`;
+  return ethSupply.mulUnsafe(FixedNumber.from(eth.price_usd)).toString();
 };
 
 export const fetchMvmToken = async (address: string) => {

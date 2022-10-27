@@ -40,7 +40,7 @@
         class="flex justify-center w-full sm:w-auto sm:absolute sm:-top-14 sm:-right-20 sm:h-[300px] md:h-[380px] md:-top-14 lg:h-[530px] lg:-top-[95px]"
       >
         <img
-          class="w-full sm:w-auto sm:h-full"
+          class="w-full select-none sm:w-auto sm:h-full"
           :src="background"
           alt="background-image"
         />

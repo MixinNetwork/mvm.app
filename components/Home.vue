@@ -146,7 +146,7 @@ export default {
   async fetch() {
     setInterval(async () => {
       await this.updateTvl();
-    }, 30000);
+    }, 1000 * 60);
   },
   methods: {
     onClickMenu() {

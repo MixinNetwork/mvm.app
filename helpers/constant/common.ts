@@ -1,6 +1,7 @@
 export const MVM_RPC_URL = "https://geth.mvm.dev/";
 
 export const REGISTRY_ADDRESS = "0x3c84B6C98FBeB813e05a7A7813F0442883450B1F";
+export const LOCK_ADDRESS = "0x3d01ae83024a05379C8D89e72CEf39451283f02e"
 
 export const ETH_ASSET_ID = "43d61dcd-e413-450d-80b8-101d5e903357";
 export const XIN_ASSET_ID = "c94ac88f-4671-3976-b60a-09064f1811e8";

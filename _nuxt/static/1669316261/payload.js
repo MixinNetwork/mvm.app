@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/", {data:[{tvl:"141299.21016826802"}],fetch:{},mutations:void 0});

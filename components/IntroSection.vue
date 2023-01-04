@@ -1,39 +1,5 @@
 <template>
   <div
-    class="relative w-full min-w-[320px] h-screen background overflow-x-hidden"
-  >
-    <!-- header -->
-    <div
-      class="flex justify-between items-center mx-auto mt-2 px-6 w-full h-6 sm:my-0 sm:px-0 sm:h-[100px] sm:w-[632px] md:w-[852px] lg:w-[1200px]"
-    >
-      <div class="flex row items-center h-6 sm:h-8">
-        <img class="h-full" :src="logo" alt="mvm-logo" />
-        <div class="ml-2 font-extrabold text-xs opacity-80 sm:text-xl">MVM</div>
-      </div>
-
-      <div class="relative">
-        <img
-          class="h-6 cursor-pointer sm:invisible sm:h-0"
-          :src="menuIcon"
-          alt="menu"
-          @click="onClickMenu"
-        />
-
-        <div :class="['nav-bar', showNav ? 'visible' : '']">
-          <div class="nav-link">
-            <a class="link" href="https://scan.mvm.dev">Explorer</a>
-          </div>
-          <div class="nav-link border-y border-[#F5F5F5] sm:border-opacity-0">
-            <a class="link" href="https://bridge.mvm.app">Bridge</a>
-          </div>
-          <div class="nav-link">
-            <a class="link" href="https://mvm.dev">Developers</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
       class="main relative mx-auto pb-2 px-6 w-full sm:p-0 sm:w-[632px] md:w-[852px] lg:w-[1200px]"
     >
       <div
@@ -76,25 +42,19 @@
 
         <!-- status -->
         <div class="flex flex-wrap justify-between relative w-full">
-          <template v-for="(feature, i) of features">
-            <feature-box
-              :key="i"
-              :title="feature.title"
-              :content="feature.content"
-            />
-          </template>
+          <feature-box
+            v-for="(feature, i) of features"
+            :key="i"
+            :title="feature.title"
+            :content="feature.content"
+          />
         </div>
       </div>
-    </div>
-
-    <footer class="w-full h-5"></footer>
   </div>
 </template>
 
 <script>
 import FeatureBox from "@/components/FeatureBox";
-import logo from "@/static/logo.svg";
-import menuIcon from "@/static/menu.svg";
 import background from "@/static/bg.png";
 import { getMvmTvl } from "@/helpers/api";
 import { toThousands } from "@/helpers/utils";
@@ -109,10 +69,7 @@ export default {
   },
   data() {
     return {
-      logo,
-      menuIcon,
       background,
-      showNav: false,
       tvl: this.eth,
     };
   },
@@ -149,9 +106,6 @@ export default {
     }, 1000 * 60);
   },
   methods: {
-    onClickMenu() {
-      this.showNav = !this.showNav;
-    },
     async updateTvl() {
       const tvl = await getMvmTvl();
       this.tvl = tvl.toString();
@@ -159,5 +113,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

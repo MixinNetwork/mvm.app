@@ -24,6 +24,7 @@ module.exports = {
       },
       boxShadow: {
         mvm: "0px 8px 40px rgba(18, 43, 91, 0.08)",
+        selection: "0px 2px 20px rgba(0, 0, 74, 0.1)"
       },
     },
   },

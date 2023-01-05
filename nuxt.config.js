@@ -68,10 +68,6 @@ export default {
     ]
   ],
 
-  // router: process.env.NUXT_ENV_PLATFORM === 'github' ? {
-  //   base: "/mvm.app/",
-  // } : undefined,
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {

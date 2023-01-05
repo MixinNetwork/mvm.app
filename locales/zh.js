@@ -16,5 +16,28 @@ export default {
       feature3: "条公链",
       feature4: "总锁定价值",
     }
+  },
+  footer: {
+    locales: {
+      en: "英语",
+      zh: "简体中文"
+    },
+    about: {
+      title: "关于",
+      link1: "联系我们",
+      link2: "常见问题",
+      link3: "媒体素材"
+    },
+    developers: {
+      title: "开发者",
+      link1: "文档",
+      link2: "浏览器",
+      link3: "开源代码",
+    },
+    community: {
+      title: "社区",
+      link1: "Discord",
+      link2: "Twitter",
+    }
   }
 }

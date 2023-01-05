@@ -62,7 +62,7 @@
 
 <script>
 import FeatureBox from "@/components/FeatureBox";
-import background from "@/static/bg.png";
+import background from "@/assets/images/bg.png";
 import { getMvmTvl } from "@/helpers/api";
 import { toThousands } from "@/helpers/utils";
 

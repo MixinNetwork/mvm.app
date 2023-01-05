@@ -38,8 +38,8 @@
 </template>
 
 <script>
-import logo from "@/static/logo.svg";
-import menuIcon from "@/static/menu.svg";
+import logo from "@/assets/icons/logo.svg";
+import menuIcon from "@/assets/icons/menu.svg";
 
 export default {
   name: "Header",

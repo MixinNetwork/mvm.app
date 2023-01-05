@@ -1,14 +1,10 @@
 html {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-  margin-right: calc(-1 * (100vw - 100%));
-}
-
-body {
-  margin: 0;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 

@@ -1,5 +1,7 @@
 <template>
-  <div class="feature-box">
+  <div 
+    class="flex flex-[0_0_48%] flex-col justify-center items-center mb-3 py-2.5 bg-white shadow-mvm rounded-xl box-border text-center sm:mb-0 sm:flex-[0_0_23%] sm:py-3 md:py-4 lg:py-[30px]"
+  >
     <div class="font-bold sm:text-lg md:text-[22px] lg:text-3xl">
       {{ title }}
     </div>

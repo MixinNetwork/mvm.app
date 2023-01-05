@@ -23,13 +23,13 @@
           ]"
         >
           <div class="flex items-center w-36 h-12 opacity-80 bg-white text-sm sm:justify-center sm:m-0 sm:w-[100px] sm:text-lg">
-            <a class="block ml-6 text-black hover:font-bold sm:m-0" href="https://scan.mvm.dev">Explorer</a>
+            <a class="block ml-6 text-black hover:font-bold sm:m-0" href="https://scan.mvm.dev">{{ $t('nav.explorer') }}</a>
           </div>
           <div class="flex items-center w-36 h-12 opacity-80 bg-white text-sm border-y border-[#F5F5F5] sm:justify-center sm:m-0 sm:w-[100px] sm:text-lg sm:border-opacity-0">
-            <a class="block ml-6 text-black hover:font-bold sm:m-0" href="https://bridge.mvm.app">Bridge</a>
+            <a class="block ml-6 text-black hover:font-bold sm:m-0" href="https://bridge.mvm.app">{{ $t('nav.bridge') }}</a>
           </div>
           <div class="flex items-center w-36 h-12 opacity-80 bg-white text-sm sm:justify-center sm:m-0 sm:w-[100px] sm:text-lg">
-            <a class="block ml-6 text-black hover:font-bold sm:m-0" href="https://mvm.dev">Developers</a>
+            <a class="block ml-6 text-black hover:font-bold sm:m-0" href="https://mvm.dev">{{ $t('nav.developers') }}</a>
           </div>
         </div>
       </div>

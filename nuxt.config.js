@@ -1,3 +1,6 @@
+import en from "./locales/en";
+import zh from "./locales/zh";
+
 export default {
   ssr: true,
   target: "static", // default is 'server'
@@ -48,7 +51,22 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    [
+      '@nuxtjs/i18n',
+      {
+        locales: ['en', 'zh'],
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'en',
+          messages: {
+            en,
+            zh
+          }
+        }
+      }
+    ]
+  ],
 
   // router: process.env.NUXT_ENV_PLATFORM === 'github' ? {
   //   base: "/mvm.app/",

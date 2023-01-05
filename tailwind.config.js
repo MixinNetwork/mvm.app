@@ -20,6 +20,7 @@ module.exports = {
       colors: {
         primary: "#5959D8",
         hover: "#DADDFF",
+        footer: "#F7F8F9"
       },
       boxShadow: {
         mvm: "0px 8px 40px rgba(18, 43, 91, 0.08)",

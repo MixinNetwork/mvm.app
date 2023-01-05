@@ -8,8 +8,8 @@
           <div
             class="relative w-full font-bold text-[30px] sm:text-[32px] md:text-[40px] lg:text-[56px] leading-[130%]"
           >
-            <div class="text-primary">Cross-Chain</div>
-            <div>Smart Contracts Platform</div>
+            <div class="text-primary">{{ $t('intro.title1') }}</div>
+            <div>{{ $t('intro.title2') }}</div>
           </div>
 
           <img 
@@ -21,7 +21,7 @@
           <div
             class="relative mt-4 text-sm opacity-60 sm:mt-3 sm:w-[400px] md:text-base md:mt-6 md:w-[500px] lg:mt-6 lg:text-xl lg:w-[700px]"
           >
-            Open source, secure, low-cost, lightning fast and decentralized.
+          {{ $t('intro.subTitle') }}
           </div>
         </div>
 
@@ -34,7 +34,7 @@
               class="flex justify-center items-center w-full h-full border-2 border-primary rounded-xl bg-primary text-white hover:bg-hover hover:border-hover hover:text-primary" 
               href="https://mvm.dev"
             >
-              Developer Docs
+              {{ $t('intro.doc') }}
             </a>
           </div>
           <div class="flex flex-[0_0_48%] h-12 cursor-pointer overflow-hidden text-sm md:flex-[0_0_47%] md:h-[60px] lg:text-xl">
@@ -42,7 +42,7 @@
               class="flex justify-center items-center w-full h-full border-2 border-primary rounded-xl text-primary hover:bg-hover hover:border-hover hover:text-primary" 
               href="https://bridge.mvm.app"
             >
-              Bridge to MVM
+              {{ $t('intro.bridge') }}
             </a>
           </div>
         </div>
@@ -89,19 +89,19 @@ export default {
       return [
         {
           title: "1 sec",
-          content: "Transaction Finality",
+          content: this.$t("intro.features.feature1"),
         },
         {
           title: "< $0.01",
-          content: "Fee",
+          content: this.$t("intro.features.feature2"),
         },
         {
           title: "44",
-          content: "Connected Chains",
+          content: this.$t("intro.features.feature3"),
         },
         {
           title: tvlString,
-          content: "Total Value Locked",
+          content: this.$t("intro.features.feature4"),
         },
       ];
     },

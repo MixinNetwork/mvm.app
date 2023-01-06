@@ -17,6 +17,9 @@ export default {
       feature4: "总锁定价值",
     }
   },
+  ecosystem: {
+    
+  },
   footer: {
     locales: {
       en: "英语",

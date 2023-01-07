@@ -9,11 +9,17 @@
         v-for="(row, i) in iconList" 
         :key="i"
         :class="[
-          'relative mb-4 w-[675px] whitespace-nowrap sm:mb-10 sm:w-[1675px]',
+          'relative mb-4 w-[675px] whitespace-nowrap sm:mb-10 sm:w-[1320px] lg:w-[1675px]',
           offset[i]
         ]" 
       >
-        <img class="inline-block mr-3 w-9 sm:mr-[34px] sm:w-[88px]" v-for="icon in row" :src="icon.src" :alt="icon.alt" />
+        <img 
+          class="inline-block mr-3 w-9 sm:mr-[28px] sm:w-[66px] lg:mr-[34px] lg:w-[88px]" 
+          v-for="icon in row" 
+          :key="icon.alt"
+          :src="icon.src" 
+          :alt="icon.alt" 
+        />
       </div>
     </div>
   </div>
@@ -64,6 +70,7 @@ export default {
         1: "left-2.5 sm:left-7",  
         2: ""
       },
+      imgStyle: "mr-3 w-9 md:mr-[20px] md:w-[44px] md:mr-[28px] md:w-[66px] lg:mr-[34px] lg:w-[88px]",
       iconList: [
         [
           {src: btcsv, alt: "btcsv"},

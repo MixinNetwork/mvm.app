@@ -33,6 +33,10 @@ export default {
       content: "MVM 完全兼容以太坊智能合（EVM），迁移以太坊的智能合约到 MVM 无需任何修改，熟悉 Solidity 的开发者可以很方便的在 MVM 上用自己熟悉的语言开发智能合约，享受更低的手续费和更快的确认速度。"
     }
   },
+  assets: {
+    title1: "Cross-Chain",
+    title2: " Assets"
+  },
   footer: {
     locales: {
       en: "English",

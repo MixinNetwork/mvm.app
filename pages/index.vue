@@ -6,6 +6,7 @@
     <IntroSection :eth="tvl" />
     <EcosystemSection />
     <AssetsSection />
+    <NftSection />
     <Footer></Footer>
   </div>
 </template>
@@ -17,11 +18,12 @@ import Footer from "@/components/Footer.vue";
 import IntroSection from "@/components/IntroSection.vue";
 import EcosystemSection from "~/components/EcosystemSection.vue";
 import AssetsSection from "~/components/AssetsSection.vue";
+import NftSection from "~/components/NftSection.vue";
 import { getEthValue } from "~/helpers/api";
 
 export default Vue.extend({
   name: "Index",
-  components: { Header, IntroSection, EcosystemSection, AssetsSection, Footer },
+  components: { Header, IntroSection, EcosystemSection, AssetsSection, NftSection, Footer },
   async asyncData() {
     const tvl = await getEthValue();
     return {

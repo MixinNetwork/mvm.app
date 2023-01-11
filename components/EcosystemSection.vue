@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center pt-[110px] pb-[100px] px-6 sm:px-0">
+  <div class="flex justify-center items-center pt-[110px] pb-[100px] px-6 eco-background sm:px-0">
     <div class="flex flex-col items-center w-full sm:w-[632px] md:w-[852px] lg:w-[1200px]">
       <div class="mb-[100px] w-full font-bold text-[32px] leading-[130%] sm:mb-[180px] sm:text-[50px] sm:text-center">
         <span class="text-primary">{{ $t("ecosystem.title1") }}</span>{{ $t("ecosystem.title2") }}

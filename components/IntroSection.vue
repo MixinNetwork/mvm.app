@@ -1,8 +1,8 @@
 <template>
   <div
-      class="relative mx-auto pt-[88px] pb-3 px-6 h-screen min-h-[720px] sm:px-0 sm:pt-[150px] sm:pb-2 sm:min-h-[495px] sm:w-[632px] md:min-h-[580px] md:w-[852px] lg:min-h-[700px] lg:w-[1200px]"
+      class="relative pt-[88px] h-screen min-h-[720px] background sm:pt-[150px]"
     >
-      <div class="flex flex-col justify-around items-start w-full h-full sm:justify-evenly">
+      <div class="flex flex-col justify-around items-start mx-auto px-6 pb-3 w-full h-full sm:justify-evenly sm:px-0 sm:pb-2 sm:min-h-[495px] sm:w-[632px] md:min-h-[580px] md:w-[852px] lg:min-h-[700px] lg:w-[1200px]">
         <!-- title -->
         <div class="relative w-full">
           <div

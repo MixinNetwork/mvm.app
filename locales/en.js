@@ -41,6 +41,10 @@ export default {
     title1: "Cross-Chain",
     title2: " NFTs"
   },
+  community: {
+    title1: "Join",
+    title2: " our community"
+  },
   footer: {
     locales: {
       en: "English",

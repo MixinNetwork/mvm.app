@@ -41,6 +41,10 @@ export default {
     title1: "跨链",
     title2: "NFTs"
   },
+  community: {
+    title1: "加入",
+    title2: "社区"
+  },
   footer: {
     locales: {
       en: "英语",

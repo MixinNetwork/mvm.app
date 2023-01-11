@@ -52,6 +52,7 @@
           <feature-box
             v-for="(feature, i) of features"
             :key="i"
+            :box-style="boxStyle"
             :title="feature.title"
             :content="feature.content"
           />
@@ -76,6 +77,7 @@ export default {
   },
   data() {
     return {
+      boxStyle:"flex flex-[0_0_48%] flex-col justify-center items-center mb-3 py-2.5 bg-white shadow-mvm rounded-xl box-border text-center sm:mb-0 sm:flex-[0_0_23%] sm:py-3 md:py-4 lg:py-[30px]",
       background,
       tvl: this.eth,
     };
@@ -86,22 +88,48 @@ export default {
   computed: {
     features() {
       const tvlString = `$${toThousands(Math.floor(Number(this.tvl)).toString())}`;
+      const titleStyle = "font-bold sm:text-lg md:text-[22px] lg:text-3xl";
+      const contentStyle = "mt-1 text-sm opacity-60 sm:mt-1.5 md:text-base md:mt-3 lg:mt-3.5 lg:text-lg";
       return [
         {
-          title: "1 sec",
-          content: this.$t("intro.features.feature1"),
+          title: {
+            text: "1 sec",
+            style: titleStyle
+          },
+          content: {
+            text: this.$t("intro.features.feature1"),
+            style: contentStyle
+          }
         },
         {
-          title: "< $0.01",
-          content: this.$t("intro.features.feature2"),
+          title: {
+            text: "< $0.01",
+            style: titleStyle
+          },
+          content: {
+            text: this.$t("intro.features.feature2"),
+            style: contentStyle
+          }
         },
         {
-          title: "44",
-          content: this.$t("intro.features.feature3"),
+          title: {
+            text: "44",
+            style: titleStyle
+          },
+          content: {
+            text: this.$t("intro.features.feature3"),
+            style: contentStyle
+          }
         },
         {
-          title: tvlString,
-          content: this.$t("intro.features.feature4"),
+          title: {
+            text: tvlString,
+            style: titleStyle
+          },
+          content: {
+            text: this.$t("intro.features.feature4"),
+            style: contentStyle
+          }
         },
       ];
     },

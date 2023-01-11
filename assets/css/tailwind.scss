@@ -16,4 +16,24 @@
   .eco-background {
     background: linear-gradient(180deg, #FFFFFF 0%, #F8F8FF 100%);
   }
+
+  .twitter-background {
+    background: linear-gradient(150.26deg, #5EEAFD 5.09%, #0075FF 100%);
+  }
+
+  .discord-background {
+    background: linear-gradient(147.36deg, #D196FF 2.08%, #585FFF 98.55%);
+  }
+
+  .telegram-background {
+    background: linear-gradient(150.66deg, #7FF176 3.37%, #00C2FF 94.83%);
+  }
+
+  .mixin-background {
+    background: linear-gradient(150.36deg, #6CB0FF 6.19%, #2B40FF 97.43%);
+  }
+
+  object {
+    pointer-events: none;
+  }
 }

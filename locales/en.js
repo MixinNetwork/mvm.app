@@ -41,6 +41,30 @@ export default {
     title1: "Cross-Chain",
     title2: " NFTs"
   },
+  doc: {
+    title1: "Make",
+    title2: " your dapp cross-chain",
+    section1: {
+      title: "References",
+      content: "Read docs to check all API interfaces required to build Web3 app",
+      link: "See references"
+    },
+    section2: {
+      title: "Documentaion",
+      content: "Read docs to learn the introduction and principle of important smart contracts",
+      link: "Read the docs"
+    },
+    section3: {
+      title: "Tutorials",
+      content: "Learn how to transfer smart contracts from Ethereum and build cross-chain Web3 app",
+      link: "Go to tutorials"
+    },
+    section4: {
+      title: "FAQ",
+      content: "Read FAQ to learn more about MVM",
+      link: "Learn more"
+    }
+  },
   community: {
     title1: "Join",
     title2: " our community"

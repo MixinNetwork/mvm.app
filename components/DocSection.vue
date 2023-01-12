@@ -1,0 +1,74 @@
+<template>
+  <div class="mb-[116px] px-6 w-full sm:mb-[240px] sm:px-0">
+    <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1200px]">
+      <div class="font-bold text-[32px] leading-[130%] sm:text-[50px] sm:text-center">
+        <span class="text-primary">{{ $t("doc.title1") }}</span>{{ $t("doc.title2") }}
+      </div>
+
+      <div class="flex flex-row flex-wrap justify-between mt-16 min-w-[305px] sm:mt-[120px] lg:flex-nowrap">
+        <FeatureBox 
+          v-for="(f, i) in list"
+          :key="i"
+          :box-style="boxStyle"
+          :inner-box-style="innerBoxStyle"
+          :icon="f.icon"
+          :title="f.title"
+          :content="f.content"
+          :link="f.link"
+        />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import FeatureBox from "@/components/FeatureBox";
+import ref from "@/assets/icons/references.svg";
+import doc from "@/assets/icons/documentation.svg";
+import tutorials from "@/assets/icons/tutorials.svg";
+import faq from "@/assets/icons/faq.svg";
+import openLink from "@/assets/icons/link_open.svg";
+
+const innerBoxStyle = "";
+const iconStyle = "w-12 md:w-20";
+const titleStyle = "mt-5 mb-3 font-bold text-xl text-black break-words break-all sm:mt-[38px] sm:mb-5 sm:text-3xl";
+const contentStyle = "font-normal text-base leading-6 sm:leading-[30px] sm:text-xl";
+const linkStyle = "font-semibold text-base leading-5 text-primary break-keep sm:text-[22px]";
+const linkIconStyle = "ml-1.5 w-4 sm:ml-2 sm:w-6";
+const iconList = [ref, doc, tutorials, faq];
+
+export default {
+  name: "DocSection",
+  components: { FeatureBox },
+  data() {
+    return {
+      boxStyle: [
+        "flex flex-col flex-[0_0_48%] justify-between h-full rounded-xl mb-4 pt-3 pb-[14px] px-3 shadow-mvm sm:pt-7 sm:pb-[45px] sm:px-7 lg:flex-[0_0_23%]",
+        this.$i18n.locale === 'zh' ? 'h-[280px] sm:h-[360px] md:h-[400px] lg:h-[440px]' : 'h-[380px] sm:h-[410px] md:h-[400px] lg:h-[450px]'
+      ],
+      innerBoxStyle,
+      list: new Array(4).fill(0).map((_, i) => ({
+        icon: {
+          src: iconList[i],
+          style: iconStyle
+        },
+        title: {
+          text: this.$t(`doc.section${i + 1}.title`),
+          style: titleStyle
+        },
+        content: {
+          text: this.$t(`doc.section${i + 1}.content`),
+          style: contentStyle
+        },
+        link: {
+          text: this.$t(`doc.section${i + 1}.link`),
+          style: linkStyle,
+          icon: openLink,
+          iconStyle: linkIconStyle,
+          iconAlt: this.$t(`doc.section${i + 1}.link`)
+        }
+      }))
+    }
+  }
+}
+</script>

@@ -8,7 +8,10 @@
       <div v-if="!!content" :class="content.style">{{ content.text }}</div>
     </div>
 
-    <div v-if="!!link" :class="link.style">{{ link.text }}</div>
+    <div v-if="!!link" class="flex flex-row items-center">
+      <div :class="link.style">{{ link.text }}</div>
+      <img v-if="!!link.icon" :class="link.iconStyle" :src="link.icon" :alt="link.iconAlt" />
+    </div>
   </div>
 </template>
 

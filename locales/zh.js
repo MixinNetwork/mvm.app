@@ -41,6 +41,30 @@ export default {
     title1: "跨链",
     title2: "NFTs"
   },
+  doc: {
+    title1: "让",
+    title2: "你的 dapp 跨链",
+    section1: {
+      title: "相关文档",
+      content: "查看文档检查开发跨链 Web3 应用所需的所有 API 接口",
+      link: "查看文档"
+    },
+    section2: {
+      title: "文档",
+      content: "阅读文档了解工作原理和和关键合约讲解说明",
+      link: "阅读文档"
+    },
+    section3: {
+      title: "教程",
+      content: "根据教程学习如何迁移以太坊智能合约和开发跨链 Web3 应用",
+      link: "前往教程"
+    },
+    section4: {
+      title: "常见问题",
+      content: "更多有关于 MVM 的常见问题请查看我们的 FAQ 文档",
+      link: "了解更多"
+    }
+  },
   community: {
     title1: "加入",
     title2: "社区"

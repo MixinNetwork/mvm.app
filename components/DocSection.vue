@@ -36,6 +36,12 @@ const contentStyle = "font-normal text-base leading-6 sm:leading-[30px] sm:text-
 const linkStyle = "font-semibold text-base leading-5 text-primary break-keep sm:text-[22px]";
 const linkIconStyle = "ml-1.5 w-4 sm:ml-2 sm:w-6";
 const iconList = [ref, doc, tutorials, faq];
+const linkList = [
+  "",
+  "https://mvm.dev/",
+  "",
+  "https://mvm.dev/zh/resources/qa.html"
+]
 
 export default {
   name: "DocSection",
@@ -63,6 +69,7 @@ export default {
         link: {
           text: this.$t(`doc.section${i + 1}.link`),
           style: linkStyle,
+          href: linkList,
           icon: openLink,
           iconStyle: linkIconStyle,
           iconAlt: this.$t(`doc.section${i + 1}.link`)

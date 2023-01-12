@@ -9,8 +9,14 @@
     </div>
 
     <div v-if="!!link" class="flex flex-row items-center">
-      <div :class="link.style">{{ link.text }}</div>
-      <img v-if="!!link.icon" :class="link.iconStyle" :src="link.icon" :alt="link.iconAlt" />
+      <a v-if="!!link.href" :href="link.href" class="flex flex-row items-center w-full cursor-pointer">
+        <div :class="link.style">{{ link.text }}</div>
+        <img v-if="!!link.icon" :class="link.iconStyle" :src="link.icon" :alt="link.iconAlt" />
+      </a>
+      <template v-else>
+        <div :class="link.style">{{ link.text }}</div>
+        <img v-if="!!link.icon" :class="link.iconStyle" :src="link.icon" :alt="link.iconAlt" />
+      </template>
     </div>
   </div>
 </template>

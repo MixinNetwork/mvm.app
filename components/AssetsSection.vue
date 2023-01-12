@@ -26,40 +26,47 @@
 </template>
 
 <script>
-import btcsv from "@/assets/icons/btcsv.png";
-import btc from "@/assets/icons/btc.png";
-import rvn from "@/assets/icons/rvn.png";
-import eos from "@/assets/icons/eos.png";
-import bnb from "@/assets/icons/bnb.png";
-import bts from "@/assets/icons/bts.png";
-import akash from "@/assets/icons/akash.png";
-import eth from "@/assets/icons/eth.png";
-import ar from "@/assets/icons/ar.png";
-import atom from "@/assets/icons/atom.png";
-import zen from "@/assets/icons/zen.png";
-import dot from "@/assets/icons/dot.png";
-import ckb from "@/assets/icons/ckb.png";
-import zec from "@/assets/icons/zec.png"; 
-import ksm from "@/assets/icons/ksm.png";
-import dash from "@/assets/icons/dash.png";
-import algo from "@/assets/icons/algo.png";
-import dcr from "@/assets/icons/dcr.png";
-import ltc from "@/assets/icons/ltc.png";
-import alpaca from "@/assets/icons/alpaca.png";
-import mob from "@/assets/icons/mob.png";
-import xmr from "@/assets/icons/xmr.png";
-import near from "@/assets/icons/near.png";
-import sc from "@/assets/icons/sc.png";
-import sol from "@/assets/icons/sol.png";
-import nmc from "@/assets/icons/nmc.png";
-import xtz from "@/assets/icons/xtz.png";
-import trx from "@/assets/icons/trx.png";
-import v from "@/assets/icons/v.png";
-import nem from "@/assets/icons/nem.png";
-import xlm from "@/assets/icons/xlm.png";
-import xrp from "@/assets/icons/xrp.png";
-import doge from "@/assets/icons/doge.png";
-import etc from "@/assets/icons/etc.png";
+import stc from "@/assets/icons/stc.webp";
+import btcsv from "@/assets/icons/btcsv.webp";
+import btc from "@/assets/icons/btc.webp";
+import rvn from "@/assets/icons/rvn.webp";
+import eos from "@/assets/icons/eos.webp";
+import bnb from "@/assets/icons/bnb.webp";
+import bts from "@/assets/icons/bts.webp";
+import akash from "@/assets/icons/akash.webp";
+import polygon from "@/assets/icons/polygon.webp";
+import eth from "@/assets/icons/eth.webp";
+import ar from "@/assets/icons/ar.webp";
+import atom from "@/assets/icons/atom.webp";
+import zen from "@/assets/icons/zen.webp";
+import avax from "@/assets/icons/avax.webp";
+import tribe from "@/assets/icons/tribe.webp";
+import dot from "@/assets/icons/dot.webp";
+import ckb from "@/assets/icons/ckb.webp";
+import zec from "@/assets/icons/zec.webp"; 
+import ksm from "@/assets/icons/ksm.webp";
+import dash from "@/assets/icons/dash.webp";
+import algo from "@/assets/icons/algo.webp";
+import dcr from "@/assets/icons/dcr.webp";
+import ltc from "@/assets/icons/ltc.webp";
+import alpaca from "@/assets/icons/alpaca.webp";
+import ton from "@/assets/icons/ton.webp";
+import hmt from "@/assets/icons/hmt.webp";
+import mob from "@/assets/icons/mob.webp";
+import xmr from "@/assets/icons/xmr.webp";
+import near from "@/assets/icons/near.webp";
+import sc from "@/assets/icons/sc.webp";
+import sol from "@/assets/icons/sol.webp";
+import nmc from "@/assets/icons/nmc.webp";
+import xtz from "@/assets/icons/xtz.webp";
+import trx from "@/assets/icons/trx.webp";
+import v from "@/assets/icons/v.webp";
+import p from "@/assets/icons/p.webp";
+import nem from "@/assets/icons/nem.webp";
+import xlm from "@/assets/icons/xlm.webp";
+import xrp from "@/assets/icons/xrp.webp";
+import doge from "@/assets/icons/doge.webp";
+import etc from "@/assets/icons/etc.webp";
 
 export default {
   name: "AssetsSection",
@@ -73,23 +80,23 @@ export default {
       imgStyle: "mr-3 w-9 md:mr-[20px] md:w-[44px] md:mr-[28px] md:w-[66px] lg:mr-[34px] lg:w-[88px]",
       iconList: [
         [
-          {src: btcsv, alt: "btcsv"},
+          {src: stc, alt: "stc"},
           {src: btc, alt: "btc"},
           {src: rvn, alt: "rvn"},
           {src: btcsv, alt: "btcsv"},
-          {src: btc, alt: "btc"},
+          {src: eth, alt: "eth"},
           {src: eos, alt: "eos"},
           {src: bnb, alt: "bnb"},
           {src: bts, alt: "bts"},
           {src: akash, alt: "akash"},
-          {src: eth, alt: "eth"},
+          {src: polygon, alt: "polygon"},
           {src: ar, alt: "ar"},
           {src: atom, alt: "atom"},
           {src: zen, alt: "zen"},
-          {src: eth, alt: "eth"}
+          {src: avax, alt: "avax"}
         ],
         [
-          {src: dot, alt: "dot"},
+          {src: tribe, alt: "tribe"},
           {src: ckb, alt: "ckb"},
           {src: zec, alt: "zec"},
           {src: dot, alt: "dot"},
@@ -105,8 +112,8 @@ export default {
           {src: alpaca, alt: "alpaca"}
         ],
         [
-          {src: sc, alt: "sc"},
-          {src: sol, alt: "sol"},
+          {src: ton, alt: "ton"},
+          {src: hmt, alt: "hmt"},
           {src: nmc, alt: "nmc"},
           {src: sc, alt: "sc"},
           {src: sol, alt: "sol"},
@@ -115,10 +122,10 @@ export default {
           {src: v, alt: "v"},
           {src: nem, alt: "nem"},
           {src: xlm, alt: "xlm"},
-          {src: xrp, alt: "xrp"},
+          {src: p, alt: "p"},
           {src: doge, alt: "doge"},
           {src: etc, alt: "etc"},
-          {src: xlm, alt: "xlm"}
+          {src: xrp, alt: "xrp"}
         ]
       ]
     }

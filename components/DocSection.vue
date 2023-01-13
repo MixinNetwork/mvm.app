@@ -10,7 +10,6 @@
           v-for="(f, i) in list"
           :key="i"
           :box-style="boxStyle"
-          :inner-box-style="innerBoxStyle"
           :icon="f.icon"
           :title="f.title"
           :content="f.content"
@@ -51,7 +50,6 @@ export default {
         "flex flex-col flex-[0_0_48%] justify-between h-full rounded-xl mb-4 pt-3 pb-[14px] px-3 shadow-mvm sm:pt-7 sm:pb-[45px] sm:px-7 lg:flex-[0_0_23%]",
         this.$i18n.locale === 'zh' ? 'h-[280px] sm:h-[360px] md:h-[400px] lg:h-[440px]' : 'h-[380px] sm:h-[410px] md:h-[400px] lg:h-[450px]'
       ],
-      innerBoxStyle,
       list: new Array(4).fill(0).map((_, i) => ({
         icon: {
           src: iconList[i],

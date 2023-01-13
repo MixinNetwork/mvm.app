@@ -4,7 +4,7 @@
   >
     <Header></Header>
     <IntroSection :eth="tvl" />
-    <EcosystemSection />
+    <ContractSection />
     <AssetsSection />
     <NftSection />
     <AuditSection />
@@ -19,7 +19,7 @@ import Vue from "vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import IntroSection from "@/components/IntroSection.vue";
-import EcosystemSection from "~/components/EcosystemSection.vue";
+import ContractSection from "~/components/ContractSection.vue";
 import AssetsSection from "~/components/AssetsSection.vue";
 import NftSection from "~/components/NftSection.vue";
 import AuditSection from "~/components/AuditSection.vue";
@@ -32,7 +32,7 @@ export default Vue.extend({
   components: { 
     Header, 
     IntroSection, 
-    EcosystemSection, 
+    ContractSection, 
     AssetsSection, 
     NftSection, 
     AuditSection, 

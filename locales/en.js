@@ -17,9 +17,9 @@ export default {
       feature4: "Total Value Locked",
     }
   },
-  ecosystem: {
+  contract: {
     title1: "Cross-Chain",
-    title2: " Ecosystem",
+    title2: " Smart Contracts",
     section1: {
       title: "跨链智能合约调用",
       content: "跨链智能合约调用主要通过在以太坊、Solana、NEAR、EOS 等多个区块链平台部署代理合约和桥接合约然后在 MVM 中转来实现，可实现在一个智能合约中跨链调用多个区块链的智能合约。开发者无需关心其他区块链智能合约的编程语言、Gas 费等，专注业务逻辑本身，通过灵活组合多链智能合约实现无限可能。"

@@ -17,7 +17,7 @@
               class="flex flex-col justify-center w-full h-[62px] border-b-[1px] border-b-primary/20"
             >
               <a class="flex flex-row justify-between my-auto w-full" :href="openSourceLinks[i - 1]">  
-                <div class="font-medium text-base leading-[24px] sm:text-xl sm:leading-[30px]">{{ $t(`audit.opensource.link${i}`) }}</div>
+                <div class="font-medium text-base leading-6 sm:text-xl sm:leading-[30px]">{{ $t(`audit.opensource.link${i}`) }}</div>
                 <img class="w-6" :src="openLink" :alt="$t(`audit.opensource.link${i}`)" />
               </a>
             </div>
@@ -35,7 +35,7 @@
                 <img class="block w-full" :src="ioactive" alt="IOActive"/>
               </div>
               <a 
-                class="block w-full mt-1 font-medium text-base leading-6 text-primary sm:mt-5 sm:text-lg sm:leading-[30px]"
+                class="block w-full mt-1 font-medium text-base leading-6 text-primary sm:mt-5 sm:text-xl sm:leading-[30px]"
                 href="https://github.com/MixinNetwork/audits/blob/main/mixin-virtual-machine-ioactive.pdf"
               >Report-IOActive.pdf</a>
             </div>
@@ -44,7 +44,7 @@
                 <img class="block w-full" :src="slowmist" alt="Slowmist"/>
               </div>
               <a 
-                class="block w-full mt-1 font-medium text-base leading-6 text-primary sm:mt-5 sm:text-lg sm:leading-[30px]"
+                class="block w-full mt-1 font-medium text-base leading-6 text-primary sm:mt-5 sm:text-xl sm:leading-[30px]"
                 href="https://github.com/MixinNetwork/audits/blob/main/mixin-virtual-machine-slowmist.pdf"
               >Report-Slowmist.pdf</a>
             </div>

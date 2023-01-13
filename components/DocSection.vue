@@ -1,7 +1,7 @@
 <template>
   <div class="pt-20 pb-[38px] px-6 w-full sm:pt-[150px] sm:pb-[120px] sm:px-0">
     <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1200px]">
-      <div class="font-bold text-[32px] leading-[130%] sm:text-[50px] sm:text-center">
+      <div class="font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center">
         <span class="text-primary">{{ $t("doc.title1") }}</span>{{ $t("doc.title2") }}
       </div>
 
@@ -29,10 +29,9 @@ import tutorials from "@/assets/icons/tutorials.svg";
 import faq from "@/assets/icons/faq.svg";
 import openLink from "@/assets/icons/link_open.svg";
 
-const innerBoxStyle = "";
 const iconStyle = "w-12 md:w-20";
 const titleStyle = "mt-5 mb-3 font-bold text-xl text-black break-words break-all sm:mt-[38px] sm:mb-5 sm:text-3xl";
-const contentStyle = "font-normal text-base leading-6 sm:leading-[30px] sm:text-xl";
+const contentStyle = "font-normal text-base leading-6 sm:text-xl sm:leading-[30px]";
 const linkStyle = "font-semibold text-base leading-5 text-primary break-keep sm:text-[22px]";
 const linkIconStyle = "ml-1.5 w-4 sm:ml-2 sm:w-6";
 const iconList = [ref, doc, tutorials, faq];

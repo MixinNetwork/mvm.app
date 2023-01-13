@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-20 w-full px-6 sm:mb-[200px] sm:px-0">
+  <div class="pt-[58px] pb-[76px] w-full px-6 sm:pt-[120px] sm:pb-[200px] sm:px-0">
     <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1200px]">
       <div class="w-full text-left font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center">
         <span class="text-primary">{{ $t("community.title1") }}</span>{{ $t("community.title2") }}

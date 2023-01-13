@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center mt-[130px] mb-[100px] px-3 sm:mt-[261px] sm:mb-[200px] sm:px-9">
+  <div class="flex justify-center items-center pt-[60px] pb-[100px] px-3 sm:pt-[130px] sm:pb-[200px] sm:px-9">
     <div class="flex flex-col items-center w-full">
       <div class="mb-16 w-full font-bold text-[32px] leading-[130%] sm:mb-[164px] sm:text-[50px] sm:text-center">
         <span class="text-primary">{{ $t("nfts.title1") }}</span>{{ $t("nfts.title2") }}

@@ -1,13 +1,10 @@
 <template>
-  <div class="pb-20 px-6 w-full eco-background sm:pb-[172px] sm:px-0">
-    <div
-      class="mt-20 w-full sm:mt-[160px]"
-    >
-      <div class="font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center">
+  <div class="py-20 px-6 w-full eco-background sm:pt-40 sm:pb-[172px] sm:px-0">
+    <div class="font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center">
         <span class="text-primary">{{ $t("audit.title1") }}</span>{{ $t("audit.title2") }}
-      </div>
+    </div>
 
-      <div class="flex flex-col items-center mt-12 w-full sm:mt-[120px] lg:flex-row lg:justify-center">
+    <div class="flex flex-col items-center mt-12 w-full sm:mt-[120px] lg:flex-row lg:justify-center">
         <div class="flex flex-col justify-between py-10 px-5 w-full h-[456px] border-box bg-white/30 shadow-audit rounded-xl sm:px-12 sm:w-[578px]">
           <div class="w-full">
             <div class="font-semibold text-2xl leading-9 sm:text-[38px] sm:leading-[57px]">{{ $t("audit.opensource.title") }}</div>
@@ -53,7 +50,6 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </template>

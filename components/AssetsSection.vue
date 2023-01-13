@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full">
-    <div class="mt-[100px] mb-[60px] px-6 w-full font-bold text-[32px] leading-[130%] sm:mb-[180px] sm:p-0 sm:text-[50px] sm:text-center">
+  <div class="pt-[100px] pb-[60px] w-full sm:pt-[140px] sm:pb-[130px]">
+    <div class="mb-[60px] px-6 w-full font-bold text-[32px] leading-[130%] sm:p-0 sm:text-[50px] sm:text-center">
       <span class="text-primary">{{ $t("assets.title1") }}</span>{{ $t("assets.title2") }}
     </div>
     

@@ -5,41 +5,22 @@
         <span class="text-primary">{{ $t("contract.title1") }}</span>{{ $t("contract.title2") }}
       </div>
 
-      <div class="flex flex-col w-full mb-[100px]">
-        <div class="font-bold text-[22px] leading-[130%] text-black/80 md:hidden">{{ $t("contract.section1.title") }}</div>
-        <div class="flex flex-col mt-[52px] w-full md:flex-row-reverse md:justify-between">
+      <div
+        v-for="(item, index) in list"
+        :key="index"
+        class="flex flex-col w-full mb-[100px]"
+      >
+        <div class="font-bold text-[22px] leading-[130%] text-black/80 md:hidden">{{ item.title }}</div>
+        <div :class="[
+          'flex flex-col mt-[52px] w-full md:justify-between',
+          index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
+        ]">
           <div class="w-full md:flex-[0_0_43%]">
-            <img class="w-full" :src="img1" alt="cross-chain smart contract calling"/>
+            <img class="w-full" :src="item.image.src" :alt="item.image.alt"/>
           </div>
           <div class="flex flex-col justify-center mt-[22px] w-full md:mt-0 md:flex-[0_0_43%] md:w-auto">
-            <div class="hidden font-semibold text-[32px] leading-[48px] md:block">{{ $t("contract.section1.title") }}</div>
-            <div class="font-normal text-base leading-[34px] text-black/90 sm:text-[22px] sm:leading-[38px] md:mt-[21px]">{{ $t("contract.section1.content") }}</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col w-full mb-[100px]">
-        <div class="font-bold text-[22px] leading-[130%] text-black/80 md:hidden">{{ $t("contract.section2.title") }}</div>
-        <div class="flex flex-col mt-[52px] w-full md:flex-row md:justify-between">
-          <div class="w-full md:flex-[0_0_43%]">
-            <img class="w-full" :src="img2" alt="transfer assets from multiple chains"/>
-          </div>
-          <div class="flex flex-col justify-center mt-[22px] w-full md:mt-0 md:flex-[0_0_43%] md:w-auto">
-            <div class="hidden font-semibold text-[32px] md:block">{{ $t("contract.section2.title") }}</div>
-            <div class="font-normal text-base leading-[34px] text-black/90 md:mt-[21px]">{{ $t("contract.section2.content") }}</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col w-full mb-[100px]">
-        <div class="font-bold text-[22px] leading-[130%] text-black/80 md:hidden">{{ $t("contract.section3.title") }}</div>
-        <div class="flex flex-col mt-[52px] w-full md:flex-row-reverse md:justify-between">
-          <div class="w-full md:flex-[0_0_43%]">
-            <img class="w-full" :src="img3" alt="compatible with EVM"/>
-          </div>
-          <div class="flex flex-col justify-center mt-[22px] w-full md:mt-0 md:flex-[0_0_43%] md:w-auto">
-            <div class="hidden font-semibold text-[32px] md:block">{{ $t("contract.section3.title") }}</div>
-            <div class="font-normal text-base leading-[34px] text-black/90 md:mt-[21px]">{{ $t("contract.section3.content") }}</div>
+            <div class="hidden font-semibold text-[32px] leading-[48px] md:block">{{ item.title }}</div>
+            <div class="font-normal text-base leading-[34px] text-black/90 sm:text-[22px] sm:leading-[38px] md:mt-[21px]">{{ item.content }}</div>
           </div>
         </div>
       </div>
@@ -56,9 +37,32 @@ export default {
   name: "ContractSection",
   data() {
     return {
-      img1,
-      img2,
-      img3
+      list: [
+        {
+          image: {
+            src: img1,
+            alt: this.$t("contract.section1.title")
+          },
+          title: this.$t("contract.section1.title"),
+          content: this.$t("contract.section1.content")
+        },
+        {
+          image: {
+            src: img2,
+            alt: this.$t("contract.section2.title")
+          },
+          title: this.$t("contract.section2.title"),
+          content: this.$t("contract.section2.content")
+        },
+        {
+          image: {
+            src: img3,
+            alt: this.$t("contract.section3.title")
+          },
+          title: this.$t("contract.section3.title"),
+          content: this.$t("contract.section3.content")
+        },
+      ]
     }
   }
 }

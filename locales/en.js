@@ -41,6 +41,59 @@ export default {
     title1: "Cross-Chain",
     title2: " NFTs"
   },
+  ecosystem: {
+    title1: "Cross-Chain",
+    title2: " Ecosystem",
+    bridge: {
+      title: "MVM Bridge",
+      content: "MVM Bridge provides a lightning fast, low-cost, and flexible solution to transfer assets securely and reliably across chains, ignoring token lock-up period restrictions without third-party risks and market liquidity constraints.",
+      feature1: "Open source",
+      feature2: "Low gas fee",
+      feature3: "Faster confirmation",
+      feature4: "Support multiple chains assets",
+    },
+    quill: {
+      title: "Quill",
+      content: "Quill is building a value net on Web3 for both authors and readers. We believe that the value of an article is composed of both the author and the reader, but the actual situation is that the reader's contribution, especially the early readers' contribution,is not well represented. Therefore, the biggest difference between Quill and other platforms is that Quill introduces an early reader rewards mechanism.",
+    },
+    trident: {
+      title: "Trident NFT Market",
+      content: "Trident is an easy-to-use NFT marketplace for every general user.",
+      feature1: "Decentralized.",
+      feature2: "Fast and gas free.",
+      feature3: "Low mint fee.",
+      feature4: "Early buyer rewards.",
+      feature5: "Support free airdrop.",
+    },
+    fourSwap: {
+      title: "4swap",
+      content: "4swap is a decentralized protocol for automated liquidity provision built with the Mixin MTG (Mixin Trusted Group) technology. It uses combined algorithms - functioning on a Curve-like, bespoke low slippage, low trading fee algorithm specifically for swapping between stablecoins and on the constant product formula x*y=k for the rest of pairs."
+    },
+    pandoRings: {
+      title: "Pand Rings",
+      content: "Pando Rings is an algorithmic, autonomous interest rate protocol built with Mixin MTG (Mixin Trusted Group) technology. It is a place where you can lend or borrow cryptocurrencies. You can think of it as an open market for money. It lets users deposit cryptocurrencies and earn interest, or borrow other cryptoassets against them."
+    },
+    pandoLeaf: {
+      title: "Pando Leaf",
+      content: "Pando Leaf is a decentralized financial network, implement a derivatives liquidity protocol, a place where you can deposit collateral to generate and destroy Pando USD(pUSD) and destroy it when repaying the generated pUSD balance."
+    },
+    optionDance: {
+      title: "OptionDance",
+      content: "Trading options has never been easier, we reinvented options trading for investors, everyone can trade options like the gurus. ",
+      feature1: "Effortless Hedging",
+      feature2: "Clarity in every investment",
+      feature3: "Risk-Free Decentralization"
+    },
+    murmurs: {
+      title: "Murmurs",
+      content: "Murmurs help you to find interesting people or build a following of people who are interested in you.",
+      feature1: "Follow your interests.",
+      feature2: "Tap into what’s going on around you.",
+      feature3: "Share your opinion.",
+      feature4: "Get noticed.",
+    },
+    link: "Try it"
+  },
   audit: {
     title1: "Compeletely",
     title2: " transparent and secure",

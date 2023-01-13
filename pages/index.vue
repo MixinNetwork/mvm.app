@@ -7,6 +7,7 @@
     <ContractSection />
     <AssetsSection />
     <NftSection />
+    <EcosystemSection />
     <AuditSection />
     <DocSection />
     <CommunitySection />
@@ -22,6 +23,7 @@ import IntroSection from "@/components/IntroSection.vue";
 import ContractSection from "~/components/ContractSection.vue";
 import AssetsSection from "~/components/AssetsSection.vue";
 import NftSection from "~/components/NftSection.vue";
+import EcosystemSection from "~/components/EcosystemSection.vue";
 import AuditSection from "~/components/AuditSection.vue";
 import DocSection from "~/components/DocSection.vue";
 import CommunitySection from "~/components/CommunitySection.vue";
@@ -35,6 +37,7 @@ export default Vue.extend({
     ContractSection, 
     AssetsSection, 
     NftSection, 
+    EcosystemSection,
     AuditSection, 
     DocSection, 
     CommunitySection, 

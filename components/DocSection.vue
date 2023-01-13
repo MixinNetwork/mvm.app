@@ -66,7 +66,7 @@ export default {
         link: {
           text: this.$t(`doc.section${i + 1}.link`),
           style: linkStyle,
-          href: linkList,
+          href: linkList[i],
           icon: openLink,
           iconStyle: linkIconStyle,
           iconAlt: this.$t(`doc.section${i + 1}.link`)

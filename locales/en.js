@@ -21,16 +21,16 @@ export default {
     title1: "Cross-Chain",
     title2: " Smart Contracts",
     section1: {
-      title: "跨链智能合约调用",
-      content: "跨链智能合约调用主要通过在以太坊、Solana、NEAR、EOS 等多个区块链平台部署代理合约和桥接合约然后在 MVM 中转来实现，可实现在一个智能合约中跨链调用多个区块链的智能合约。开发者无需关心其他区块链智能合约的编程语言、Gas 费等，专注业务逻辑本身，通过灵活组合多链智能合约实现无限可能。"
+      title: "Call cross-chain smart contracts",
+      content: "Cross-chain smart contract calls are mainly implemented by deploying proxy contracts and bridge contracts on multiple chains such as Ethereum, Solana, NEAR, and EOS, and then transferring assets through MVM, which can realize cross-chain calling of multiple smart contracts in one smart contract. Developers do not need to care about the programming language and gas fees of smart contracts from other chains, but to focus on the business logic itself, and realize infinite possibilities through flexible combination of smart contracts from multiple chains."
     },
     section2: {
-      title: "多链资产调用",
-      content: "MVM 支持 Bitcoin、Ethereum、Aptos、Monero、MobileCoin、Polygon、Polkadot、Avalanche、Dogecoin 和 Binance Smart Chain 等 46 条公链的资产，开发者可以在 Dapp 中轻松调用多链资产，实现交易、支付、期权、游戏、社交、工具和跨链钱包等多种产品。"
+      title: "Transfer cross-chain assets",
+      content: "MVM supports the assets from 46 public chains including Bitcoin, Ethereum, Aptos, Monero, MobileCoin, Polygon, Polkadot, Avalanche, Dogecoin and Binance Smart Chain. Developers can easily transfer assets from multiple chains in Dapp to build various kinds for dapps, including transactions, payments, games, social networking, tools and cross-chain wallets."
     },
     section3: {
-      title: "兼容 EVM",
-      content: "MVM 完全兼容以太坊智能合（EVM），迁移以太坊的智能合约到 MVM 无需任何修改，熟悉 Solidity 的开发者可以很方便的在 MVM 上用自己熟悉的语言开发智能合约，享受更低的手续费和更快的确认速度。"
+      title: "Compatible with EVM",
+      content: "MVM is fully compatible with Ethereum smart contract (EVM). Migration of Ethereum smart contracts to MVM does not require any modification. Developers who are familiar with Solidity can easily develop smart contracts on MVM with their familiar language, enjoy lower fees, and faster confirmation."
     }
   },
   assets: {

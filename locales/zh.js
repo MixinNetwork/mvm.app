@@ -41,6 +41,21 @@ export default {
     title1: "跨链",
     title2: "NFTs"
   },
+  audit: {
+    title1: "完全的",
+    title2: "透明与安全",
+    opensource: {
+      title: "开源",
+      subTitle: "代码开源，数据传输透明",
+      link1: "MVM 开源代码",
+      link2: "MVM 跨链桥开源代码",
+      link3: "浏览器开源代码"
+    },
+    audit: {
+      title: "审计报告",
+      subTitle: "查看最新审计报告与合约中的错误修复和再次认证。",
+    }
+  },
   doc: {
     title1: "让",
     title2: "你的 dapp 跨链",

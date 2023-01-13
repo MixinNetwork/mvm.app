@@ -7,6 +7,7 @@
     <EcosystemSection />
     <AssetsSection />
     <NftSection />
+    <AuditSection />
     <DocSection />
     <CommunitySection />
     <Footer></Footer>
@@ -21,13 +22,24 @@ import IntroSection from "@/components/IntroSection.vue";
 import EcosystemSection from "~/components/EcosystemSection.vue";
 import AssetsSection from "~/components/AssetsSection.vue";
 import NftSection from "~/components/NftSection.vue";
+import AuditSection from "~/components/AuditSection.vue";
 import DocSection from "~/components/DocSection.vue";
 import CommunitySection from "~/components/CommunitySection.vue";
 import { getEthValue } from "~/helpers/api";
 
 export default Vue.extend({
   name: "Index",
-  components: { Header, IntroSection, EcosystemSection, AssetsSection, NftSection, DocSection, CommunitySection, Footer },
+  components: { 
+    Header, 
+    IntroSection, 
+    EcosystemSection, 
+    AssetsSection, 
+    NftSection, 
+    AuditSection, 
+    DocSection, 
+    CommunitySection, 
+    Footer 
+  },
   async asyncData() {
     const tvl = await getEthValue();
     return {

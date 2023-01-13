@@ -41,6 +41,21 @@ export default {
     title1: "Cross-Chain",
     title2: " NFTs"
   },
+  audit: {
+    title1: "Compeletely",
+    title2: " transparent and secure",
+    opensource: {
+      title: "Open source",
+      subTitle: "Code open source and data transparent",
+      link1: "MVM source code",
+      link2: "MVM Bridge source code",
+      link3: "Explorer source code"
+    },
+    audit: {
+      title: "Audited reports",
+      subTitle: "Check out the live audit reports, bug fixes and recertification in smart contracts.",
+    }
+  },
   doc: {
     title1: "Make",
     title2: " your dapp cross-chain",

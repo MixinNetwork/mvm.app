@@ -21,8 +21,8 @@ export default {
     title1: "Cross-Chain",
     title2: " Smart Contracts",
     section1: {
-      title: "Call cross-chain smart contracts",
-      content: "It's mainly implemented by deploying proxy contracts and bridge contracts on multiple chains such as Ethereum, Solana, and EOS, and then call contracts through MVM, which can realize calling of multiple cross-chain contracts in one contract. Developers do not need to care about the language and fee of smart contracts from other chains, but to focus on the business."
+      title: "Interact with cross-chain contracts",
+      content: "It's mainly implemented by deploying proxy contracts and bridge contracts on multiple chains such as Ethereum, Solana, and EOS, and then call contract functions through MVM, which can interact with multiple cross-chain contracts in one contract. Developers do not need to care about the language and fee of smart contracts from other chains, but to focus on the business."
     },
     section2: {
       title: "Transfer cross-chain assets",

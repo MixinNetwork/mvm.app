@@ -1,6 +1,6 @@
 <template>
   <div class="pt-[100px] px-6 bg-footer sm:pt-[140px] sm:pb-[60px] sm:px-0">
-    <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1200px]">
+    <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1280px]">
       <div class="w-full font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center">
         <span class="text-primary">{{ $t("ecosystem.title1") }}</span>{{ $t("ecosystem.title2") }}
       </div>

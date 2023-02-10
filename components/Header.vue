@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center items-center absolute top-0 w-full my-6 px-6 z-10 sm:my-0 sm:h-[100px] sm:w-full sm:px-0">
     <div 
-      class="relative flex flex-row justify-between items-center w-full h-6 sm:h-auto sm:w-[632px] md:w-[852px] lg:w-[1200px]"
+      class="relative flex flex-row justify-between items-center w-full h-6 sm:h-auto sm:w-[632px] md:w-[852px] lg:w-[1280px]"
     >
       <div class="flex row items-center h-6 sm:h-8">
         <img class="h-full" :src="logo" alt="mvm-logo" />
@@ -23,7 +23,7 @@
           ]"
         >
           <div 
-            v-for="(l, i) in nav" 
+            v-for="(l, i) in navs" 
             :key="i"
             :class="[
               'flex items-center w-full h-12 bg-white sm:justify-center sm:ml-10 sm:w-auto sm:h-auto',
@@ -49,7 +49,7 @@ export default {
       logo,
       menuIcon,
       showNav: false,
-      nav: [
+      navs: [
         {
           href: "https://scan.mvm.dev",
           text: this.$t('nav.explorer')

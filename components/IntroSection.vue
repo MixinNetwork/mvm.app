@@ -1,58 +1,78 @@
 <template>
   <div
-      class="relative pt-[88px] h-screen min-h-[720px] background sm:pt-[150px]"
+      class="relative pt-[72px] h-screen background sm:pt-[100px]"
     >
-      <div class="flex flex-col justify-around items-start mx-auto px-6 pb-3 w-full h-full sm:justify-evenly sm:px-0 sm:pb-2 sm:min-h-[495px] sm:w-[632px] md:min-h-[580px] md:w-[852px] lg:min-h-[700px] lg:w-[1200px]">
+      <div 
+        :class="[
+          'flex flex-col justify-evenly items-start mx-auto px-6 w-full h-full sm:justify-evenly sm:px-0 sm:pb-2',
+          'sm:min-h-[400px] sm:max-h-[500px] sm:w-[632px] md:min-h-[580px] md:max-h-[750px] md:w-[852px] lg:max-h-[900px] lg:min-h-[700px] lg:w-[1280px]'
+        ]">
         <!-- title -->
-        <div class="relative w-full">
+        <div class="relative w-full h-auto">
           <div
-            class="relative w-full font-bold text-[30px] sm:text-[32px] md:text-[40px] lg:text-[56px] leading-[130%]"
+            class="relative w-full font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:text-4xl md:text-5xl lg:text-[56px] "
           >
             <div class="text-primary">{{ $t('intro.title1') }}</div>
             <div>{{ $t('intro.title2') }}</div>
           </div>
 
           <img 
-            class="w-full select-none sm:absolute sm:-right-20 sm:-top-16 sm:w-auto sm:h-[300px] md:h-[380px] lg:-top-32 lg:h-[530px]"
+            class="mx-auto max-w-[500px] w-full select-none sm:absolute sm:-right-20 sm:-top-6 sm:max-w-none sm:w-auto sm:h-[300px] md:-top-8 md:h-[380px] lg:-top-24 lg:h-[500px]"
             :src="background"
             alt="background-image"
           />
 
           <div
-            class="relative mt-4 text-sm opacity-60 sm:mt-3 sm:w-[400px] md:text-base md:mt-6 md:w-[500px] lg:mt-6 lg:text-xl lg:w-[700px]"
+            class="mt-1 font-normal text-sm leading-[130%] text-black/60 sm:static sm:mt-6 sm:w-[380px] sm:text-base md:w-[500px] md:text-lg lg:w-[700px] lg:text-xl "
           >
-          {{ $t('intro.subTitle') }}
+            {{ $t('intro.subTitle') }}
           </div>
         </div>
 
         <!-- links -->
         <div
-          class="button-container flex justify-between relative my-3 w-full sm:my-6 sm:w-[344px] md:w-[380px] lg:w-[440px]"
+          class="flex justify-between my-1 w-full sm:my-0 sm:w-[344px] md:w-[380px] lg:w-[447px]"
         >
-          <div class="flex flex-[0_0_48%] h-12 cursor-pointer overflow-hidden text-sm md:flex-[0_0_47%] md:h-[60px] lg:text-xl">
+          <div 
+            v-for="(l, i) in links"
+            :key="i"
+            class="flex flex-[0_0_48%] h-12 cursor-pointer overflow-hidden md:flex-[0_0_47%] md:h-[60px]"
+          >
             <a 
-              class="flex justify-center items-center w-full h-full border-2 border-primary rounded-xl bg-primary text-white hover:bg-hover hover:border-hover hover:text-primary" 
-              href="https://mvm.dev"
+              :class="[
+                'flex justify-center items-center w-full h-full font-normal text-sm leading-5 border-2 border-primary rounded-xl sm:text-base md:text-lg lg:text-xl',
+                i === 0 
+                  ? 'bg-primary text-white hover:bg-hover hover:border-hover hover:text-primary'
+                  : 'text-primary hover:bg-hover hover:border-hover hover:text-primary'
+              ]" 
+              :href="l.href"
             >
-              {{ $t('intro.doc') }}
-            </a>
-          </div>
-          <div class="flex flex-[0_0_48%] h-12 cursor-pointer overflow-hidden text-sm md:flex-[0_0_47%] md:h-[60px] lg:text-xl">
-            <a 
-              class="flex justify-center items-center w-full h-full border-2 border-primary rounded-xl text-primary hover:bg-hover hover:border-hover hover:text-primary" 
-              href="https://bridge.mvm.app"
-            >
-              {{ $t('intro.bridge') }}
+              {{ l.text }}
             </a>
           </div>
         </div>
 
         <!-- status -->
-        <div class="flex flex-wrap justify-between relative w-full">
+        <div class="flex flex-wrap justify-between w-full">
           <feature-box
             v-for="(feature, i) of features"
             :key="i"
-            :box-style="boxStyle"
+            :box-style="[
+              boxStyle,
+              i < 2 ? 'flex mb-0 sm:flex' : 'hidden sm:flex'
+            ]"
+            :title="feature.title"
+            :content="feature.content"
+          />
+        </div>
+        <div class="flex flex-wrap justify-between w-full sm:hidden">
+          <feature-box
+            v-for="(feature, i) of features.slice(2)"
+            :key="i"
+            :box-style="[
+              boxStyle,
+              'flex mb-0'
+            ]"
             :title="feature.title"
             :content="feature.content"
           />
@@ -77,9 +97,19 @@ export default {
   },
   data() {
     return {
-      boxStyle:"flex flex-[0_0_48%] flex-col justify-center items-center mb-3 py-2.5 bg-white shadow-mvm rounded-xl box-border text-center sm:mb-0 sm:flex-[0_0_23%] sm:py-3 md:py-4 lg:py-[30px]",
+      boxStyle:"flex-[0_0_48%] flex-col justify-center items-center py-2 bg-white shadow-mvm rounded-xl box-border text-center sm:mb-0 sm:flex-[0_0_23.5%] sm:p-0 sm:h-20 md:h-[100px] lg:h-[142px]",
       background,
       tvl: this.eth,
+      links: [
+        {
+          href: "https://mvm.dev",
+          text: this.$t('intro.doc')
+        },
+        {
+          href: "https://bridge.mvm.app",
+          text: this.$t('intro.bridge')
+        }
+      ]
     };
   },
   mounted() {
@@ -88,8 +118,8 @@ export default {
   computed: {
     features() {
       const tvlString = `$${toThousands(Math.floor(Number(this.tvl)).toString())}`;
-      const titleStyle = "font-bold sm:text-lg md:text-[22px] lg:text-3xl";
-      const contentStyle = "mt-1 text-sm opacity-60 sm:mt-1.5 md:text-base md:mt-3 lg:mt-3.5 lg:text-lg";
+      const titleStyle = "font-bold text-lg leading-[27px] text-black/80 md:text-[22px] lg:text-3xl lg:leading-[45px]";
+      const contentStyle = "mt-1.5 font-normal text-sm leading-[130%] text-black/60 md:text-base lg:text-lg";
       return [
         {
           title: {

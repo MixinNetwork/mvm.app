@@ -3,7 +3,7 @@
     class="w-full px-6 pt-16 pb-20 bg-footer sm:h-[303px] sm:px-0 sm:pb-[122px]"
   >
     <div 
-      class="flex flex-col w-full sm:h-[184px] sm:flex-row sm:mx-auto sm:w-[632px] md:w-[852px] lg:w-[1200px]"
+      class="flex flex-col w-full sm:h-[184px] sm:flex-row sm:mx-auto sm:w-[632px] md:w-[852px] lg:w-[1280px]"
     >
       <div class="w-4/5 h-full sm:w-5/12 md:w-1/2">
         <div class="flex flex-row items-center mb-8 sm:mb-4">

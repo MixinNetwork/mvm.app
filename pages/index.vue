@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-full min-w-[320px] overflow-x-hidden"
+    class="relative w-full min-w-[350px] overflow-x-hidden"
   >
     <Header></Header>
     <IntroSection :eth="tvl" />

@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center items-center pt-[96px] px-6 eco-background sm:pt-[170px] sm:pb-[138px] sm:px-0">
-    <div class="flex flex-col items-center w-full sm:w-[632px] md:w-[852px] lg:w-[1200px]">
+    <div class="flex flex-col items-center w-full sm:w-[632px] md:w-[852px] lg:w-[1280px]">
       <div class="mb-[100px] w-full font-bold text-[32px] leading-[130%] sm:mb-[180px] sm:text-[50px] sm:leading-[72px] sm:text-center">
         <span class="text-primary">{{ $t("contract.title1") }}</span>{{ $t("contract.title2") }}
       </div>

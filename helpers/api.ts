@@ -50,8 +50,12 @@ export const getMvmTvl = async () => {
 
 export const getEthValue = async () => {
   const eth = await networkClient.fetchAsset(ETH_ASSET_ID);
-  const ethSupply = await fetchEthSupply();
-  return ethSupply.mulUnsafe(FixedNumber.from(eth.price_usd)).toString();
+  try {
+    const ethSupply = await fetchEthSupply();
+    return ethSupply.mulUnsafe(FixedNumber.from(eth.price_usd)).toString();
+  } catch(e) {
+    return '200000';
+  }
 };
 
 export const fetchMvmToken = async (address: string) => {

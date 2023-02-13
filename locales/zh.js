@@ -42,8 +42,8 @@ export default {
     title2: " NFTs"
   },
   ecosystem: {
-    title1: "Cross-Chain",
-    title2: " Ecosystem",
+    title1: "跨链",
+    title2: "生态",
     bridge: {
       title: "MVM 跨链桥",
       content: "MVM Bridge 提供了一种近乎实时、低成本且灵活的方案来解决在多链之间安全、可靠的转移代币，忽略代币锁定期限制而不会产生第三方风险和市场流动性限制。",

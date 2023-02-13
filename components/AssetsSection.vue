@@ -1,6 +1,6 @@
 <template>
-  <div class="pt-[100px] pb-[60px] w-full sm:pt-[140px] sm:pb-[130px]">
-    <div class="mb-[60px] px-6 w-full font-bold text-[32px] leading-[130%] sm:p-0 sm:text-[50px] sm:leading-[72px] sm:text-center">
+  <div class="pt-[100px] w-full sm:pt-[140px]">
+    <div class="mb-[60px] px-6 w-full font-bold text-[32px] leading-[130%] sm:mb-[160px] sm:p-0 sm:text-[50px] sm:leading-[72px] sm:text-center">
       <span class="text-primary">{{ $t("assets.title1") }}</span>{{ $t("assets.title2") }}
     </div>
     
@@ -67,6 +67,7 @@ import xlm from "@/assets/icons/xlm.webp";
 import xrp from "@/assets/icons/xrp.webp";
 import doge from "@/assets/icons/doge.webp";
 import etc from "@/assets/icons/etc.webp";
+import bsc from "@/assets/icons/bsc.webp";
 
 export default {
   name: "AssetsSection",
@@ -105,7 +106,7 @@ export default {
           {src: algo, alt: "algo"},
           {src: dcr, alt: "dcr"},
           {src: ltc, alt: "ltc"},
-          {src: alpaca, alt: "alpaca"},
+          {src: bsc, alt: "bsc"},
           {src: mob, alt: "mob"},
           {src: xmr, alt: "xmr"},
           {src: near, alt: "near"},

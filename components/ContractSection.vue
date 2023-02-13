@@ -46,8 +46,7 @@ import compatibleAnimationMp4 from '@/assets/animations/compatible.mp4';
 import contractAnimationWebm from '@/assets/animations/contracts.webm';
 import assetsAnimationWebm from '@/assets/animations/assets.webm';  
 import compatibleAnimationWebm from '@/assets/animations/compatible.webm';
-console.log(contractAnimationMp4, assetsAnimationMp4, compatibleAnimationMp4, 
-contractAnimationWebm, assetsAnimationWebm, compatibleAnimationWebm)
+
 export default {
   name: "ContractSection",
   data() {

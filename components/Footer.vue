@@ -1,21 +1,23 @@
 <template>
   <footer
-    class="w-full px-6 pt-16 pb-20 bg-footer sm:h-[303px] sm:px-0 sm:pb-[122px]"
+    class="w-full px-6 pt-16 pb-20 bg-footer sm:h-[376px] sm:px-0"
   >
     <div 
-      class="flex flex-col w-full sm:h-[184px] sm:flex-row sm:mx-auto sm:w-[632px] md:w-[852px] lg:w-[1280px]"
+      class="flex flex-col w-full sm:h-[194px] sm:flex-row sm:mx-auto sm:w-[632px] md:w-[852px] lg:w-[1280px]"
     >
       <div class="w-4/5 h-full sm:w-5/12 md:w-1/2">
         <div class="flex flex-row items-center mb-8 sm:mb-4">
           <img class="h-8" :src="logo" alt="logo"/>
-          <div class="ml-2 text-md font-semibold text-black">MVM</div>
+          <div class="ml-2 font-extrabold text-xl leading-6 text-black sm:text-lg">MVM</div>
         </div>
 
         <div class="relative mb-[54px] h-8 w-[154px]">
-          <div class="flex flex-row relative rounded-lg bg-white cursor-pointer" @click.stop="useToggleMenu">
-            <img :src="langIconMap[currentLang]" class="m-2 h-4" alt="language" />
-            <div class="font-medium text-base text-black/80 leading-8">{{ $t(`footer.locales.${currentLang}`) }}</div>
-            <img :src="showLangMenu ? arrowUp : arrowDown" class="absolute top-2 right-2 w-4"/>
+          <div class="flex flex-row justify-between items-center rounded-lg bg-white cursor-pointer" @click.stop="useToggleMenu">
+            <div class="flex flex-row items-center">
+              <img :src="langIconMap[currentLang]" class="m-2 h-4" alt="language" />
+              <div class="font-semibold text-base leading-6 text-black/80">{{ $t(`footer.locales.${currentLang}`) }}</div>
+            </div>
+            <img class="mr-2 w-4" :src="showLangMenu ? arrowUp : arrowDown" />
           </div>
           
           <div 
@@ -25,11 +27,11 @@
             <div
               v-for="l in totalLangs" 
               :key="l.locale"
-              :class="['flex flex-row w-full h-[46px] cursor-pointer', currentLang === l.locale ? 'bg-footer' : '']" 
+              :class="['flex flex-row items-center w-full h-[46px] cursor-pointer', currentLang === l.locale ? 'bg-footer' : '']" 
               @click="useSelectLang(l.locale)"
             >
-              <img :src="l.icon" class="my-4 mx-2 h-4" alt="language" />
-              <div class="font-normal text-base text-black/80 leading-[46px]">{{ $t(`footer.locales.${l.locale}`) }}</div>
+              <img :src="l.icon" class="my-[15px] mx-2 h-4" alt="language" />
+              <div class="font-normal text-base leading-6 text-black/80">{{ $t(`footer.locales.${l.locale}`) }}</div>
             </div>
           </div>
         </div>
@@ -40,7 +42,7 @@
           <a class="inline-block mr-4 w-7 h-7 hover:opacity-60" href="https://discord.gg/JER9jmbRB6"><img class="w-full" :src="discord" alt="discord"/></a>
         </div>
 
-        <div class="font-medium text-base text-black/80">{{ copyright }}</div>
+        <div class="font-medium text-base leading-6 tracking-[-0.4px] text-black/80">{{ copyright }}</div>
       </div>
 
       <div

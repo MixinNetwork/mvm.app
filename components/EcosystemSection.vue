@@ -18,7 +18,7 @@
             <img class="w-full" :src="item.image.src" :alt="item.image.alt"/>
           </div>
           <div class="w-full sm:w-[540px]">
-            <div class="mt-[26px] font-bold text-[22px] leading-[130%] text-black/80 sm:text-[32px] sm:leading-[48px] lg:mt-0">
+            <div class="mt-[26px] font-bold text-[22px] leading-[130%] text-black sm:text-[32px] sm:leading-[48px] lg:mt-0">
               {{ item.title }}
             </div>
             <div class="mt-[26px] mb-4 font-normal text-base leading-[34px] text-black/90 sm:mt-6 sm:text-[22px] sm:leading-[38px]">
@@ -38,7 +38,7 @@
                 :href="hrefList[index]"
                 class="flex flex-row items-center"
               >
-                <div class="font-semibold text-lg leading-5 text-primary sm:text-[22px]">{{ $t("ecosystem.link") }}</div>
+                <div class="font-semibold text-lg leading-5 text-primary tracking-[-0.8px] sm:text-[22px]">{{ $t("ecosystem.link") }}</div>
                 <img class="ml-2 w-6" :src="openLink" :alt="$t('ecosystem.link')" />
               </a>
             </div>

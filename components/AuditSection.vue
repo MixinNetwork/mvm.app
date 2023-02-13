@@ -1,14 +1,14 @@
 <template>
   <div class="py-20 px-6 w-full eco-background sm:pt-40 sm:pb-[172px] sm:px-0">
-    <div class="font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center">
+    <div class="font-bold text-[32px] leading-[130%] tracking-[-0.8px] sm:text-[50px] sm:leading-[72px] sm:text-center">
         <span class="text-primary">{{ $t("audit.title1") }}</span>{{ $t("audit.title2") }}
     </div>
 
     <div class="flex flex-col items-center mt-12 w-full sm:mt-[120px] lg:flex-row lg:justify-center">
         <div class="flex flex-col justify-between py-10 px-5 w-full h-[456px] border-box bg-white/30 shadow-audit rounded-xl sm:px-12 sm:w-[578px]">
           <div class="w-full">
-            <div class="font-semibold text-2xl leading-9 sm:text-[38px] sm:leading-[57px]">{{ $t("audit.opensource.title") }}</div>
-            <div class="mt-3 font-normal text-black/60 text-lg leading-[150%] sm:mt-[23px] sm:text-lg">{{ $t("audit.opensource.subTitle") }}</div>
+            <div class="font-semibold text-2xl leading-9 text-black/90 tracking-[-0.8px] sm:text-[38px] sm:leading-[57px]">{{ $t("audit.opensource.title") }}</div>
+            <div class="mt-3 font-normal text-lg leading-[150%] text-black/60 sm:mt-[23px]">{{ $t("audit.opensource.subTitle") }}</div>
           </div>
           
           <div class="w-full">
@@ -17,7 +17,7 @@
               class="flex flex-col justify-center w-full h-[62px] border-b-[1px] border-b-primary/20"
             >
               <a class="flex flex-row justify-between my-auto w-full" :href="openSourceLinks[i - 1]">  
-                <div class="font-medium text-base leading-6 sm:text-xl sm:leading-[30px]">{{ $t(`audit.opensource.link${i}`) }}</div>
+                <div class="font-medium text-base leading-6 text-black/90 sm:text-xl sm:leading-[30px]">{{ $t(`audit.opensource.link${i}`) }}</div>
                 <img class="w-6" :src="openLink" :alt="$t(`audit.opensource.link${i}`)" />
               </a>
             </div>
@@ -26,8 +26,8 @@
 
         <div class="flex flex-col justify-between mt-5 border-box py-10 px-5 w-full h-[456px] bg-white/30 shadow-audit rounded-xl sm:px-12 sm:w-[578px] lg:mt-0 lg:ml-11">
           <div>
-            <div class="font-semibold text-2xl leading-9 sm:text-[38px] sm:leading-[57px]">{{ $t("audit.audit.title") }}</div>
-            <div class="mt-3 font-normal text-black/60 text-lg leading-[150%] sm:mt-[23px] sm:text-lg">{{ $t("audit.audit.subTitle") }}</div>
+            <div class="font-semibold text-2xl leading-9 text-black/90 tracking-[-0.8px] sm:text-[38px] sm:leading-[57px]">{{ $t("audit.audit.title") }}</div>
+            <div class="mt-3 font-normal text-black/60 text-lg leading-[150%] sm:mt-[23px]">{{ $t("audit.audit.subTitle") }}</div>
           </div>
           <div class="flex flex-col justify-between w-full sm:flex-row">
             <div>

@@ -39,7 +39,7 @@ export default {
   },
   nfts: {
     title1: "跨链",
-    title2: "NFTs"
+    title2: " NFTs"
   },
   ecosystem: {
     title1: "Cross-Chain",
@@ -110,8 +110,8 @@ export default {
     }
   },
   doc: {
-    title1: "让",
-    title2: "你的 dapp 跨链",
+    title1: "开发",
+    title2: "你的跨链 dapp",
     section1: {
       title: "相关文档",
       content: "查看文档检查开发跨链 Web3 应用所需的所有 API 接口",

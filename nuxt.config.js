@@ -52,6 +52,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
     [
       '@nuxtjs/i18n',
       {
@@ -77,4 +78,13 @@ export default {
       },
     },
   },
+
+  axios: {
+    retry: 3,
+    headers: {
+      common: {
+        'Content-Type': 'application/json'
+      }
+    }
+  }
 };

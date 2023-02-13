@@ -82,24 +82,26 @@
 </template>
 
 <script>
-import FeatureBox from "@/components/FeatureBox";
+import { FixedNumber, utils } from "ethers";
+import FeatureBox from "@/components/FeatureBox.vue";
 import background from "@/assets/images/bg.png";
-import { getMvmTvl } from "@/helpers/api";
 import { toThousands } from "@/helpers/utils";
+import { ETH_ASSET_ID, LOCK_ADDRESS, WHITELIST_ASSET } from "@/helpers/constant/common";
 
 export default {
   name: "Home",
   components: { FeatureBox },
   props: {
-    eth: {
+    initTvl: {
       type: String,
-    },
+      required: true
+    }
   },
   data() {
     return {
       boxStyle:"flex-[0_0_48%] flex-col justify-center items-center py-2 bg-white shadow-mvm rounded-xl box-border text-center sm:mb-0 sm:flex-[0_0_23.5%] sm:p-0 sm:h-20 md:h-[100px] lg:h-[142px]",
       background,
-      tvl: this.eth,
+      tvl: this.initTvl,
       links: [
         {
           href: "https://mvm.dev",
@@ -114,6 +116,10 @@ export default {
   },
   mounted() {
     this.updateTvl();
+
+    setInterval(async () => {
+      await this.updateTvl();
+    }, 1000 * 60);
   },
   computed: {
     features() {
@@ -164,15 +170,49 @@ export default {
       ];
     },
   },
-  fetchOnServer: false,
-  async fetch() {
-    setInterval(async () => {
-      await this.updateTvl();
-    }, 1000 * 60);
-  },
   methods: {
+    async fetchEthSupply() {
+      const supplyResp = await this.$axios.$get(`https://scan.mvm.dev/api?module=stats&action=ethsupply`);
+      const lockedSupply = await this.$axios.$get(`https://scan.mvm.dev/api?module=account&action=balance&address=${LOCK_ADDRESS}`);
+      return FixedNumber.from(utils.formatEther(supplyResp.result))
+        .subUnsafe(FixedNumber.from(utils.formatEther(lockedSupply.result)))
+        .toString();
+    },
+    async fetchMixinAssets(whiteList) {
+      const mixinAssetsResponse = await this.$axios.$get('https://scan.mvm.dev/api?module=token&action=getMixinAssets');
+      const mixinAssets = mixinAssetsResponse.result.filter(asset => whiteList.includes(asset.mixinAssetId));
+      return mixinAssets;
+    },
+    async fetchMvmToken(address) {
+      const token = await this.$axios.$get(`https://scan.mvm.dev/api?module=token&action=getToken&contractaddress=${address}`);
+      return token.result;
+    },
     async updateTvl() {
-      const tvl = await getMvmTvl();
+      const WHITELIST_ASSET_ID = WHITELIST_ASSET.map((asset) => asset.id);  
+
+      const [ethSupply, mixinAssets] = await Promise.all([
+        this.fetchEthSupply(),
+        this.fetchMixinAssets(WHITELIST_ASSET_ID),
+      ]);
+
+      const mixinTokens = await Promise.all(
+        mixinAssets.map(a => this.fetchMvmToken(a.contractAddress))
+      );
+
+      const tvl = mixinAssets.reduce((prev, curr, i) => {
+        if (curr.mixinAssetId === ETH_ASSET_ID) {
+          return prev.addUnsafe(FixedNumber.from(curr.priceUSD).mulUnsafe(FixedNumber.from(ethSupply)));
+        }
+
+        try {
+          const price = FixedNumber.from(curr.priceUSD);
+          const supply = FixedNumber.from(utils.formatUnits(mixinTokens[i].totalSupply, curr.decimals).toString());
+          return prev.addUnsafe(price.mulUnsafe(supply))
+        } catch(e) {
+          return prev.addUnsafe(FixedNumber.from('0'));
+        }
+      }, FixedNumber.from('0'));
+
       this.tvl = tvl.toString();
     },
   },

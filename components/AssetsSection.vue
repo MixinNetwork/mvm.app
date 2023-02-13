@@ -4,27 +4,16 @@
       class="mb-[60px] px-6 w-full font-bold text-[32px] leading-[130%] sm:mb-[160px] sm:p-0 sm:text-[50px] sm:leading-[72px] sm:text-center">
       <span class="text-primary">{{ $t("assets.title1") }}</span>{{ $t("assets.title2") }}
     </div>
-    
+
     <div class="flex flex-col w-full h-[156px] overflow-x-hidden sm:h-[384px]">
-      <no-ssr placeholder="Loading...">
-        <div 
-          v-for="(row, i) in iconList" 
-          :key="i"
-          :class="[
-            'relative mb-4 whitespace-nowrap sm:mb-10',
-            offsets[i],
-            `animation-container${i + 1}`
-          ]" 
-        >
-          <img 
-            class="inline-block mr-3 w-9 sm:mr-9 sm:w-[88px]" 
-            v-for="(icon, i) in row" 
-            :key="i"
-            :src="icon.src" 
-            :alt="icon.alt" 
-          />
-        </div>
-      </no-ssr>
+      <div v-for="(row, i) in iconList" :key="i" :class="[
+        'relative mb-4 whitespace-nowrap sm:mb-10',
+        offsets[i],
+        `animation-container${i + 1}`
+      ]">
+        <img class="inline-block mr-3 w-9 sm:mr-9 sm:w-[88px]" v-for="(icon, i) in row" :key="i" :src="icon.src"
+          :alt="icon.alt" />
+      </div>
     </div>
   </div>
 </template>
@@ -146,14 +135,14 @@ export default {
       let totalWidth = this.rowWidth - (innerWidth < 720 ? this.leftOffsets[0] / 3 : this.leftOffsets[0]);
 
       if (innerWidth > totalWidth) {
-        while(totalWidth < innerWidth) {
+        while (totalWidth < innerWidth) {
           totalWidth += this.rowWidth;
           totalRowNumber += 1;
         }
       }
-      
+
       this.iconList = this.iconList.map(row => new Array(totalRowNumber + 1).fill(0).reduce(
-        (prev) => [...prev, ...row], 
+        (prev) => [...prev, ...row],
         []
       ));
     }
@@ -168,9 +157,11 @@ export default {
 .animation-container1 {
   animation: scroll-animation1 15s linear infinite;
 }
+
 .animation-container2 {
   animation: scroll-animation2 15s linear infinite;
 }
+
 .animation-container3 {
   animation: scroll-animation3 15s linear infinite;
 }
@@ -179,9 +170,11 @@ export default {
   .animation-container1 {
     animation: mobile-scroll-animation1 15s linear infinite;
   }
+
   .animation-container2 {
     animation: mobile-scroll-animation2 15s linear infinite;
   }
+
   .animation-container3 {
     animation: mobile-scroll-animation3 15s linear infinite;
   }
@@ -196,6 +189,7 @@ export default {
     left: -1763px;
   }
 }
+
 @keyframes scroll-animation2 {
   from {
     left: 36px;
@@ -205,6 +199,7 @@ export default {
     left: -1700px;
   }
 }
+
 @keyframes scroll-animation3 {
   from {
     left: 12px;
@@ -214,6 +209,7 @@ export default {
     left: -1724px;
   }
 }
+
 @keyframes mobile-scroll-animation1 {
   from {
     left: -9px;
@@ -223,6 +219,7 @@ export default {
     left: -681px;
   }
 }
+
 @keyframes mobile-scroll-animation2 {
   from {
     left: 12px;
@@ -232,6 +229,7 @@ export default {
     left: -660px;
   }
 }
+
 @keyframes mobile-scroll-animation3 {
   from {
     left: 4px;

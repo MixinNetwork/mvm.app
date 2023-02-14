@@ -5,9 +5,9 @@
       <span class="text-primary">{{ $t("assets.title1") }}</span>{{ $t("assets.title2") }}
     </div>
 
-    <div class="flex flex-col w-full h-[156px] overflow-x-hidden sm:h-[384px]">
+    <div class="flex flex-col relative w-full h-[156px] overflow-x-hidden sm:h-[384px]">
       <div v-for="(row, i) in iconList" :key="i" :class="[
-        'relative mb-4 whitespace-nowrap sm:mb-10',
+        'absolute whitespace-nowrap',
         offsets[i],
         `animation-container${i + 1}`
       ]">
@@ -73,9 +73,9 @@ export default {
       rowWidth: innerWidth < 720 ? 672 : 1736,
       leftOffsets: [27, 36, 12],
       offsets: [
-        `-left-[9px] sm:-left-[27px]`,
-        `left-[12px] sm:left-[36px]`,
-        `left-[4px] sm:left-[12px]`,
+        `top-0 -left-[9px] sm:-left-[27px]`,
+        `top-[48px] left-[12px] sm:top-[128px] sm:left-[36px]`,
+        `top-[96px] left-[4px] sm:top-[256px] sm:left-[12px]`,
       ],
       iconList: [
         [

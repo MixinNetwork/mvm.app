@@ -5,7 +5,7 @@
         <span class="text-primary">{{ $t("nfts.title1") }}</span>{{ $t("nfts.title2") }}
       </div>
 
-      <div class="flex flex-row flex-wrap justify-between w-full">
+      <div class="flex flex-row flex-wrap justify-between w-full max-w-[1610px]">
         <div
           v-for="(img, i) in list"
           :key="i"
@@ -36,9 +36,7 @@ import eagle from "@/assets/images/cryptoninja_eagle.png";
 import lion from "@/assets/images/lazy_lion.png";
 import clonex from "@/assets/images/clone_x.png";
 import star1 from "@/assets/images/Starcatchers1.png";
-import star2 from "@/assets/images/Starcatchers2.png";
 import renga from "@/assets/images/renga.png";
-import seaman from "@/assets/images/seaman.png";
 import angryCat from "@/assets/images/angry_cat.png";
 import gu from "@/assets/images/genuine_undead.png";
 import penguine1 from "@/assets/images/pudgy_penguins1.png";
@@ -47,6 +45,11 @@ import gutterCatGang from "@/assets/images/gutter_cat_gang.png";
 import panda from "@/assets/images/cryptoninja_panda.png";
 import woman from "@/assets/images/woman.png";
 import castaways from "@/assets/images/castaways.png";
+import boxcat from "@/assets/images/nft/boxcat.webp";
+import bananos from "@/assets/images/nft/bananos.webp";
+import degod from "@/assets/images/nft/degod.webp";
+import mimic from "@/assets/images/nft/mimic.webp";
+import y00t from "@/assets/images/nft/y00t.webp";
 
 export default {
   name: "NftSection",
@@ -54,9 +57,9 @@ export default {
     return {
       list: [
         {
-          src: lotusGang,
-          alt: "lotus gang",
-          type: "SOLANA"
+          src: boxcat,
+          alt: "boxcat planet",
+          type: "ERC 721"
         },
         {
           src: degentoonz,
@@ -81,7 +84,7 @@ export default {
         {
           src: lion,
           alt: "lazy lion",
-          type: "ERC 1155"
+          type: "ERC 721"
         },
         {
           src: clonex,
@@ -94,44 +97,44 @@ export default {
           type: "ERC 721"
         },
         {
-          src: star2,
-          alt: "Starcatchers",
-          type: "ERC 721"
+          src: mimic,
+          alt: "Mimic Shhans",
+          type: "ERC 1155"
         },
         {
-          src: star1,
-          alt: "Starcatchers",
-          type: "ERC 721"
+          src: bananos,
+          alt: "Bananos M1",
+          type: "ERC 1155"
         },
         {
           src: renga,
           alt: "renga",
-          type: "FLOW"
+          type: "ERC 721"
         },
         {
-          src: seaman,
-          alt: "seaman",
-          type: "ERC 721"
+          src: y00t,
+          alt: "y00t",
+          type: "Solana"
         },
         {
           src: angryCat,
           alt: "AngryCat",
-          type: "ERC 1155"
+          type: "ERC 721"
         },
         {
           src: gu,
           alt: "Genuine Undead",
-          type: "ERC 1155"
+          type: "ERC 721"
         },
         {
-          src: penguine1,
-          alt: "Pudgy Penguins",
-          type: "ERC 721"
+          src: degod,
+          alt: "Degod",
+          type: "Solana"
         },
         {
           src: gutterCatGang,
           alt: "Gutter Cat Gang",
-          type: "FLOW"
+          type: "ERC 721"
         },
         {
           src: penguine1,

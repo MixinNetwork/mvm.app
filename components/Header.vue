@@ -18,7 +18,7 @@
 
         <div 
           :class="[
-            'z-10 absolute top-9 -right-3 flex flex-col items-center w-[150px] bg-white rounded-md shadow-[0_2px_20px_rgba(0,0,74,0.1)] overflow-hidden sm:visible sm:flex sm:flex-row sm:justify-between sm:static sm:w-auto sm:border-opacity-0 sm:shadow-none', 
+            'z-10 absolute top-9 -right-3 flex flex-col items-center w-[150px] bg-white rounded-md shadow-[0_2px_20px_rgba(0,0,74,0.1)] overflow-hidden sm:visible sm:flex sm:flex-row sm:justify-between sm:static sm:w-[360px] sm:border-opacity-0 sm:shadow-none', 
             showNav ? 'visible' : 'invisible'
           ]"
         >
@@ -26,11 +26,15 @@
             v-for="(l, i) in navs" 
             :key="i"
             :class="[
-              'flex items-center w-full h-12 bg-white sm:justify-center sm:ml-10 sm:w-auto sm:h-auto',
+              'flex items-center w-full h-12 bg-white sm:justify-center sm:h-auto',
               i === 1 ? 'border-y border-[#F5F5F5] sm:border-opacity-0' : '',
+              i === 2 ? 'sm:w-[100px]' : 'sm:w-[90px]'
             ]"
           >
-            <a class="block pl-6 font-normal text-sm leading-4 text-black/80 sm:pl-0 sm:text-lg sm:leading-[27px] hover:font-bold" :href="l.href">{{ l.text }}</a>
+            <a 
+              class="block pl-6 font-normal text-sm leading-4 text-black/80 sm:pl-0 sm:text-lg sm:leading-[27px] hover:font-bold" 
+              :href="l.href"
+            >{{ l.text }}</a>
           </div>
         </div>
       </div>

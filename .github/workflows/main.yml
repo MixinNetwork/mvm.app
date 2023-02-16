@@ -4,9 +4,9 @@ name: CD
 
 on:
   push:
-    branches: [main]
+    branches: [feature/update]
   pull_request:
-    branches: [main]
+    branches: [feature/update]
 
 jobs:
   build:

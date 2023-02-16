@@ -4,6 +4,10 @@ import zh from "./locales/zh";
 export default {
   ssr: true,
   target: "static", // default is 'server'
+  
+  router: {
+    base: '/mvm.app/'
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -31,7 +35,6 @@ export default {
       type: "image/x-icon",
       href: process.env.NUXT_ENV_PLATFORM === 'github' ? "/favicon.png" : "/favicon.png"
     }],
-
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

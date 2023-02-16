@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-[100px] px-6 bg-footer sm:pt-[140px] sm:pb-[60px] sm:px-0">
+  <div class="pt-[100px] pb-[86px] px-6 bg-footer sm:pt-[140px] sm:pb-[60px] sm:px-0">
     <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1280px]">
       <div class="w-full font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center">
         <span class="text-primary">{{ $t("ecosystem.title1") }}</span>{{ $t("ecosystem.title2") }}
@@ -11,7 +11,7 @@
           :class="[
             'flex flex-col items-center md:justify-between',
             index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse',
-            index === list.length - 1 ? '' : 'mb-20 sm:mb-[120px] '
+            index === list.length - 1 ? '' : 'mb-[82px] sm:mb-[120px] '
           ]"
         >
           <div class="w-full sm:w-[540px]">
@@ -33,7 +33,7 @@
                   , i !== item.features.length - 1 ? 'mb-1' : '']"
               >{{ f }}</li>
             </ul>
-            <div class="mt-12 sm:mt-10">
+            <div class="mt-[50px] sm:mt-[42px]">
               <a 
                 :href="hrefList[index]"
                 class="flex flex-row items-center"

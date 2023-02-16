@@ -5,7 +5,7 @@
       <div 
         :class="[
           'flex flex-col justify-evenly items-start mx-auto px-6 w-full h-full sm:justify-evenly sm:px-0 sm:pb-2',
-          'sm:min-h-[400px] sm:max-h-[500px] sm:w-[632px] md:min-h-[580px] md:max-h-[750px] md:w-[852px] lg:max-h-[900px] lg:min-h-[700px] lg:w-[1280px]'
+          'sm:min-h-[400px] sm:max-h-[580px] sm:w-[632px] md:min-h-[580px] md:max-h-[750px] md:w-[852px] lg:max-h-[900px] lg:min-h-[700px] lg:w-[1280px]'
         ]">
         <!-- title -->
         <div class="relative w-full h-auto">
@@ -23,7 +23,10 @@
           />
 
           <div
-            class="mt-1 font-normal text-sm leading-[130%] text-black/60 sm:static sm:mt-6 sm:w-[380px] sm:text-base md:w-[500px] md:text-lg lg:w-[700px] lg:text-xl "
+            :class="[
+              'font-normal text-sm leading-[130%] text-black/60 sm:static sm:mt-6 sm:w-[380px] sm:text-base md:w-[500px] md:text-lg lg:w-[700px] lg:text-xl',
+              $i18n.locale === 'zh' ? 'mt-[18px]' : 'mt-1'
+            ]"
           >
             {{ $t('intro.subTitle') }}
           </div>
@@ -31,7 +34,10 @@
 
         <!-- links -->
         <div
-          class="flex justify-between my-1 w-full sm:my-0 sm:w-[344px] md:w-[380px] lg:w-[447px]"
+          :class="[
+            'flex justify-between w-full sm:my-0 sm:w-[344px] md:w-[380px] lg:w-[447px]',
+            $i18n.locale === 'zh' ? 'my-5' : 'my-1'
+          ]"
         >
           <div 
             v-for="(l, i) in links"

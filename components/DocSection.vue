@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       boxStyle: [
-        "flex flex-col flex-[0_0_48%] justify-between h-full rounded-xl mb-4 pt-3 pb-[14px] px-3 shadow-mvm sm:mb-6 sm:pt-7 sm:pb-[45px] sm:px-7 md:mb-8 lg:mb-0 lg:flex-[0_0_23%]",
+        "flex flex-col flex-[0_0_48%] justify-between h-full rounded-xl mb-4 pt-3 pb-[14px] px-3 shadow-mvm select-none sm:mb-6 sm:pt-7 sm:pb-[45px] sm:px-7 md:mb-8 lg:mb-0 lg:flex-[0_0_23%]",
         this.$i18n.locale === 'zh' ? 'h-[270px] sm:h-[360px] md:h-[400px] lg:h-[440px]' : 'h-[330px] sm:h-[410px] md:h-[400px] lg:h-[450px]'
       ],
       list: new Array(4).fill(0).map((_, i) => ({

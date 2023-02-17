@@ -1,7 +1,7 @@
 <template>
   <div class="pt-20 pb-[38px] px-6 w-full sm:pt-[150px] sm:pb-[120px] sm:px-0">
     <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1280px]">
-      <div class="font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center">
+      <div class="font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:text-[50px] sm:leading-[72px] sm:tracking-[-0.4px] sm:text-center">
         <span class="text-primary">{{ $t("doc.title1") }}</span>{{ $t("doc.title2") }}
       </div>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-[100px] pb-[86px] px-6 bg-footer sm:pt-[140px] sm:pb-[60px] sm:px-0">
+  <div class="pt-[100px] pb-[86px] px-6 bg-footer sm:pt-[140px] sm:pb-[180px] sm:px-0">
     <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1280px]">
       <div class="w-full font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center">
         <span class="text-primary">{{ $t("ecosystem.title1") }}</span>{{ $t("ecosystem.title2") }}
@@ -11,14 +11,15 @@
           :class="[
             'flex flex-col items-center md:justify-between',
             index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse',
-            index === list.length - 1 ? '' : 'mb-[82px] sm:mb-[120px] '
+            index === list.length - 1 ? '' : 'mb-[84px] sm:mb-[120px] '
           ]"
         >
           <div class="w-full sm:w-[540px]">
             <img class="w-full" :src="item.image.src" :alt="item.image.alt"/>
           </div>
+
           <div class="w-full sm:w-[540px]">
-            <div class="mt-[26px] font-bold text-[22px] leading-[130%] text-black sm:text-[32px] sm:leading-[48px] lg:mt-0">
+            <div class="mt-[26px] font-bold text-[22px] leading-[130%] text-black/80 tracking-[-0.4px] sm:text-[32px] sm:leading-[48px] sm:text/black lg:mt-0">
               {{ item.title }}
             </div>
             <div class="mt-[26px] mb-4 font-normal text-base leading-[34px] text-black/90 sm:mt-6 sm:text-[22px] sm:leading-[38px]">

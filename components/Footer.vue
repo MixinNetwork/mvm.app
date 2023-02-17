@@ -99,10 +99,10 @@ export default {
               text: this.$t("footer.about.link2"),
               link: "https://mvm.dev/resources/qa.html"
             },
-            // {
-            //   text: this.$t("footer.about.link3"),
-            //   link: ""
-            // }
+            {
+              text: this.$t("footer.about.link3"),
+              link: `/MVM-Logo.zip`
+            }
           ]
         },
         {

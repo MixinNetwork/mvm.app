@@ -24,7 +24,6 @@
               muted 
               playsinline
             >
-              <!-- TODO: 两倍尺寸，mp4 更清晰，背景不透明 -->
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">
             </video>

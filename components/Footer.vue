@@ -69,6 +69,10 @@ import discord from "@/assets/icons/discord.svg";
 import arrowUp from "@/assets/icons/arrow_up.svg";
 import arrowDown from "@/assets/icons/arrow_down.svg";
 
+if (process.client) {
+  var body = document.querySelector('body');
+}
+
 export default {
   name: "Footer",
   data() {
@@ -160,7 +164,16 @@ export default {
     useSelectLang(l) {
       this.showLangMenu = false;
       this.$i18n.setLocale(l)
+    },
+    useHideMenu() {
+      if (this.showLangMenu) this.showLangMenu = false;
     }
+  },
+  mounted() {
+    body.addEventListener('click', this.useHideMenu)
+  },
+  beforeDestroy() {
+    body.removeEventListener('click', this.useHideMenu)
   }
 }
 </script>

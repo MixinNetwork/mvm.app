@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center pt-[100px] w-full sm:pt-[140px]">
+  <div class="flex flex-col items-center pt-[44px] w-full sm:pt-[108px]">
     <div
       class="mb-[60px] px-6 w-full font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:mb-[160px] sm:p-0 sm:text-[50px] sm:leading-[72px] sm:tracking-[-0.8px] sm:text-center">
       <span class="text-primary">{{ $t("assets.title1") }}</span>{{ $t("assets.title2") }}

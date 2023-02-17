@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col items-center pt-[100px] w-full sm:pt-[140px]">
     <div
-      class="mb-[60px] px-6 w-full font-bold text-[32px] leading-[130%] sm:mb-[160px] sm:p-0 sm:text-[50px] sm:leading-[72px] sm:text-center">
+      class="mb-[60px] px-6 w-full font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:mb-[160px] sm:p-0 sm:text-[50px] sm:leading-[72px] sm:tracking-[-0.8px] sm:text-center">
       <span class="text-primary">{{ $t("assets.title1") }}</span>{{ $t("assets.title2") }}
     </div>
 
-    <div class="flex flex-col relative w-full h-[156px] overflow-x-hidden sm:h-[384px]">
+    <div class="flex flex-col relative w-full h-[140px] overflow-x-hidden sm:h-[344px]">
       <div v-for="(row, i) in iconList" :key="i" :class="[
         'absolute whitespace-nowrap',
         offsets[i],
@@ -74,8 +74,8 @@ export default {
       leftOffsets: [27, 36, 12],
       offsets: [
         `top-0 -left-[9px] sm:-left-[27px]`,
-        `top-[48px] left-[12px] sm:top-[128px] sm:left-[36px]`,
-        `top-[96px] left-[4px] sm:top-[256px] sm:left-[12px]`,
+        `top-[52px] left-[12px] sm:top-[128px] sm:left-[36px]`,
+        `top-[104px] left-[4px] sm:top-[256px] sm:left-[12px]`,
       ],
       iconList: [
         [

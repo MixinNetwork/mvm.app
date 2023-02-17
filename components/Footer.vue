@@ -8,7 +8,7 @@
       <div class="w-4/5 h-full sm:w-5/12 md:w-1/2">
         <div class="flex flex-row items-center mb-8 sm:mb-4">
           <img class="h-8" :src="logo" alt="logo"/>
-          <div class="ml-2 font-extrabold text-xl leading-6 text-black sm:text-lg">MVM</div>
+          <div class="ml-2 font-extrabold text-xl leading-6 text-black">MVM</div>
         </div>
 
         <div class="relative mb-[54px] h-8 w-[154px]">
@@ -36,7 +36,7 @@
           </div>
         </div>
         
-        <div class="mb-4 w-full h-7">
+        <div class="mb-4 w-full">
           <a class="inline-block mr-4 w-7 h-7 hover:opacity-60" href="https://twitter.com/MvmBridge"><img class="w-full" :src="twitter" alt="twitter"/></a>
           <a class="inline-block mr-4 w-7 h-7 hover:opacity-60" href="https://t.me/mvmbridge"><img class="w-full" :src="telegram" alt="telegram"/></a>
           <a class="inline-block mr-4 w-7 h-7 hover:opacity-60" href="https://discord.gg/JER9jmbRB6"><img class="w-full" :src="discord" alt="discord"/></a>
@@ -138,7 +138,7 @@ export default {
   computed: {
     copyright() {
       const year = new Date().getFullYear();
-      return `© MVM 2020-${year}`;
+      return `© MVM 2020-${year}. All Rights Reserved.`;
     },
     currentLang() {
       return this.$i18n.locale;

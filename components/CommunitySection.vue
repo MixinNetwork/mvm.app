@@ -1,11 +1,11 @@
 <template>
-  <div class="pt-[58px] pb-[76px] w-full px-6 sm:pt-[120px] sm:pb-[200px] sm:px-0">
+  <div class="pt-[58px] pb-[74px] w-full px-6 sm:pt-[120px] sm:pb-[200px] sm:px-0">
     <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1280px]">
-      <div class="w-full text-left font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center">
+      <div class="w-full font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:text-[50px] sm:leading-[72px] sm:tracking-[-0.8px] sm:text-center">
         <span class="text-primary">{{ $t("community.title1") }}</span>{{ $t("community.title2") }}
       </div>
 
-      <div class="flex flex-row flex-wrap justify-between mt-[84px] sm:mt-30">
+      <div class="flex flex-row flex-wrap justify-between mt-[84px] sm:mt-[120px]">
         <div
           v-for="(f, i) in list"
           :key="i"
@@ -33,7 +33,7 @@ import mixin from "@/assets/icons/community_mixin.svg";
 
 const boxStyle = "h-[190px] rounded-xl cursor-pointer md:h-[300px] lg:h-[372px]";
 const innerBoxStyle = "flex flex-col items-center";
-const iconStyle = "mt-[46px] mb-4 w-12 cursor-pointer sm:w-22 sm:mb-[30px] md:mt-20 lg:mt-[112px]";
+const iconStyle = "mt-[46px] mb-4 w-12 cursor-pointer sm:mt-10 sm:mb-[30px] md:mt-16 md:w-[88px] lg:mt-[112px]";
 const titleStyle = "font-semibold text-lg text-white sm:text-[22px]";
 
 export default {

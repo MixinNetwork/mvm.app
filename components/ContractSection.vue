@@ -23,6 +23,7 @@
               loop 
               muted 
               playsinline
+              :controls="platform === 'iOS' ? 'controls' : null"
             >
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">
@@ -39,6 +40,7 @@
 </template>
 
 <script>
+import { getMixinEnvironment } from "@/utils/index";
 import contractAnimationMp4 from '@/assets/animations/contracts.mp4';
 import assetsAnimationMp4 from '@/assets/animations/assets.mp4';
 import compatibleAnimationMp4 from '@/assets/animations/compatible.mp4';
@@ -46,10 +48,16 @@ import contractAnimationWebm from '@/assets/animations/contracts.webm';
 import assetsAnimationWebm from '@/assets/animations/assets.webm';  
 import compatibleAnimationWebm from '@/assets/animations/compatible.webm';
 
+if (process.client) {
+  var platform = getMixinEnvironment();
+  console.log(platform)
+}
+
 export default {
   name: "ContractSection",
   data() {
     return {
+      platform,
       list: [
         {
           animation: {

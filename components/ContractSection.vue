@@ -8,7 +8,7 @@
       <div
         v-for="(item, index) in list"
         :key="index"
-        class="flex flex-col w-full mb-[84px]"
+        class="flex flex-col w-full mb-[100px] lg:mb-[84px]"
       >
         <div class="font-bold text-[22px] leading-[130%] tracking-[-0.4px] text-black/80 sm:text-[32px] sm:leading-[48px] sm:text-black lg:hidden">
           {{ item.title }}

@@ -28,7 +28,11 @@
             :class="[
               'flex items-center w-full h-12 bg-white sm:justify-center sm:h-auto',
               i === 1 ? 'border-y border-[#F5F5F5] sm:border-opacity-0' : '',
-              i === 2 ? $i18n.locale === 'zh' ? 'sm:w-[60px]' : 'sm:w-[90px]' : 'sm:w-[100px]'
+              i === 2 
+                ? $i18n.locale === 'zh' 
+                  ? 'sm:w-[60px]' 
+                  : 'sm:w-[100px]' 
+                : 'sm:w-[100px]'
             ]"
           >
             <a 

@@ -23,8 +23,9 @@
               loop 
               muted 
               playsinline
-              :controls="platform === 'iOS' ? 'controls' : null"
               preload="auto"
+              :poster="item.animation.poster"
+              :controls="platform === 'iOS' ? 'controls' : null"
             >
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">
@@ -43,11 +44,14 @@
 <script>
 import { getMixinEnvironment } from "@/utils/index";
 import contractAnimationMp4 from '@/assets/animations/contracts.mp4';
-import assetsAnimationMp4 from '@/assets/animations/assets.mp4';
-import compatibleAnimationMp4 from '@/assets/animations/compatible.mp4';
 import contractAnimationWebm from '@/assets/animations/contracts.webm';
+import contractImage from '@/assets/images/contracts.webp';
+import assetsAnimationMp4 from '@/assets/animations/assets.mp4';
 import assetsAnimationWebm from '@/assets/animations/assets.webm';  
+import assetsImage from '@/assets/images/assets.webp';
+import compatibleAnimationMp4 from '@/assets/animations/compatible.mp4';
 import compatibleAnimationWebm from '@/assets/animations/compatible.webm';
+import compatibleImage from '@/assets/images/compatible.webp';
 
 if (process.client) {
   var platform = getMixinEnvironment();
@@ -63,7 +67,8 @@ export default {
         {
           animation: {
             mp4: contractAnimationMp4,
-            webm: contractAnimationWebm
+            webm: contractAnimationWebm,
+            poster: contractImage
           },
           title: this.$t("contract.section1.title"),
           content: this.$t("contract.section1.content")
@@ -71,7 +76,8 @@ export default {
         {
           animation: {
             mp4: assetsAnimationMp4,
-            webm: assetsAnimationWebm
+            webm: assetsAnimationWebm,
+            poster: assetsImage
           },
           title: this.$t("contract.section2.title"),
           content: this.$t("contract.section2.content")
@@ -79,7 +85,8 @@ export default {
         {
           animation: {
             mp4: compatibleAnimationMp4,
-            webm: compatibleAnimationWebm
+            webm: compatibleAnimationWebm,
+            poster: compatibleImage
           },
           title: this.$t("contract.section3.title"),
           content: this.$t("contract.section3.content")

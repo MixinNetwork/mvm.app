@@ -36,7 +36,7 @@
         <div
           :class="[
             'flex justify-between w-full sm:my-0 sm:w-[344px] md:w-[380px] lg:w-[447px]',
-            $i18n.locale === 'zh' ? 'my-5' : 'my-1'
+            $i18n.locale === 'zh' ? 'my-5' : 'my-1 link-contianer'
           ]"
         >
           <div 
@@ -224,3 +224,12 @@ export default {
   },
 };
 </script>
+
+<style>
+@media screen and (min-height: 685px) {
+  .link-contianer {
+    margin: 16px 0;
+  }
+}
+
+</style>

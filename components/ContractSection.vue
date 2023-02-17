@@ -24,6 +24,7 @@
               muted 
               playsinline
               :controls="platform === 'iOS' ? 'controls' : null"
+              preload="auto"
             >
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">

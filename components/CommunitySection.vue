@@ -31,7 +31,7 @@ import dc from "@/assets/icons/community_discord.svg";
 import tg from "@/assets/icons/community_telegram.svg";
 import mixin from "@/assets/icons/community_mixin.svg";
 
-const boxStyle = "h-[190px] rounded-xl cursor-pointer md:h-[300px] lg:h-[372px]";
+const boxStyle = "h-[190px] rounded-xl cursor-pointer select-none md:h-[300px] lg:h-[372px]";
 const innerBoxStyle = "flex flex-col items-center";
 const iconStyle = "mt-[46px] mb-4 w-12 cursor-pointer sm:mt-10 sm:mb-[30px] md:mt-16 md:w-[88px] lg:mt-[112px]";
 const titleStyle = "font-semibold text-lg text-white sm:text-[22px]";

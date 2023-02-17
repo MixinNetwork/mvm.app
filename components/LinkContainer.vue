@@ -11,19 +11,30 @@
       :key="text"
       class="mt-5 sm:mt-6"
     >
+      <router-link
+        v-if="link.startsWith('/')"
+        class="font-normal text-base leading-[26px] text-black/60 sm:text-sm md:text-base lg:text-lg" 
+        :to="link"
+      >
+        {{ text }}
+      </router-link>
       <a
+        v-else
         class="font-normal text-base leading-[26px] text-black/60 sm:text-sm md:text-base lg:text-lg" 
         :href="link"
       >
         {{ text }}
-      </a>
+    </a>
     </div>
   </div>
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
   name: "LinkContainer",
+  comments: { RouterLink },
   props: ["title", "links"]
 }
 </script>

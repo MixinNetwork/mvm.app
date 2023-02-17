@@ -37,7 +37,7 @@ const iconList = [ref, doc, tutorials, faq];
 const linkList = [
   "https://mvm.dev/api/intro.html",
   "https://mvm.dev/",
-  "",
+  "https://mvm.dev/zh/registry/call.html",
   "https://mvm.dev/resources/qa.html"
 ]
 

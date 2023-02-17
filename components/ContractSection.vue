@@ -29,7 +29,7 @@
               <source :src="item.animation.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="flex flex-col justify-center mt-[22px] w-full md:mt-0 lg:w-[528px]">
+          <div class="flex flex-col justify-center mt-[22px] w-full lg:mt-0 lg:w-[528px]">
             <div class="hidden w-[120%] font-semibold text-[32px] leading-[48px] lg:block">{{ item.title }}</div>
             <div class="font-normal text-base leading-[34px] text-black/90 sm:text-[22px] sm:leading-[38px] lg:mt-6">{{ item.content }}</div>
           </div>

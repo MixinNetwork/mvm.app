@@ -47,7 +47,8 @@ export default {
           boxStyle: `twitter-background ${boxStyle}`,
           icon: {
             src: twi,
-            style: iconStyle
+            style: iconStyle,
+            alt: "Twitter"
           },
           title: {
             text: "Twitter",
@@ -58,7 +59,8 @@ export default {
           boxStyle: `discord-background ${boxStyle}`,
           icon: {
             src: dc,
-            style: iconStyle
+            style: iconStyle,
+            alt: "Discord"
           },
           title: {
             text: "Discord",
@@ -69,7 +71,8 @@ export default {
           boxStyle: `telegram-background ${boxStyle}`,
           icon: {
             src: tg,
-            style: iconStyle
+            style: iconStyle,
+            alt: "Telegram"
           },
           title: {
             text: "Telegram",
@@ -80,7 +83,8 @@ export default {
           boxStyle: `mixin-background ${boxStyle}`,
           icon: {
             src: mixin,
-            style: iconStyle
+            style: iconStyle,
+            alt: "Mixin"
           },
           title: {
             text: "Mixin",

@@ -1,7 +1,7 @@
 <template>
   <div :class="boxStyle">
     <div :class="innerBoxStyle">
-      <object v-if="!!icon" :class="icon.style" :data="icon.src"></object>
+      <img v-if="!!icon" :class="icon.style" :src="icon.src" alt=""/>
       
       <div v-if="!!title" :class="title.style">{{ title.text }}</div>
 

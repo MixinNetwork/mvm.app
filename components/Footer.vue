@@ -5,7 +5,7 @@
     <div 
       class="flex flex-col w-full sm:h-[194px] sm:flex-row sm:mx-auto sm:w-[632px] md:w-[852px] lg:w-[1280px]"
     >
-      <div class="w-4/5 h-full sm:w-5/12 md:w-1/2">
+      <div class="h-full sm:w-5/12 md:w-1/2">
         <div class="flex flex-row items-center mb-8 sm:mb-4">
           <img class="h-8" :src="logo" alt="logo"/>
           <div class="ml-2 font-extrabold text-xl leading-6 text-black">MVM</div>
@@ -46,7 +46,7 @@
       </div>
 
       <div
-        class="flex flex-col justify-between w-4/5 h-full mt-4 sm:mt-0 sm:pl-3 sm:w-7/12 sm:flex-row md:w-1/2"
+        class="flex flex-col justify-between h-full mt-4 sm:mt-0 sm:pl-3 sm:w-7/12 sm:flex-row md:w-1/2"
       >
         <link-container
           v-for="{title, links} in linkList" 

@@ -103,23 +103,18 @@ export default {
     }
   },
   methods: {
-    onLoad(i) {
+    removeControllers(i) {
       this.isPlayed[i] = true;
-      console.log('playing', i)
-      console.log(this.isPlayed[i])
+      this.$refs.video[i].removeEventListener('timeupdate', this.removeControllers(i));
     }
   },
   mounted() {
     this.videoSize = videoSize;
 
-    this.$refs.video.forEach((video, i) => {
-      video.addEventListener('playing', this.onLoad(i))
-    });
+    if (this.platform === 'iOS') 
+      this.$refs.video.forEach((video, i) => {
+        video.addEventListener('timeupdate', this.removeControllers(i));
+      });
   },
-  beforeDestroy() {
-    this.$refs.video.forEach((video, i) => {
-      video.removeEventListener('playing', this.onLoad(i))
-    });
-  }
 }
 </script>

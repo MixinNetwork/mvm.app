@@ -26,6 +26,7 @@
               muted 
               playsinline
               preload="auto"
+              :poster="item.animation.poster"
               :autoplay="platform !== 'iOS' ? true : false"
               :controls="platform !== 'iOS' ? false : isPlayed[index] ? false : true"
             >

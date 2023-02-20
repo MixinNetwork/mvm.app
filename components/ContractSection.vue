@@ -29,6 +29,7 @@
               :poster="item.animation.poster"
               :autoplay="platform !== 'iOS' ? true : false"
               :controls="platform !== 'iOS' ? false : isPlayed[index] ? false : true"
+              @click="removeControllers(index)"
             >
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">
@@ -104,30 +105,12 @@ export default {
   },
   methods: {
     removeControllers(i) {
-      console.log('timeupdate', i)
+      console.log('click', i)
       this.isPlayed[i] = true;
     }
   },
   mounted() {
     this.videoSize = videoSize;
-
-    if (this.platform === 'iOS') 
-      this.$refs.video.forEach((video, i) => {
-        video.addEventListener('timeupdate', this.removeControllers(i));
-      });
   },
-  watch: {
-    isPlayed: {
-      deep: true,
-      handler(newValue, oldValue) {
-        newValue.forEach((flag, i) => {
-          if (!oldValue[i] && flag) {
-            console.log('remove', i)
-            this.$refs.video[i].removeEventListener('timeupdate', this.removeControllers(i));
-          }
-        })
-      }
-    }
-  }
 }
 </script>

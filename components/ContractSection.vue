@@ -104,6 +104,7 @@ export default {
   },
   methods: {
     removeControllers(i) {
+      console.log('timeupdate', i)
       this.isPlayed[i] = true;
     }
   },
@@ -121,6 +122,7 @@ export default {
       handler(newValue, oldValue) {
         newValue.forEach((flag, i) => {
           if (!oldValue[i] && flag) {
+            console.log('remove', i)
             this.$refs.video[i].removeEventListener('timeupdate', this.removeControllers(i));
           }
         })

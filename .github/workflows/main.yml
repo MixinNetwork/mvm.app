@@ -20,6 +20,8 @@ jobs:
 
       - name: Build APP
         run: yarn generate:github-page
+        env:
+          NODE_OPTIONS: "--openssl-legacy-provider"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

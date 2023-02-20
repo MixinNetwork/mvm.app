@@ -89,7 +89,7 @@ export default {
   },
   data() {
     return {
-      boxStyle:"flex flex-[0_0_48%] flex-col justify-center items-center py-2 bg-white shadow-mvm rounded-xl box-border text-center sm:mb-0 sm:flex-[0_0_23.5%] sm:p-0 sm:h-20 md:h-[100px] lg:h-[142px]",
+      boxStyle:"flex flex-[0_0_48%] flex-col justify-center items-center mb-[18px] py-2 bg-white shadow-mvm rounded-xl box-border text-center sm:mb-0 sm:flex-[0_0_23.5%] sm:p-0 sm:h-20 md:h-[100px] lg:h-[142px]",
       background,
       tvl: this.initTvl,
       links: [

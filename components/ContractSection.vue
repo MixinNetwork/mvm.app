@@ -23,7 +23,7 @@
               loop 
               muted 
               playsinline
-              preload="auto"
+              preload="metadata"
               :poster="item.animation.poster"
               :controls="platform === 'iOS' ? 'controls' : null"
             >

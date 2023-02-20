@@ -112,7 +112,7 @@ export default {
     },
     onclick(i) {
       this.$refs.video[i].addEventListener(
-        'canplaythrough', 
+        'timeupdate', 
         this.removeControllers(i)
       )
     }
@@ -124,7 +124,7 @@ export default {
     this.list.forEach((item, i) => {
       if (item.animation.isPlayed = true) {
         this.$refs.video[i].removeEventListener(
-          'canplaythrough', 
+          'timeupdate', 
           this.removeControllers(i)
         )
       }

@@ -19,13 +19,14 @@
         ]">
           <div class="w-full sm:w-[528px]">
             <video 
+              ref="video"
               autoplay 
               loop 
               muted 
               playsinline
               preload="metadata"
               :poster="item.animation.poster"
-              :controls="platform === 'iOS' ? 'controls' : null"
+              :controls="platform !== 'iOS' ? null : isLoaded[index] ? null : 'controls'"
             >
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">
@@ -55,7 +56,6 @@ import compatibleImage from '@/assets/images/compatible.webp';
 
 if (process.client) {
   var platform = getMixinEnvironment();
-  console.log(platform)
 }
 
 export default {
@@ -63,6 +63,7 @@ export default {
   data() {
     return {
       platform,
+      isLoaded: [false, false, false],
       list: [
         {
           animation: {
@@ -93,6 +94,22 @@ export default {
         },
       ]
     }
+  },
+  methods: {
+    onLoad(i) {
+      console.log('canplaythrough')
+      this.isLoaded[i] = true;
+    }
+  },
+  mounted() {
+    this.$refs.video.forEach((video, i) => {
+      video.addEventListener('canplaythrough', this.onLoad(i))
+    });
+  },
+  beforeDestroy() {
+    this.$refs.video.forEach((video, i) => {
+      video.removeEventListener('canplaythrough', this.onLoad(i))
+    });
   }
 }
 </script>

@@ -18,8 +18,7 @@
           index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'
         ]">
           <div class="w-full sm:w-[528px]">
-            <div>{{ isPlayed[index] }}</div>
-            <div>{{ platform !== 'iOS' ? 'false' : !isPlayed[index] }}</div>
+            <div>{{ item.animation.isPlayed[index] }}</div>
             <video 
               ref="video"
               :width="videoSize.width"
@@ -30,7 +29,7 @@
               preload="auto"
               :poster="item.animation.poster"
               :autoplay="platform !== 'iOS' ? true : false"
-              :controls="platform !== 'iOS' ? false : !isPlayed[index]"
+              :controls="platform !== 'iOS' ? false : !item.animation.isPlayed[index]"
               @click="removeControllers(index)"
             >
               <source :src="item.animation.webm" type="video/webm">
@@ -73,13 +72,13 @@ export default {
         width: 372,
         height: 263
       },
-      isPlayed: [false, false, false],
       list: [
         {
           animation: {
             mp4: contractAnimationMp4,
             webm: contractAnimationWebm,
-            poster: contractImage
+            poster: contractImage,
+            isPlayed: false,
           },
           title: this.$t("contract.section1.title"),
           content: this.$t("contract.section1.content")
@@ -88,7 +87,8 @@ export default {
           animation: {
             mp4: assetsAnimationMp4,
             webm: assetsAnimationWebm,
-            poster: assetsImage
+            poster: assetsImage,
+            isPlayed: false,
           },
           title: this.$t("contract.section2.title"),
           content: this.$t("contract.section2.content")
@@ -97,7 +97,8 @@ export default {
           animation: {
             mp4: compatibleAnimationMp4,
             webm: compatibleAnimationWebm,
-            poster: compatibleImage
+            poster: compatibleImage,
+            isPlayed: false,
           },
           title: this.$t("contract.section3.title"),
           content: this.$t("contract.section3.content")
@@ -107,10 +108,7 @@ export default {
   },
   methods: {
     removeControllers(i) {
-      console.log('click', i)
-      this.isPlayed[i] = true;
-      console.log(this.platform, this.isPlayed)
-      console.log(this.platform !== 'iOS' ? false : this.isPlayed[i] ? false : true)
+      this.list[i].animation.isPlayed = true;
     }
   },
   mounted() {

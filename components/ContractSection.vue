@@ -68,6 +68,7 @@ export default {
   data() {
     return {
       e: '',
+      counters: [0, 0, 0],
       platform,
       videoSize: {
         width: 372,
@@ -112,48 +113,31 @@ export default {
       this.list[i].animation.isPlayed = true;
     },
     onclick(i) {
-      // this.$refs.video[i].addEventListener(
-      //   'timeupdate', 
-      //   this.removeControllers(i)
-      // )
-
-      const events = [
-        'canplay',
-        'canplaythrough',
-        'complete',
-        'durationchange',
-        'emptied',
-        'loadeddata',
-        'pause',
-        'play',
-        'playing',
-        'progress',
-        'seeked',
-        'stalled',
-        'suspend',
-        'timeupdate',
-        'waiting'
-      ]
-      events.forEach((e) => {
-        this.$refs.video[i].addEventListener(e, () => {
-          this.e = e
-          console.log(e)
-        })
-      })
+      if (this.platform === 'iOS')
+        this.$refs.video[i].addEventListener(
+          'timeupdate', 
+          () => {
+            this.counters[i] = this.counters[i] + 1;
+            if (this.counters[i] === 5) this.removeControllers(i);
+          }
+        )
     }
   },
   mounted() {
     this.videoSize = videoSize;
   },
   beforeDestroy() {
-    // this.list.forEach((item, i) => {
-    //   if (item.animation.isPlayed = true) {
-    //     this.$refs.video[i].removeEventListener(
-    //       'timeupdate', 
-    //       this.removeControllers(i)
-    //     )
-    //   }
-    // })
+    this.list.forEach((item, i) => {
+      if (item.animation.isPlayed = true) {
+        this.$refs.video[i].removeEventListener(
+          'timeupdate', 
+          () => {
+            this.counters[i] = this.counters[i] + 1;
+            if (this.counters[i] === 5) this.removeControllers(i);
+          }
+        )
+      }
+    })
   }
 }
 </script>

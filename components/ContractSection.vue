@@ -18,7 +18,8 @@
           index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'
         ]">
           <div class="w-full sm:w-[528px]">
-            <div>{{ platform !== 'iOS' ? 'false' : isPlayed[index] ? 'false' : 'true' }}</div>
+            <div>{{ isPlayed[index] }}</div>
+            <div>{{ platform !== 'iOS' ? 'false' : !isPlayed[index] }}</div>
             <video 
               ref="video"
               :width="videoSize.width"
@@ -29,7 +30,7 @@
               preload="auto"
               :poster="item.animation.poster"
               :autoplay="platform !== 'iOS' ? true : false"
-              :controls="platform !== 'iOS' ? false : isPlayed[index] ? false : true"
+              :controls="platform !== 'iOS' ? false : !isPlayed[index]"
               @click="removeControllers(index)"
             >
               <source :src="item.animation.webm" type="video/webm">

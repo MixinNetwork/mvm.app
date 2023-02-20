@@ -108,34 +108,27 @@ export default {
   },
   methods: {
     removeControllers(i) {
-      const events = [
-        'canplay',
-        'canplaythrough',
-        'complete',
-        'durationchange',
-        'emptied',
-        'loadeddata',
-        'pause',
-        'play',
-        'playing',
-        'progress',
-        'seeked',
-        'stalled',
-        'suspend',
-        'timeupdate',
-        'waiting'
-      ]
-      events.forEach((e) => {
-        this.$refs.video[i].addEventListener(e, () => {
-          console.log(e)
-        })
-      })
-      // this.list[i].animation.isPlayed = true;
-      console.log('click', this.list[i].animation.isPlayed)
+      this.list[i].animation.isPlayed = true;
+    },
+    onclick(i) {
+      this.$refs.video[i].addEventListener(
+        'canplaythrough', 
+        this.removeControllers(i)
+      )
     }
   },
   mounted() {
     this.videoSize = videoSize;
   },
+  beforeDestroy() {
+    this.list.forEach((item, i) => {
+      if (item.animation.isPlayed = true) {
+        this.$refs.video[i].removeEventListener(
+          'canplaythrough', 
+          this.removeControllers(i)
+        )
+      }
+    })
+  }
 }
 </script>

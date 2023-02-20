@@ -30,7 +30,7 @@
               :poster="item.animation.poster"
               :autoplay="platform !== 'iOS' ? true : false"
               :controls="platform !== 'iOS' ? false : !item.animation.isPlayed"
-              @click="removeControllers(index)"
+              @click="onclick(index)"
             >
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">

@@ -105,7 +105,6 @@ export default {
   methods: {
     removeControllers(i) {
       this.isPlayed[i] = true;
-      this.$refs.video[i].removeEventListener('timeupdate', this.removeControllers(i));
     }
   },
   mounted() {
@@ -116,5 +115,17 @@ export default {
         video.addEventListener('timeupdate', this.removeControllers(i));
       });
   },
+  watch: {
+    isPlayed: {
+      deep: true,
+      handler(newValue, oldValue) {
+        newValue.forEach((flag, i) => {
+          if (!oldValue[i] && flag) {
+            this.$refs.video[i].removeEventListener('timeupdate', this.removeControllers(i));
+          }
+        })
+      }
+    }
+  }
 }
 </script>

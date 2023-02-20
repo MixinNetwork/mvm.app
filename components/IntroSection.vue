@@ -59,7 +59,7 @@
         </div>
 
         <div class="flex flex-wrap justify-between w-full">
-          <feature-box
+          <FeatureBox
             v-for="(feature, i) of features"
             :key="i"
             :box-style="boxStyle"

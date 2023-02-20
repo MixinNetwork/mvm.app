@@ -35,8 +35,7 @@
         <!-- links -->
         <div
           :class="[
-            'flex justify-between w-full sm:my-0 sm:w-[344px] md:w-[380px] lg:w-[447px]',
-            $i18n.locale === 'zh' ? 'my-5' : 'my-1 link-contianer'
+            'flex justify-between w-full my-5 sm:my-0 sm:w-[344px] md:w-[380px] lg:w-[447px]',
           ]"
         >
           <div 

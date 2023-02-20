@@ -22,12 +22,12 @@
               ref="video"
               :width="videoSize.width"
               :height="videoSize.height"
-              autoplay 
               loop 
               muted 
               playsinline
               preload="auto"
-              :controls="platform !== 'iOS' ? null : isLoaded[index] ? null : 'controls'"
+              :autoplay="platform !== 'iOS' ? true : false"
+              :controls="platform !== 'iOS' ? false : isPlayed[index] ? false : true"
             >
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">
@@ -69,7 +69,7 @@ export default {
         width: 372,
         height: 263
       },
-      isLoaded: [false, false, false],
+      isPlayed: [false, false, false],
       list: [
         {
           animation: {
@@ -103,9 +103,9 @@ export default {
   },
   methods: {
     onLoad(i) {
-      this.isLoaded[i] = true;
+      this.isPlayed[i] = true;
       console.log('play', i)
-      console.log(this.isLoaded[i])
+      console.log(this.isPlayed[i])
     }
   },
   mounted() {

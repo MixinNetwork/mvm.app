@@ -107,6 +107,8 @@ export default {
     removeControllers(i) {
       console.log('click', i)
       this.isPlayed[i] = true;
+      console.log(this.platform, this.isPlayed)
+      console.log(this.platform !== 'iOS' ? false : this.isPlayed[i] ? false : true)
     }
   },
   mounted() {

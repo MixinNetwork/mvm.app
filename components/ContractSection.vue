@@ -105,7 +105,7 @@ export default {
   methods: {
     onLoad(i) {
       this.isPlayed[i] = true;
-      console.log('play', i)
+      console.log('playing', i)
       console.log(this.isPlayed[i])
     }
   },
@@ -113,12 +113,12 @@ export default {
     this.videoSize = videoSize;
 
     this.$refs.video.forEach((video, i) => {
-      video.addEventListener('play', this.onLoad(i))
+      video.addEventListener('playing', this.onLoad(i))
     });
   },
   beforeDestroy() {
     this.$refs.video.forEach((video, i) => {
-      video.removeEventListener('play', this.onLoad(i))
+      video.removeEventListener('playing', this.onLoad(i))
     });
   }
 }

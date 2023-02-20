@@ -36,6 +36,7 @@
         <div
           :class="[
             'flex justify-between w-full my-5 sm:my-0 sm:w-[344px] md:w-[380px] lg:w-[447px]',
+            $i18n.locale === 'zh' ? 'my-5' : 'my-1 link-container'
           ]"
         >
           <div 
@@ -224,9 +225,9 @@ export default {
 </script>
 
 <style>
-@media screen and (max-width: 719px) and (min-height: 685px) {
-  .link-contianer {
-    margin: 20px 0;
+@media screen and (max-width: 719px) and (min-height: 690px) {
+  .link-container {
+    margin: 16px 0;
   }
 }
 </style>

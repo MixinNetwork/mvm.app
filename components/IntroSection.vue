@@ -58,27 +58,11 @@
           </div>
         </div>
 
-        <!-- status -->
         <div class="flex flex-wrap justify-between w-full">
-          <feature-box
+          <FeatureBox
             v-for="(feature, i) of features"
             :key="i"
-            :box-style="[
-              boxStyle,
-              i < 2 ? 'flex mb-0 sm:flex' : 'hidden sm:flex'
-            ]"
-            :title="feature.title"
-            :content="feature.content"
-          />
-        </div>
-        <div class="flex flex-wrap justify-between w-full sm:hidden">
-          <feature-box
-            v-for="(feature, i) of features.slice(2)"
-            :key="i"
-            :box-style="[
-              boxStyle,
-              'flex mb-0'
-            ]"
+            :box-style="boxStyle"
             :title="feature.title"
             :content="feature.content"
           />
@@ -105,7 +89,7 @@ export default {
   },
   data() {
     return {
-      boxStyle:"flex-[0_0_48%] flex-col justify-center items-center py-2 bg-white shadow-mvm rounded-xl box-border text-center sm:mb-0 sm:flex-[0_0_23.5%] sm:p-0 sm:h-20 md:h-[100px] lg:h-[142px]",
+      boxStyle:"flex flex-[0_0_48%] flex-col justify-center items-center py-2 bg-white shadow-mvm rounded-xl box-border text-center sm:mb-0 sm:flex-[0_0_23.5%] sm:p-0 sm:h-20 md:h-[100px] lg:h-[142px]",
       background,
       tvl: this.initTvl,
       links: [

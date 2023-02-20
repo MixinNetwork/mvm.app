@@ -20,12 +20,13 @@
           <div class="w-full sm:w-[528px]">
             <video 
               ref="video"
+              :width="videoSize.width"
+              :height="videoSize.height"
               autoplay 
               loop 
               muted 
               playsinline
-              preload="metadata"
-              :poster="item.animation.poster"
+              preload="auto"
               :controls="platform !== 'iOS' ? null : isLoaded[index] ? null : 'controls'"
             >
               <source :src="item.animation.webm" type="video/webm">
@@ -43,7 +44,7 @@
 </template>
 
 <script>
-import { getMixinEnvironment } from "@/utils/index";
+import { getMixinEnvironment, responsiveVideoSize } from "@/utils/index";
 import contractAnimationMp4 from '@/assets/animations/contracts.mp4';
 import contractAnimationWebm from '@/assets/animations/contracts.webm';
 import contractImage from '@/assets/images/contracts.webp';
@@ -56,6 +57,7 @@ import compatibleImage from '@/assets/images/compatible.webp';
 
 if (process.client) {
   var platform = getMixinEnvironment();
+  var videoSize = responsiveVideoSize();
 }
 
 export default {
@@ -63,6 +65,10 @@ export default {
   data() {
     return {
       platform,
+      videoSize: {
+        width: 372,
+        height: 263
+      },
       isLoaded: [false, false, false],
       list: [
         {
@@ -97,18 +103,21 @@ export default {
   },
   methods: {
     onLoad(i) {
-      console.log('canplaythrough')
       this.isLoaded[i] = true;
+      console.log('play', i)
+      console.log(this.isLoaded[i])
     }
   },
   mounted() {
+    this.videoSize = videoSize;
+
     this.$refs.video.forEach((video, i) => {
-      video.addEventListener('canplaythrough', this.onLoad(i))
+      video.addEventListener('play', this.onLoad(i))
     });
   },
   beforeDestroy() {
     this.$refs.video.forEach((video, i) => {
-      video.removeEventListener('canplaythrough', this.onLoad(i))
+      video.removeEventListener('play', this.onLoad(i))
     });
   }
 }

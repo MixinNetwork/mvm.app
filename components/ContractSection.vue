@@ -18,7 +18,7 @@
           index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'
         ]">
           <div class="w-full sm:w-[528px]">
-            <div>{{ item.animation.isPlayed ? 'true' : 'false'  }}</div>
+            <div>{{ e }}</div>
             <video 
               ref="video"
               :width="videoSize.width"
@@ -67,6 +67,7 @@ export default {
   name: "ContractSection",
   data() {
     return {
+      e: '',
       platform,
       videoSize: {
         width: 372,
@@ -111,24 +112,48 @@ export default {
       this.list[i].animation.isPlayed = true;
     },
     onclick(i) {
-      this.$refs.video[i].addEventListener(
-        'timeupdate', 
-        this.removeControllers(i)
-      )
+      // this.$refs.video[i].addEventListener(
+      //   'timeupdate', 
+      //   this.removeControllers(i)
+      // )
+
+      const events = [
+        'canplay',
+        'canplaythrough',
+        'complete',
+        'durationchange',
+        'emptied',
+        'loadeddata',
+        'pause',
+        'play',
+        'playing',
+        'progress',
+        'seeked',
+        'stalled',
+        'suspend',
+        'timeupdate',
+        'waiting'
+      ]
+      events.forEach((e) => {
+        this.$refs.video[i].addEventListener(e, () => {
+          this.e = e
+          console.log(e)
+        })
+      })
     }
   },
   mounted() {
     this.videoSize = videoSize;
   },
   beforeDestroy() {
-    this.list.forEach((item, i) => {
-      if (item.animation.isPlayed = true) {
-        this.$refs.video[i].removeEventListener(
-          'timeupdate', 
-          this.removeControllers(i)
-        )
-      }
-    })
+    // this.list.forEach((item, i) => {
+    //   if (item.animation.isPlayed = true) {
+    //     this.$refs.video[i].removeEventListener(
+    //       'timeupdate', 
+    //       this.removeControllers(i)
+    //     )
+    //   }
+    // })
   }
 }
 </script>

@@ -107,8 +107,30 @@ export default {
     }
   },
   methods: {
-    removeControllers(i) { 
-      this.list[i].animation.isPlayed = true;
+    removeControllers(i) {
+      const events = [
+        'canplay',
+        'canplaythrough',
+        'complete',
+        'durationchange',
+        'emptied',
+        'loadeddata',
+        'pause',
+        'play',
+        'playing',
+        'progress',
+        'seeked',
+        'stalled',
+        'suspend',
+        'timeupdate',
+        'waiting'
+      ]
+      events.forEach((e) => {
+        this.$refs.video[i].addEventListener(e, () => {
+          console.log(e)
+        })
+      })
+      // this.list[i].animation.isPlayed = true;
       console.log('click', this.list[i].animation.isPlayed)
     }
   },

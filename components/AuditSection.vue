@@ -1,20 +1,20 @@
 <template>
-  <div class="py-20 px-6 w-full eco-background sm:pt-40 sm:pb-[172px] sm:px-0">
+  <div class="py-20 px-6 w-full eco-background md:pt-40 md:pb-[172px] md:px-0">
     <div
-      class="font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:text-[50px] sm:leading-[72px] sm:tracking-[-0.8px] sm:text-center">
+      class="font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:mx-auto sm:w-[632px] sm:text-[50px] sm:leading-[72px] md:mx-0 md:w-full md:tracking-[-0.8px] md:text-center">
       <span class="text-primary">{{ $t("audit.title1") }}</span>{{ $t("audit.title2") }}
     </div>
 
-    <div class="flex flex-col items-center mt-12 w-full sm:mt-[120px] lg:flex-row lg:justify-center">
+    <div class="flex flex-col items-center mt-12 w-full sm:mx-auto sm:w-[632px] md:mt-[120px] md:flex-row md:justify-between md:w-[852px] lg:w-[1014px] xl:w-[1200px]">
       <div
-        class="flex flex-col justify-between py-10 px-5 w-full h-[456px] border-box bg-white/30 shadow-audit rounded-xl sm:px-12 sm:w-[578px]"
+        class="flex flex-col justify-between py-10 px-5 w-full h-[456px] border-box bg-white/30 shadow-audit rounded-xl sm:px-12 md:w-[48%]"
       >
         <div class="w-full">
           <div
             class="font-semibold text-2xl leading-9 text-black/90 tracking-[-0.8px] sm:text-[38px] sm:leading-[57px]">{{
               $t("audit.opensource.title")
             }}</div>
-          <div class="mt-3 font-normal text-lg leading-[150%] text-black/60 sm:mt-[23px]">{{
+          <div class="mt-3 font-normal text-lg leading-[150%] text-black/60 md:mt-[23px]">{{
             $t("audit.opensource.subTitle")
           }}</div>
         </div>
@@ -32,28 +32,35 @@
       </div>
 
       <div
-        class="flex flex-col justify-between mt-5 border-box py-10 px-5 w-full h-[456px] bg-white/30 shadow-audit rounded-xl sm:px-12 sm:w-[578px] lg:mt-0 lg:ml-11">
+        class="flex flex-col justify-between mt-5 border-box py-10 px-5 w-full h-[480px] bg-white/30 shadow-audit rounded-xl sm:px-12 sm:h-[456px] md:w-[48%] md:mt-0">
         <div>
           <div
             class="font-semibold text-2xl leading-9 text-black/90 tracking-[-0.8px] sm:text-[38px] sm:leading-[57px]">{{
             $t("audit.audit.title") }}</div>
-          <div class="mt-3 font-normal text-lg leading-[150%] text-black/60 sm:mt-[23px]">{{ $t("audit.audit.subTitle")
+          <div class="mt-3 font-normal text-lg leading-[150%] text-black/60 md:mt-[23px]">{{ $t("audit.audit.subTitle")
           }}</div>
         </div>
         <div class="flex flex-col justify-between w-full sm:flex-row">
-          <div>
-            <div class="w-[136px] bg-white rounded-lg overflow-hidden sm:w-[232px]">
-              <img class="w-full" :src="ioactive" alt="IOActive" />
+          <div
+            v-for="(item, index) in auditList"
+            :key="index"
+            class="sm:w-[232px] md:w-[48%]"
+          >
+            <div 
+              :class="[
+                'w-[136px] bg-white rounded-lg overflow-hidden sm:w-full',
+                index === auditList.length - 1 ? 'mt-6 sm:mt-0' : ''
+              ]"
+            >
+              <img class="w-full" :src="item.image.src" :alt="item.image.alt" />
             </div>
-            <a class="block w-full mt-1 font-medium text-base leading-6 text-primary sm:mt-5 sm:text-xl sm:leading-[30px]"
-              href="https://github.com/MixinNetwork/audits/blob/main/mixin-virtual-machine-ioactive.pdf">Report-IOActive.pdf</a>
-          </div>
-          <div>
-            <div class="mt-6 w-[136px] bg-white rounded-lg overflow-hidden sm:mt-0 sm:w-[232px]">
-              <img class="w-full" :src="slowmist" alt="Slowmist" />
-            </div>
-            <a class="block w-full mt-1 font-medium text-base leading-6 text-primary sm:mt-5 sm:text-xl sm:leading-[30px]"
-              href="https://github.com/MixinNetwork/audits/blob/main/mixin-virtual-machine-slowmist.pdf">Report-Slowmist.pdf</a>
+            <a 
+              :class="[
+                'block w-full mt-1 font-medium text-base leading-6 text-primary',
+                'sm:text-xl sm:leading-[30px] md:mt-5 md:text-sm lg:text-lg xl:text-xl xl:leading-[30px]'
+              ]"
+              :href="item.link.href"
+            >{{ item.link.text }}</a>
           </div>
         </div>
       </div>
@@ -77,6 +84,28 @@ export default {
         "https://github.com/MixinNetwork/trusted-group/tree/master/mvm",
         "https://github.com/MixinNetwork/bridge.mvm.app",
         "https://github.com/MixinNetwork/blockscout"
+      ],
+      auditList: [
+        {
+          image: {
+            src: ioactive,
+            alt: 'IOActive'
+          },
+          link: {
+            text: 'Report-IOActive.pdf',
+            href: 'https://github.com/MixinNetwork/audits/blob/main/mixin-virtual-machine-ioactive.pdf'
+          }
+        },
+        {
+          image: {
+            src: slowmist,
+            alt: 'Slowmist'
+          },
+          link: {
+            text: 'Report-Slowmist.pdf',
+            href: 'https://github.com/MixinNetwork/audits/blob/main/mixin-virtual-machine-slowmist.pdf'
+          }
+        },
       ]
     }
   }

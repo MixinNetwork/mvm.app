@@ -121,10 +121,6 @@ export default {
   },
   mounted() {
     this.updateTvl();
-
-    setInterval(async () => {
-      await this.updateTvl();
-    }, 1000 * 60);
   },
   computed: {
     features() {

@@ -18,7 +18,6 @@
           index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'
         ]">
           <div class="w-full sm:w-[528px]">
-            <div>{{ e }}</div>
             <video 
               ref="video"
               :width="videoSize.width"
@@ -30,7 +29,7 @@
               :poster="item.animation.poster"
               :autoplay="platform !== 'iOS' ? true : false"
               :controls="platform !== 'iOS' ? false : !item.animation.isPlayed"
-              @click="onclick(index)"
+              @click="onClick(index)"
             >
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">
@@ -67,9 +66,8 @@ export default {
   name: "ContractSection",
   data() {
     return {
-      e: '',
-      counters: [0, 0, 0],
       platform,
+      counters: [0, 0, 0],
       videoSize: {
         width: 372,
         height: 263
@@ -112,14 +110,15 @@ export default {
     removeControllers(i) {
       this.list[i].animation.isPlayed = true;
     },
-    onclick(i) {
+    videoEventCounter(i) {
+      this.counters[i] = this.counters[i] + 1;
+      if (this.counters[i] === 2) this.removeControllers(i);
+    },
+    onClick(i) {
       if (this.platform === 'iOS')
         this.$refs.video[i].addEventListener(
           'timeupdate', 
-          () => {
-            this.counters[i] = this.counters[i] + 1;
-            if (this.counters[i] === 2) this.removeControllers(i);
-          }
+          this.videoEventCounter(i)
         )
     }
   },
@@ -131,10 +130,7 @@ export default {
       if (item.animation.isPlayed = true) {
         this.$refs.video[i].removeEventListener(
           'timeupdate', 
-          () => {
-            this.counters[i] = this.counters[i] + 1;
-            if (this.counters[i] === 2) this.removeControllers(i);
-          }
+          this.videoEventCounter(i)
         )
       }
     })

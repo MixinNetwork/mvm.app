@@ -118,21 +118,16 @@ export default {
   },
   methods: {
     onClick(i) {
-      console.log('onClick')
       if (this.platform === 'iOS' && !this.list[i].animation.isPlayed) {
         this.list[i].animation.isPlayed = true;
-        console.log('isPlayed', i, this.list[i].animation.isPlayed)
       }
     },
     onTimeupdate(i) {
       console.log(i, this.platform, this.list[i].animation.isPlayed)
       if (this.platform === 'iOS' && this.list[i].animation.isPlayed) {
         this.counters[i] = this.counters[i] + 1;
-        console.log('counters', i, this.counters[i])
-        if (this.counters[i] === 3) {
-          console.log('removeController', i, this.list[i].animation.removeController)
+        if (this.counters[i] === 5) {
           this.list[i].animation.removeController = true;
-          console.log('removeController', i, this.list[i].animation.removeController)
         }
       }
     },

@@ -17,7 +17,7 @@
           </div>
 
           <img 
-            class="mx-auto max-w-[500px] w-full select-none sm:absolute sm:-right-20 sm:-top-6 sm:max-w-none sm:w-auto sm:h-[300px] md:-top-8 md:h-[380px] lg:-top-24 lg:h-[500px]"
+            class="mx-auto max-w-[500px] w-full h-auto select-none sm:absolute sm:-right-20 sm:-top-6 sm:max-w-none sm:w-auto sm:h-[300px] md:-top-8 md:h-[380px] lg:-top-24 lg:h-[500px]"
             :src="background"
             alt="background-image"
           />

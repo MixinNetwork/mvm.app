@@ -126,7 +126,7 @@ export default {
     onTimeupdate(i) {
       if (this.platform === 'iOS' && this.list[i].animation.isPlayed) {
         this.counters[i] = this.counters[i] + 1;
-        if (this.counters[i] === 3) {
+        if (this.counters[i] === 2) {
           this.list[i].animation.removeController = true;
         }
       }

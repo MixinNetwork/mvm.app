@@ -118,7 +118,7 @@ export default {
           'timeupdate', 
           () => {
             this.counters[i] = this.counters[i] + 1;
-            if (this.counters[i] === 3) this.removeControllers(i);
+            if (this.counters[i] === 2) this.removeControllers(i);
           }
         )
     }
@@ -133,7 +133,7 @@ export default {
           'timeupdate', 
           () => {
             this.counters[i] = this.counters[i] + 1;
-            if (this.counters[i] === 3) this.removeControllers(i);
+            if (this.counters[i] === 2) this.removeControllers(i);
           }
         )
       }

@@ -26,8 +26,8 @@
               muted 
               playsinline
               preload="auto"
+              autoplay
               :poster="item.animation.poster"
-              :autoplay="platform !== 'iOS' ? true : false"
               :controls="platform !== 'iOS' ? false : !item.animation.removeController"
               @click="platform !== 'iOS' ? false : onClick(index)"
               @timeupdate="
@@ -127,9 +127,9 @@ export default {
       if (this.platform === 'iOS' && this.list[i].animation.isPlayed) {
         this.counters[i] = this.counters[i] + 1;
         console.log(this.counters[i])
-        // if (this.counters[i] === 5) {
-        //   this.list[i].animation.removeController = true;
-        // }
+        if (this.counters[i] === 5) {
+          this.list[i].animation.removeController = true;
+        }
       }
     },
   },

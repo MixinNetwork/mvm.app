@@ -29,7 +29,7 @@
               :poster="item.animation.poster"
               :autoplay="platform !== 'iOS' ? true : false"
               :controls="platform !== 'iOS' ? false : !item.animation.isPlayed"
-              @click="onClick(index)"
+              @click.once="onClick(index)"
             >
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">
@@ -112,7 +112,7 @@ export default {
     },
     videoEventCounter(i) {
       this.counters[i] = this.counters[i] + 1;
-      if (this.counters[i] === 2) this.removeControllers(i);
+      if (this.counters[i] === 3) this.removeControllers(i);
     },
     onClick(i) {
       if (this.platform === 'iOS')

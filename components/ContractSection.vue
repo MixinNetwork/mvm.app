@@ -20,6 +20,7 @@
           <div class="w-full sm:w-[528px]">
             <video 
               ref="video"
+              :style="videoStyle"
               :width="videoSize.width"
               :height="videoSize.height"
               loop 
@@ -76,7 +77,7 @@ export default {
       platform,
       counters: [0, 0, 0],
       videoSize: {
-        width: 372,
+        width: 327,
         height: 263
       },
       list: [
@@ -134,5 +135,13 @@ export default {
   mounted() {
     this.videoSize = videoSize;
   },
+  computed: {
+    videoStyle() {
+      return {
+        width: `${this.videoSize.width}px`,
+        height: `${this.videoSize.height}px`
+      }
+    }
+  }
 }
 </script>

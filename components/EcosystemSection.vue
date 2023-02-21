@@ -1,7 +1,7 @@
 <template>
   <div class="pt-[100px] pb-[86px] px-6 bg-footer md:pt-[140px] md:pb-[180px] md:px-0">
     <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1014px] xl:w-[1280px]">
-      <div class="w-full font-bold text-[32px] leading-[130%] md:text-[50px] md:leading-[72px] md:text-center">
+      <div class="w-full font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] md:text-center">
         <span class="text-primary">{{ $t("ecosystem.title1") }}</span>{{ $t("ecosystem.title2") }}
       </div>
 

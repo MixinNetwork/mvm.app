@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center pt-[80px] pb-[16px] px-6 sm:px-0 md:pt-[180px] md:pb-[108px]">
+  <div class="flex justify-center items-center pt-[80px] pb-[16px] px-6 md:px-0 md:pt-[180px] md:pb-[108px]">
     <div class="flex flex-col items-center w-full sm:w-[632px] md:w-[852px] lg:w-[1014px] xl:w-[1280px]">
       <div class="mb-20 w-full font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:tracking-[-0.8px] sm:text-[50px] sm:leading-[72px] md:mb-[160px] md:text-center">
         <span class="text-primary">{{ $t("contract.title1") }}</span>{{ $t("contract.title2") }}

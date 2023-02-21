@@ -1,28 +1,38 @@
 <template>
-  <div class="pt-[100px] pb-[86px] px-6 bg-footer sm:pt-[140px] sm:pb-[180px] sm:px-0">
-    <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1280px]">
-      <div class="w-full font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center">
+  <div class="pt-[100px] pb-[86px] px-6 bg-footer md:pt-[140px] md:pb-[180px] md:px-0">
+    <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1014px] xl:w-[1280px]">
+      <div class="w-full font-bold text-[32px] leading-[130%] md:text-[50px] md:leading-[72px] md:text-center">
         <span class="text-primary">{{ $t("ecosystem.title1") }}</span>{{ $t("ecosystem.title2") }}
       </div>
 
-      <div class="mt-16 w-full sm:mt-[120px]">
+      <div class="mt-16 w-full md:mt-[120px]">
         <div
           v-for="(item, index) in list"
           :class="[
             'flex flex-col items-center md:justify-between',
-            index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse',
-            index === list.length - 1 ? '' : 'mb-[84px] sm:mb-[120px] '
+            index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse',
+            index === list.length - 1 ? '' : 'mb-[84px] md:mb-[120px] '
           ]"
         >
-          <div class="w-full sm:w-[540px]">
+          <div class="w-full sm:w-[540px] md:w-[42%]">
             <img class="w-full" :src="item.image.src" :alt="item.image.alt"/>
           </div>
 
-          <div class="w-full sm:w-[540px]">
-            <div class="mt-[26px] font-bold text-[22px] leading-[130%] text-black/80 tracking-[-0.4px] sm:text-[32px] sm:leading-[48px] sm:text/black lg:mt-0">
+          <div class="w-full sm:w-full md:w-[42%]">
+            <div 
+              :class="[
+                'mt-[26px] font-bold text-[22px] leading-[130%] text-black/80 tracking-[-0.4px]',
+                'md:mt-0 md:text-2xl md:leading-9 md:text/black lg:text-3xl lg:leading-10 xl:text-[32px] xl:leading-[48px]'
+              ]"
+            >
               {{ item.title }}
             </div>
-            <div class="mt-[26px] mb-4 font-normal text-base leading-[34px] text-black/90 sm:mt-6 sm:text-[22px] sm:leading-[38px]">
+            <div 
+              :class="[
+                'mt-[26px] mb-4 font-normal text-base leading-[34px] text-black/90',
+                'md:my-2 md:w-[105%] md:leading-7 lg:text-lg lg:leading-8 xl:mt-6 xl:text-[22px] xl:leading-[38px]'
+              ]"
+            >
               {{ item.content }}
             </div>
             <ul v-if="!!item.features" class="list-disc list-inside">
@@ -30,16 +40,18 @@
                 v-for="(f, i) in item.features" 
                 :key="f"
                 :class="[
-                  'font-normal text-base leading-[34px] text-black/90 sm:text-[22px] sm:leading-[38px]'
-                  , i !== item.features.length - 1 ? 'mb-1' : '']"
+                  'font-normal text-base leading-[34px] text-black/90',
+                  'md:leading-7 lg:text-lg lg:leading-8 xl:text-[22px] xl:leading-[38px]' ,
+                  i !== item.features.length - 1 ? 'mb-1 md:mb-0 xl:mb-1' : ''
+                ]"
               >{{ f }}</li>
             </ul>
-            <div class="mt-[50px] sm:mt-[42px]">
+            <div class="mt-[50px] md:mt-4 xl:mt-[42px]">
               <a 
                 :href="hrefList[index]"
                 class="flex flex-row items-center"
               >
-                <div class="font-semibold text-lg leading-5 text-primary tracking-[-0.8px] sm:text-[22px]">{{ $t("ecosystem.link") }}</div>
+                <div class="font-semibold text-lg leading-5 text-primary tracking-[-0.8px] xl:text-[22px]">{{ $t("ecosystem.link") }}</div>
                 <img class="ml-2 w-6" :src="openLink" :alt="$t('ecosystem.link')" />
               </a>
             </div>

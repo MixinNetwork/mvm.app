@@ -1,7 +1,7 @@
 <template>
-  <div class="flex justify-center items-center pt-[160px] pb-[88px] px-3 sm:pt-[300px] sm:pb-[172px] sm:px-9">
+  <div class="flex justify-center items-center pt-[160px] pb-[88px] px-3 md:pt-[300px] md:pb-[172px] md:px-9">
     <div class="flex flex-col items-center w-full">
-      <div class="mb-16 px-3 w-full font-bold text-[32px] leading-[130%] sm:mb-[162px] sm:px-0 sm:text-[50px] sm:leading-[72px] sm:text-center">
+      <div class="mb-16 px-3 w-full font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] sm:text-center md:mb-[162px] md:px-0">
         <span class="text-primary">{{ $t("nfts.title1") }}</span>{{ $t("nfts.title2") }}
       </div>
 
@@ -10,7 +10,7 @@
           v-for="(img, i) in list"
           :key="i"
           :class="[
-            'relative flex-[0_0_31%] mb-3 rounded-lg overflow-hidden sm:block sm:flex-[0_0_13%] sm:mb-7',
+            'relative flex-[0_0_31%] mb-3 rounded-lg overflow-hidden md:block md:flex-[0_0_13%] md:mb-7',
             i > 11 ? 'hidden' : ''
           ]"
         >
@@ -20,7 +20,7 @@
             :alt="img.alt"
           />
           <div 
-          class="absolute top-0 right-0 w-full bg-black/50 text-center text-sm font-bold leading-[150%] text-white lg:top-2.5 lg:right-2.5 lg:px-2.5 lg:w-fit lg:text-lg lg:rounded"
+            class="absolute top-0 right-0 w-full bg-black/50 text-center text-sm font-bold leading-[150%] text-white xl:top-2.5 xl:right-2.5 xl:px-2.5 xl:w-fit xl:text-lg xl:rounded"
           >{{ img.type }}</div>
         </div>
       </div>

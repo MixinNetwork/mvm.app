@@ -1,23 +1,24 @@
 <template>
-  <div class="flex justify-center items-center pt-[80px] pb-[16px] px-6 sm:pt-[180px] sm:pb-[108px] sm:px-0">
-    <div class="flex flex-col items-center w-full sm:w-[632px] md:w-[852px] lg:w-[1280px]">
-      <div class="mb-20 w-full font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:tracking-[-0.8px] sm:mb-[160px] sm:text-[50px] sm:leading-[72px] sm:text-center">
+  <div class="flex justify-center items-center pt-[80px] pb-[16px] px-6 sm:px-0 md:pt-[180px] md:pb-[108px]">
+    <div class="flex flex-col items-center w-full sm:w-[632px] md:w-[852px] lg:w-[1014px] xl:w-[1280px]">
+      <div class="mb-20 w-full font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:tracking-[-0.8px] sm:mb-[160px] sm:text-[50px] sm:leading-[72px] md:text-center">
         <span class="text-primary">{{ $t("contract.title1") }}</span>{{ $t("contract.title2") }}
       </div>
 
       <div
         v-for="(item, index) in list"
         :key="index"
-        class="flex flex-col w-full mb-[100px] lg:mb-[84px]"
+        class="flex flex-col w-full mb-[100px] md:mb-20 lg:mb-[84px]"
       >
-        <div class="font-bold text-[22px] leading-[130%] tracking-[-0.4px] text-black/80 sm:text-[32px] sm:leading-[48px] sm:text-black lg:hidden">
+        <div class="font-bold text-[22px] leading-[130%] tracking-[-0.4px] text-black/80 sm:text-2xl sm:leading-9 md:hidden">
           {{ item.title }}
         </div>
+
         <div :class="[
-          'flex flex-col items-center mt-[52px] w-full lg:justify-between lg:mt-0',
-          index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'
+          'flex flex-col items-center mt-[52px] w-full md:justify-between md:mt-0',
+          index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
         ]">
-          <div class="w-full sm:w-[528px]">
+          <div class="flex justify-center w-full md:w-2/5">
             <video 
               ref="video"
               :style="videoStyle"
@@ -43,9 +44,16 @@
               <source :src="item.animation.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="flex flex-col justify-center mt-[22px] w-full lg:mt-0 lg:w-[528px]">
-            <div class="hidden w-[120%] font-semibold text-[32px] leading-[48px] lg:block">{{ item.title }}</div>
-            <div class="font-normal text-base leading-[34px] text-black/90 sm:text-[22px] sm:leading-[38px] lg:mt-6">{{ item.content }}</div>
+
+          <div class="flex flex-col justify-center mt-[22px] w-full md:mt-0 md:w-2/5">
+            <div 
+              class="hidden w-[130%] font-semibold md:block md:text-2xl md:leading-8 lg:text-[26px] lg:leading-9 xl:text-[32px] xl:leading-[48px]"
+            >{{ item.title }}
+            </div>
+            <div 
+              class="font-normal text-base leading-[34px] text-black/90 sm:text-lg sm:leading-[34px] md:w-[105%] md:mt-4 md:text-lg md:leading-7 lg:mt-6 lg:leading-8 xl:text-[22px] xl:leading-[38px]"
+            >{{ item.content }}
+            </div>
           </div>
         </div>
       </div>
@@ -68,6 +76,7 @@ import compatibleImage from '@/assets/images/compatible.webp';
 if (process.client) {
   var platform = getMixinEnvironment();
   var videoSize = responsiveVideoSize();
+  console.log(videoSize)
 }
 
 export default {

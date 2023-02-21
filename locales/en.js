@@ -21,12 +21,12 @@ export default {
     title1: "Cross-Chain",
     title2: " Smart Contracts",
     section1: {
-      title: "Interact with cross-chain contracts",
-      content: "It's mainly implemented by deploying proxy contracts and bridge contracts on multiple chains such as Ethereum, Solana, and EOS, and then call contract functions through MVM, which can interact with multiple cross-chain contracts in one contract. Developers do not need to care about the language and fee of smart contracts from other chains, but to focus on the business."
+      title: "Call cross-chain contracts",
+      content: "It's mainly implemented with proxy contracts and bridge contracts on multiple chains such as Ethereum, Solana, and EOS, and then call contract functions through MVM, which can interact with multiple cross-chain contracts in one contract. Developers do not need to care about the language and fee of smart contracts from other chains, but to focus on the business."
     },
     section2: {
       title: "Transfer cross-chain assets",
-      content: "MVM supports the assets from 46 public chains including Bitcoin, Ethereum, Aptos, Monero, MobileCoin, Polygon, Polkadot, Avalanche, Dogecoin and Binance Smart Chain. Developers can easily transfer assets from multiple chains in Dapp to build various kinds for dapps, including transactions, payments, games, social networking, tools and cross-chain wallets."
+      content: "MVM supports the assets from 46 public chains including Bitcoin, Ethereum, Aptos, Monero, MobileCoin, Polygon, Polkadot, Avalanche, Dogecoin and Binance Smart Chain. Developers can easily transfer assets from multiple chains in Dapp to build various kinds products, including transactions, payments, games, social networking, tools and cross-chain wallets."
     },
     section3: {
       title: "Compatible with EVM",

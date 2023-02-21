@@ -28,8 +28,15 @@
               preload="auto"
               :poster="item.animation.poster"
               :autoplay="platform !== 'iOS' ? true : false"
-              :controls="platform !== 'iOS' ? false : !item.animation.isPlayed"
-              @click="onClick(index)"
+              :controls="platform !== 'iOS' ? false : !item.animation.removeController"
+              @click="platform !== 'iOS' ? false : onClick(index)"
+              @timeupdate="
+                platform !== 'iOS' 
+                  ? false 
+                  : item.animation.removeController 
+                    ? false
+                    : onTimeupdate(index) 
+              "
             >
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">
@@ -79,6 +86,7 @@ export default {
             webm: contractAnimationWebm,
             poster: contractImage,
             isPlayed: false,
+            removeController: false
           },
           title: this.$t("contract.section1.title"),
           content: this.$t("contract.section1.content")
@@ -89,6 +97,7 @@ export default {
             webm: assetsAnimationWebm,
             poster: assetsImage,
             isPlayed: false,
+            removeController: false
           },
           title: this.$t("contract.section2.title"),
           content: this.$t("contract.section2.content")
@@ -99,6 +108,7 @@ export default {
             webm: compatibleAnimationWebm,
             poster: compatibleImage,
             isPlayed: false,
+            removeController: false
           },
           title: this.$t("contract.section3.title"),
           content: this.$t("contract.section3.content")
@@ -107,33 +117,25 @@ export default {
     }
   },
   methods: {
-    removeControllers(i) {
-      this.list[i].animation.isPlayed = true;
-    },
-    videoEventCounter(i) {
-      this.counters[i] = this.counters[i] + 1;
-      if (this.counters[i] === 3) this.removeControllers(i);
-    },
     onClick(i) {
-      if (this.platform === 'iOS' && !this.list[i].animation.isPlayed)
-        this.$refs.video[i].addEventListener(
-          'timeupdate', 
-          this.videoEventCounter(i)
-        )
-    }
+      console.log('onClick')
+      if (this.platform === 'iOS' && !this.list[i].animation.isPlayed) {
+        this.list[i].animation.isPlayed = true;
+        console.log('isPlayed', i, this.list[i].animation.isPlayed)
+      }
+    },
+    onTimeupdate(i) {
+      console.log(i, this.platform, this.list[i].animation.isPlayed)
+      if (this.platform === 'iOS' && this.list[i].animation.isPlayed) {
+        this.counters[i] = this.counters[i] + 1;
+        console.log('counters', i, this.counters[i])
+        if (this.counters === 3) this.list[i].animation.removeController = true;
+        console.log('removeController', i, this.list[i].animation.removeController)
+      }
+    },
   },
   mounted() {
     this.videoSize = videoSize;
   },
-  beforeDestroy() {
-    this.list.forEach((item, i) => {
-      if (item.animation.isPlayed = true) {
-        this.$refs.video[i].removeEventListener(
-          'timeupdate', 
-          this.videoEventCounter(i)
-        )
-      }
-    })
-  }
 }
 </script>

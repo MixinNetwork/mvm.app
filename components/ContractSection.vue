@@ -29,7 +29,7 @@
               :poster="item.animation.poster"
               :autoplay="platform !== 'iOS' ? true : false"
               :controls="platform !== 'iOS' ? false : !item.animation.isPlayed"
-              @click.once="onClick(index)"
+              @click="onClick(index)"
             >
               <source :src="item.animation.webm" type="video/webm">
               <source :src="item.animation.mp4" type="video/mp4">
@@ -115,7 +115,7 @@ export default {
       if (this.counters[i] === 3) this.removeControllers(i);
     },
     onClick(i) {
-      if (this.platform === 'iOS')
+      if (this.platform === 'iOS' && !this.list[i].animation.isPlayed)
         this.$refs.video[i].addEventListener(
           'timeupdate', 
           this.videoEventCounter(i)

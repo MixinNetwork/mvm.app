@@ -10,7 +10,7 @@ export const getMixinEnvironment = () => {
 }
 
 export const responsiveVideoSize = () => {
-  const ratio = 263 / 372;
+  const ratio = 263 / 327;
   const width = window.innerWidth < 720 ? window.innerWidth - 48 : 528;
   return {
     width,

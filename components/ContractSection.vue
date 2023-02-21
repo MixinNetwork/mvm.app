@@ -129,8 +129,11 @@ export default {
       if (this.platform === 'iOS' && this.list[i].animation.isPlayed) {
         this.counters[i] = this.counters[i] + 1;
         console.log('counters', i, this.counters[i])
-        if (this.counters[i] === 3) this.list[i].animation.removeController = true;
-        console.log('removeController', i, this.list[i].animation.removeController)
+        if (this.counters[i] === 3) {
+          console.log('removeController', i, this.list[i].animation.removeController)
+          this.list[i].animation.removeController = true;
+          console.log('removeController', i, this.list[i].animation.removeController)
+        }
       }
     },
   },

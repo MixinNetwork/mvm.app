@@ -1,11 +1,11 @@
 <template>
-  <div class="pt-[58px] pb-[74px] w-full px-6 sm:pt-[120px] sm:pb-[200px] sm:px-0">
-    <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1280px]">
-      <div class="w-full font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:text-[50px] sm:leading-[72px] sm:tracking-[-0.8px] sm:text-center">
+  <div class="pt-[58px] pb-[74px] w-full px-6 md:pt-[120px] md:pb-[200px] md:px-0">
+    <div class="mx-auto w-full sm:w-[632px] md:w-[852px] lg:w-[1014px] xl:w-[1280px]">
+      <div class="w-full font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:text-[50px] sm:leading-[72px] sm:tracking-[-0.8px] md:text-center">
         <span class="text-primary">{{ $t("community.title1") }}</span>{{ $t("community.title2") }}
       </div>
 
-      <div class="flex flex-row flex-wrap justify-between mt-[84px] sm:mt-[120px]">
+      <div class="flex flex-row flex-wrap justify-between mt-[84px] md:mt-[120px]">
         <div
           v-for="(f, i) in list"
           :key="i"

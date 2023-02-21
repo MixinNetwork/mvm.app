@@ -119,7 +119,7 @@ export default {
     },
     section2: {
       title: "Documentaion",
-      content: "Read docs to learn the introduction and principle of important smart contracts",
+      content: "Read docs to learn the idea and principle of important smart contracts",
       link: "Read the docs"
     },
     section3: {

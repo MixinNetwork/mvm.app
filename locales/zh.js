@@ -119,7 +119,7 @@ export default {
     },
     section2: {
       title: "文档",
-      content: "阅读文档了解工作原理和和关键合约讲解说明",
+      content: "阅读文档了解工作原理和关键合约讲解说明",
       link: "阅读文档"
     },
     section3: {

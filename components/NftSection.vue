@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center items-center pt-[160px] pb-[88px] px-3 md:pt-[300px] md:pb-[172px] md:px-9">
     <div class="flex flex-col items-center w-full">
-      <div class="mb-16 px-3 w-full font-bold text-[32px] leading-[130%] sm:text-[50px] sm:leading-[72px] md:mb-[162px] md:px-0 md:text-center">
+      <div class="mb-16 px-3 w-full font-bold text-[32px] leading-[130%] sm:px-0 sm:w-[632px] sm:text-[50px] sm:leading-[72px] md:mb-[162px] md:w-full md:text-center">
         <span class="text-primary">{{ $t("nfts.title1") }}</span>{{ $t("nfts.title2") }}
       </div>
 

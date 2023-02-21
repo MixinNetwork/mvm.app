@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center pt-[44px] w-full md:pt-[108px]">
     <div
-      class="mb-[60px] px-6 w-full font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:text-[50px] sm:leading-[72px] sm:tracking-[-0.8px] md:mb-[160px] md:p-0 md:text-center">
+      class="mb-[60px] px-6 w-full font-bold text-[32px] leading-[130%] tracking-[-0.4px] sm:px-0 sm:w-[632px] sm:text-[50px] sm:leading-[72px] sm:tracking-[-0.8px] md:mb-[160px] md:w-full md:text-center">
       <span class="text-primary">{{ $t("assets.title1") }}</span>{{ $t("assets.title2") }}
     </div>
 

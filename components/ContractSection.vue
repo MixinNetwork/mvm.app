@@ -75,7 +75,6 @@ export default {
   data() {
     return {
       platform,
-      counters: [0, 0, 0],
       videoSize: {
         width: 327,
         height: 263
@@ -125,10 +124,7 @@ export default {
     },
     onTimeupdate(i) {
       if (this.platform === 'iOS' && this.list[i].animation.isPlayed) {
-        this.counters[i] = this.counters[i] + 1;
-        if (this.counters[i] === 1) {
-          this.list[i].animation.removeController = true;
-        }
+        this.list[i].animation.removeController = true;
       }
     },
   },

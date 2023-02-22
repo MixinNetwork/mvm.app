@@ -80,7 +80,6 @@ import compatibleImage from '@/assets/images/compatible.webp';
 if (process.client) {
   var platform = getMixinEnvironment();
   var videoSize = responsiveVideoSize();
-  console.log(videoSize)
 }
 
 export default {
